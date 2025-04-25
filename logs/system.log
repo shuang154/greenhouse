@@ -1,0 +1,986 @@
+2025-04-25 20:07:58,135 - Main - INFO - 智能温室监控系统启动中...
+2025-04-25 20:07:58,136 - Main - INFO - 初始化传感器模块...
+2025-04-25 20:07:58,137 - SensorModule - INFO - 初始化传感器模块...
+2025-04-25 20:07:58,157 - SensorModule - INFO - 数据库初始化成功
+2025-04-25 20:07:58,175 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-25 20:07:58,231 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-25 20:07:58,233 - SensorModule - ERROR - OLED显示屏初始化失败: No I2C device at address: 0x3c
+2025-04-25 20:07:58,295 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-25 20:07:58,297 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-25 20:07:58,298 - Main - INFO - 初始化控制器模块...
+2025-04-25 20:07:58,299 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-25 20:07:58,301 - ControllerModule - INFO - 舵机初始化成功
+2025-04-25 20:07:58,304 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-25 20:07:58,305 - Main - INFO - 初始化Web服务器...
+2025-04-25 20:07:58,305 - WebServer - INFO - 初始化Web服务器...
+2025-04-25 20:07:58,344 - WebServer - INFO - Web服务器初始化完成
+2025-04-25 20:07:58,346 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-25 20:07:58,348 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-25 20:07:58,349 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-25 20:07:58,384 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.15:8000
+2025-04-25 20:07:58,384 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-25 20:08:11,136 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-25 20:08:11,137 - WebServer - INFO - 正在停止Web服务器...
+2025-04-25 20:08:11,137 - WebServer - INFO - Web服务器已停止
+2025-04-25 20:08:11,138 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-25 20:08:13,639 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-25 20:08:13,640 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-25 20:08:15,641 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-25 20:08:15,642 - SensorModule - WARNING - 读取DHT11数据失败: The queue no longer exists
+2025-04-25 20:08:15,643 - Main - INFO - 系统已安全关闭
+2025-04-25 21:14:59,124 - Main - INFO - 智能温室监控系统启动中...
+2025-04-25 21:14:59,126 - Main - INFO - 初始化传感器模块...
+2025-04-25 21:14:59,127 - SensorModule - INFO - 初始化传感器模块...
+2025-04-25 21:14:59,133 - SensorModule - INFO - 数据库初始化成功
+2025-04-25 21:14:59,148 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-25 21:14:59,204 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-25 21:14:59,207 - SensorModule - ERROR - OLED显示屏初始化失败: No I2C device at address: 0x3c
+2025-04-25 21:14:59,268 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-25 21:14:59,270 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-25 21:14:59,271 - Main - INFO - 初始化控制器模块...
+2025-04-25 21:14:59,273 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-25 21:14:59,276 - ControllerModule - INFO - 舵机初始化成功
+2025-04-25 21:14:59,278 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-25 21:14:59,279 - Main - INFO - 初始化Web服务器...
+2025-04-25 21:14:59,280 - WebServer - INFO - 初始化Web服务器...
+2025-04-25 21:14:59,318 - WebServer - INFO - Web服务器初始化完成
+2025-04-25 21:14:59,321 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-25 21:14:59,324 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-25 21:14:59,325 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-25 21:14:59,377 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.15:8000
+2025-04-25 21:14:59,378 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-25 21:17:42,208 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-25 21:17:42,209 - WebServer - INFO - 正在停止Web服务器...
+2025-04-25 21:17:42,209 - WebServer - INFO - Web服务器已停止
+2025-04-25 21:17:42,210 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-25 21:17:44,711 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-25 21:17:44,712 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-25 21:17:46,714 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-25 21:17:46,714 - SensorModule - WARNING - 读取DHT11数据失败: The queue no longer exists
+2025-04-25 21:17:46,715 - Main - INFO - 系统已安全关闭
+2025-04-25 21:23:09,044 - Main - INFO - 智能温室监控系统启动中...
+2025-04-25 21:23:09,046 - Main - INFO - 初始化传感器模块...
+2025-04-25 21:23:09,047 - SensorModule - INFO - 初始化传感器模块...
+2025-04-25 21:23:09,052 - SensorModule - INFO - 数据库初始化成功
+2025-04-25 21:23:09,062 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-25 21:23:09,093 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-25 21:23:09,096 - SensorModule - ERROR - OLED显示屏初始化失败: No I2C device at address: 0x3c
+2025-04-25 21:23:09,143 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-25 21:23:09,146 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-25 21:23:09,147 - Main - INFO - 初始化控制器模块...
+2025-04-25 21:23:09,148 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-25 21:23:09,150 - ControllerModule - INFO - 舵机初始化成功
+2025-04-25 21:23:09,152 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-25 21:23:09,153 - Main - INFO - 初始化Web服务器...
+2025-04-25 21:23:09,154 - WebServer - INFO - 初始化Web服务器...
+2025-04-25 21:23:09,193 - WebServer - INFO - Web服务器初始化完成
+2025-04-25 21:23:09,195 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-25 21:23:09,198 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-25 21:23:09,200 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-25 21:23:09,233 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.15:8000
+2025-04-25 21:23:09,234 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-25 21:23:42,440 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-25 21:23:42,441 - WebServer - INFO - 正在停止Web服务器...
+2025-04-25 21:23:42,442 - WebServer - INFO - Web服务器已停止
+2025-04-25 21:23:42,442 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-25 21:23:44,655 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-25 21:23:44,656 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-25 21:23:46,657 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-25 21:23:46,658 - SensorModule - WARNING - 读取DHT11数据失败: The queue no longer exists
+2025-04-25 21:23:46,659 - Main - INFO - 系统已安全关闭
+2025-04-25 21:29:13,757 - Main - INFO - 智能温室监控系统启动中...
+2025-04-25 21:29:13,758 - Main - INFO - 初始化传感器模块...
+2025-04-25 21:29:13,759 - SensorModule - INFO - 初始化传感器模块...
+2025-04-25 21:29:13,762 - SensorModule - INFO - 数据库初始化成功
+2025-04-25 21:29:13,770 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-25 21:29:13,799 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-25 21:29:13,802 - SensorModule - ERROR - OLED显示屏初始化失败: No I2C device at address: 0x3c
+2025-04-25 21:29:13,849 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-25 21:29:13,852 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-25 21:29:13,853 - Main - INFO - 初始化控制器模块...
+2025-04-25 21:29:13,854 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-25 21:29:13,855 - ControllerModule - INFO - 舵机初始化成功
+2025-04-25 21:29:13,858 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-25 21:29:13,859 - Main - INFO - 初始化Web服务器...
+2025-04-25 21:29:13,860 - WebServer - INFO - 初始化Web服务器...
+2025-04-25 21:29:13,898 - WebServer - INFO - Web服务器初始化完成
+2025-04-25 21:29:13,900 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-25 21:29:13,902 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-25 21:29:13,904 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-25 21:29:13,939 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.15:8000
+2025-04-25 21:29:13,940 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-25 21:53:31,224 - Main - INFO - 智能温室监控系统启动中...
+2025-04-25 21:53:31,229 - Main - INFO - 初始化传感器模块...
+2025-04-25 21:53:31,230 - SensorModule - INFO - 初始化传感器模块...
+2025-04-25 21:53:31,236 - SensorModule - INFO - 数据库初始化成功
+2025-04-25 21:53:31,254 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-25 21:53:31,307 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-25 21:53:31,480 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-25 21:53:31,541 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-25 21:53:31,543 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-25 21:53:31,545 - Main - INFO - 初始化控制器模块...
+2025-04-25 21:53:31,546 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-25 21:53:31,548 - ControllerModule - INFO - 舵机初始化成功
+2025-04-25 21:53:31,551 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-25 21:53:31,552 - Main - INFO - 初始化Web服务器...
+2025-04-25 21:53:31,552 - WebServer - INFO - 初始化Web服务器...
+2025-04-25 21:53:31,591 - WebServer - INFO - Web服务器初始化完成
+2025-04-25 21:53:31,594 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-25 21:53:31,595 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-25 21:53:31,596 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-25 21:53:31,649 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.15:8000
+2025-04-25 21:53:31,650 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-25 21:53:38,757 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-25 21:53:38,758 - WebServer - INFO - 正在停止Web服务器...
+2025-04-25 21:53:38,759 - WebServer - INFO - Web服务器已停止
+2025-04-25 21:53:38,759 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-25 21:53:41,261 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-25 21:53:41,262 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-25 21:53:43,263 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-25 21:53:43,264 - SensorModule - WARNING - 读取DHT11数据失败: The queue no longer exists
+2025-04-25 21:53:43,265 - Main - INFO - 系统已安全关闭
+2025-04-25 22:02:12,386 - Main - INFO - 智能温室监控系统启动中...
+2025-04-25 22:02:12,388 - Main - INFO - 初始化传感器模块...
+2025-04-25 22:02:12,390 - SensorModule - INFO - 初始化传感器模块...
+2025-04-25 22:02:12,393 - SensorModule - INFO - 数据库初始化成功
+2025-04-25 22:02:12,401 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-25 22:02:12,430 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-25 22:02:12,603 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-25 22:02:12,650 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-25 22:02:12,653 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-25 22:02:12,655 - Main - INFO - 初始化控制器模块...
+2025-04-25 22:02:12,656 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-25 22:02:12,658 - ControllerModule - INFO - 舵机初始化成功
+2025-04-25 22:02:12,661 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-25 22:02:12,662 - Main - INFO - 初始化Web服务器...
+2025-04-25 22:02:12,663 - WebServer - INFO - 初始化Web服务器...
+2025-04-25 22:02:12,703 - WebServer - INFO - Web服务器初始化完成
+2025-04-25 22:02:12,706 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-25 22:02:12,707 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-25 22:02:12,710 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-25 22:02:12,745 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.15:8000
+2025-04-25 22:02:12,746 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-25 22:04:35,358 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-25 22:04:35,360 - WebServer - INFO - 正在停止Web服务器...
+2025-04-25 22:04:35,361 - WebServer - INFO - Web服务器已停止
+2025-04-25 22:04:35,361 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-25 22:04:37,862 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-25 22:04:37,863 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-25 22:04:39,865 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-25 22:04:39,866 - SensorModule - WARNING - 读取DHT11数据失败: The queue no longer exists
+2025-04-25 22:04:39,867 - Main - INFO - 系统已安全关闭
+2025-04-25 22:10:39,716 - Main - INFO - 智能温室监控系统启动中...
+2025-04-25 22:10:39,721 - Main - INFO - 初始化传感器模块...
+2025-04-25 22:10:39,722 - SensorModule - INFO - 初始化传感器模块...
+2025-04-25 22:10:39,728 - SensorModule - INFO - 数据库初始化成功
+2025-04-25 22:10:39,748 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-25 22:10:39,800 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-25 22:10:39,974 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-25 22:10:40,035 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-25 22:10:40,038 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-25 22:10:40,039 - Main - INFO - 初始化控制器模块...
+2025-04-25 22:10:40,040 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-25 22:10:40,042 - ControllerModule - INFO - 舵机初始化成功
+2025-04-25 22:10:40,045 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-25 22:10:40,046 - Main - INFO - 初始化Web服务器...
+2025-04-25 22:10:40,047 - WebServer - INFO - 初始化Web服务器...
+2025-04-25 22:10:40,085 - WebServer - INFO - Web服务器初始化完成
+2025-04-25 22:10:40,088 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-25 22:10:40,089 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-25 22:10:40,091 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-25 22:10:40,145 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.15:8000
+2025-04-25 22:10:40,147 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-25 22:10:58,309 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-25 22:10:58,310 - WebServer - INFO - 正在停止Web服务器...
+2025-04-25 22:10:58,310 - WebServer - INFO - Web服务器已停止
+2025-04-25 22:10:58,311 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-25 22:11:00,547 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-25 22:11:00,548 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-25 22:11:02,549 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-25 22:11:02,550 - SensorModule - WARNING - 读取DHT11数据失败: The queue no longer exists
+2025-04-25 22:11:02,551 - Main - INFO - 系统已安全关闭
+2025-04-25 22:24:29,066 - Main - INFO - 智能温室监控系统启动中...
+2025-04-25 22:24:29,067 - Main - INFO - 初始化传感器模块...
+2025-04-25 22:24:29,068 - SensorModule - INFO - 初始化传感器模块...
+2025-04-25 22:24:29,072 - SensorModule - INFO - 数据库初始化成功
+2025-04-25 22:24:29,080 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-25 22:24:29,108 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-25 22:24:29,281 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-25 22:24:29,329 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-25 22:24:29,333 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-25 22:24:29,334 - Main - INFO - 初始化控制器模块...
+2025-04-25 22:24:29,335 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-25 22:24:29,338 - ControllerModule - INFO - 舵机初始化成功
+2025-04-25 22:24:29,340 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-25 22:24:29,342 - Main - INFO - 初始化Web服务器...
+2025-04-25 22:24:29,343 - WebServer - INFO - 初始化Web服务器...
+2025-04-25 22:24:29,387 - WebServer - INFO - Web服务器初始化完成
+2025-04-25 22:24:29,391 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-25 22:24:29,394 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-25 22:24:29,396 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-25 22:24:29,429 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.15:8000
+2025-04-25 22:24:29,431 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-25 22:25:23,112 - webserver - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/greenhouse/webserver.py", line 70, in index
+    return render_template('dashboard.html', server_ip=ip, server_port=SYSTEM_CONFIG["WEB_PORT"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: dashboard.html
+2025-04-25 22:25:23,147 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 22:25:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-25 22:25:23,199 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 22:25:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-25 22:25:42,771 - webserver - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/greenhouse/webserver.py", line 70, in index
+    return render_template('dashboard.html', server_ip=ip, server_port=SYSTEM_CONFIG["WEB_PORT"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: dashboard.html
+2025-04-25 22:25:42,783 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 22:25:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-25 22:25:45,945 - webserver - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/greenhouse/webserver.py", line 70, in index
+    return render_template('dashboard.html', server_ip=ip, server_port=SYSTEM_CONFIG["WEB_PORT"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: dashboard.html
+2025-04-25 22:25:45,956 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 22:25:45] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-25 22:25:47,016 - webserver - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/greenhouse/webserver.py", line 70, in index
+    return render_template('dashboard.html', server_ip=ip, server_port=SYSTEM_CONFIG["WEB_PORT"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: dashboard.html
+2025-04-25 22:25:47,028 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 22:25:47] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-25 22:26:06,683 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-25 22:26:06,684 - WebServer - INFO - 正在停止Web服务器...
+2025-04-25 22:26:06,685 - WebServer - INFO - Web服务器已停止
+2025-04-25 22:26:06,686 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-25 22:26:09,187 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-25 22:26:09,188 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-25 22:26:11,190 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-25 22:26:11,191 - SensorModule - WARNING - 读取DHT11数据失败: The queue no longer exists
+2025-04-25 22:26:11,192 - Main - INFO - 系统已安全关闭
+2025-04-25 22:48:53,511 - WebServer - INFO - 初始化Web服务器...
+2025-04-25 22:48:53,547 - WebServer - INFO - Web服务器初始化完成
+2025-04-25 22:48:53,551 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-25 22:48:53,588 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.15:8000
+2025-04-25 22:48:53,589 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-25 22:48:59,033 - WebServer - INFO - 正在停止Web服务器...
+2025-04-25 22:48:59,035 - WebServer - INFO - Web服务器已停止
+2025-04-25 22:53:45,943 - Main - INFO - 智能温室监控系统启动中...
+2025-04-25 22:53:45,944 - Main - INFO - 初始化传感器模块...
+2025-04-25 22:53:45,945 - SensorModule - INFO - 初始化传感器模块...
+2025-04-25 22:53:45,949 - SensorModule - INFO - 数据库初始化成功
+2025-04-25 22:53:45,957 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-25 22:53:45,986 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-25 22:53:46,159 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-25 22:53:46,206 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-25 22:53:46,208 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-25 22:53:46,210 - Main - INFO - 初始化控制器模块...
+2025-04-25 22:53:46,210 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-25 22:53:46,212 - ControllerModule - INFO - 舵机初始化成功
+2025-04-25 22:53:46,215 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-25 22:53:46,216 - Main - INFO - 初始化Web服务器...
+2025-04-25 22:53:46,217 - WebServer - INFO - 初始化Web服务器...
+2025-04-25 22:53:46,256 - WebServer - INFO - Web服务器初始化完成
+2025-04-25 22:53:46,258 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-25 22:53:46,260 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-25 22:53:46,262 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-25 22:53:46,297 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.15:8000
+2025-04-25 22:53:46,298 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-25 22:54:17,993 - webserver - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/greenhouse/webserver.py", line 70, in index
+    return render_template('dashboard.html', server_ip=ip, server_port=SYSTEM_CONFIG["WEB_PORT"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: dashboard.html
+2025-04-25 22:54:18,015 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 22:54:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-25 22:54:18,129 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 22:54:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-25 22:54:43,925 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-25 22:54:43,927 - WebServer - INFO - 正在停止Web服务器...
+2025-04-25 22:54:43,927 - WebServer - INFO - Web服务器已停止
+2025-04-25 22:54:43,928 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-25 22:54:46,429 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-25 22:54:46,430 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-25 22:54:48,431 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-25 22:54:48,432 - SensorModule - WARNING - 读取DHT11数据失败: The queue no longer exists
+2025-04-25 22:54:48,434 - Main - INFO - 系统已安全关闭
+2025-04-25 22:57:41,748 - Main - INFO - 智能温室监控系统启动中...
+2025-04-25 22:57:41,749 - Main - INFO - 初始化传感器模块...
+2025-04-25 22:57:41,750 - SensorModule - INFO - 初始化传感器模块...
+2025-04-25 22:57:41,753 - SensorModule - INFO - 数据库初始化成功
+2025-04-25 22:57:41,760 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-25 22:57:41,790 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-25 22:57:41,963 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-25 22:57:42,011 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-25 22:57:42,013 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-25 22:57:42,014 - Main - INFO - 初始化控制器模块...
+2025-04-25 22:57:42,016 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-25 22:57:42,018 - ControllerModule - INFO - 舵机初始化成功
+2025-04-25 22:57:42,021 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-25 22:57:42,022 - Main - INFO - 初始化Web服务器...
+2025-04-25 22:57:42,023 - WebServer - INFO - 初始化Web服务器...
+2025-04-25 22:57:42,061 - WebServer - INFO - Web服务器初始化完成
+2025-04-25 22:57:42,064 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-25 22:57:42,065 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-25 22:57:42,068 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-25 22:57:42,103 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.15:8000
+2025-04-25 22:57:42,105 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-25 22:57:44,892 - webserver - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/greenhouse/webserver.py", line 70, in index
+    return render_template('dashboard.html', server_ip=ip, server_port=SYSTEM_CONFIG["WEB_PORT"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 96, in _get_source_fast
+    return loader.get_source(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 215, in get_source
+    contents = f.read()
+               ^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd6 in position 161: invalid continuation byte
+2025-04-25 22:57:44,916 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 22:57:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-25 22:57:57,687 - webserver - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/greenhouse/webserver.py", line 70, in index
+    return render_template('dashboard.html', server_ip=ip, server_port=SYSTEM_CONFIG["WEB_PORT"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 96, in _get_source_fast
+    return loader.get_source(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 215, in get_source
+    contents = f.read()
+               ^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd6 in position 161: invalid continuation byte
+2025-04-25 22:57:57,704 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 22:57:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-25 22:58:02,855 - webserver - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/greenhouse/webserver.py", line 70, in index
+    return render_template('dashboard.html', server_ip=ip, server_port=SYSTEM_CONFIG["WEB_PORT"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 96, in _get_source_fast
+    return loader.get_source(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 215, in get_source
+    contents = f.read()
+               ^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd6 in position 161: invalid continuation byte
+2025-04-25 22:58:02,870 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 22:58:02] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-25 22:58:03,208 - webserver - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/greenhouse/webserver.py", line 70, in index
+    return render_template('dashboard.html', server_ip=ip, server_port=SYSTEM_CONFIG["WEB_PORT"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 96, in _get_source_fast
+    return loader.get_source(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 215, in get_source
+    contents = f.read()
+               ^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd6 in position 161: invalid continuation byte
+2025-04-25 22:58:03,224 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 22:58:03] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-25 22:58:03,540 - webserver - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/greenhouse/webserver.py", line 70, in index
+    return render_template('dashboard.html', server_ip=ip, server_port=SYSTEM_CONFIG["WEB_PORT"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/flask/templating.py", line 96, in _get_source_fast
+    return loader.get_source(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zs/zs/lib/python3.11/site-packages/jinja2/loaders.py", line 215, in get_source
+    contents = f.read()
+               ^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd6 in position 161: invalid continuation byte
+2025-04-25 22:58:03,554 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 22:58:03] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-25 22:58:23,216 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-25 22:58:23,217 - WebServer - INFO - 正在停止Web服务器...
+2025-04-25 22:58:23,218 - WebServer - INFO - Web服务器已停止
+2025-04-25 22:58:23,218 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-25 22:58:25,719 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-25 22:58:25,721 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-25 22:58:27,722 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-25 22:58:27,723 - SensorModule - WARNING - 读取DHT11数据失败: The queue no longer exists
+2025-04-25 22:58:27,723 - Main - INFO - 系统已安全关闭
+2025-04-25 23:01:22,348 - Main - INFO - 智能温室监控系统启动中...
+2025-04-25 23:01:22,349 - Main - INFO - 初始化传感器模块...
+2025-04-25 23:01:22,350 - SensorModule - INFO - 初始化传感器模块...
+2025-04-25 23:01:22,353 - SensorModule - INFO - 数据库初始化成功
+2025-04-25 23:01:22,361 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-25 23:01:22,389 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-25 23:01:22,562 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-25 23:01:22,609 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-25 23:01:22,612 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-25 23:01:22,613 - Main - INFO - 初始化控制器模块...
+2025-04-25 23:01:22,614 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-25 23:01:22,616 - ControllerModule - INFO - 舵机初始化成功
+2025-04-25 23:01:22,619 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-25 23:01:22,620 - Main - INFO - 初始化Web服务器...
+2025-04-25 23:01:22,621 - WebServer - INFO - 初始化Web服务器...
+2025-04-25 23:01:22,659 - WebServer - INFO - Web服务器初始化完成
+2025-04-25 23:01:22,661 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-25 23:01:22,663 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-25 23:01:22,665 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-25 23:01:22,700 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.15:8000
+2025-04-25 23:01:22,701 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-25 23:01:26,230 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:01:26] "GET / HTTP/1.1" 200 -
+2025-04-25 23:01:26,381 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:01:26] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-04-25 23:01:26,391 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:01:26] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-04-25 23:01:27,091 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:01:27] "[33mGET /socket.io/?EIO=4&transport=polling&t=x67wjlj4 HTTP/1.1[0m" 404 -
+2025-04-25 23:01:27,106 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:01:27] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-25 23:01:27,951 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:01:27] "[33mGET /socket.io/?EIO=4&transport=polling&t=x68kyx08 HTTP/1.1[0m" 404 -
+2025-04-25 23:01:29,719 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:01:29] "[33mGET /socket.io/?EIO=4&transport=polling&t=x69yapi7 HTTP/1.1[0m" 404 -
+2025-04-25 23:01:34,789 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:01:34] "[33mGET /socket.io/?EIO=4&transport=polling&t=x6duyb6l HTTP/1.1[0m" 404 -
+2025-04-25 23:01:39,852 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:01:39] "[33mGET /socket.io/?EIO=4&transport=polling&t=x6hrqwot HTTP/1.1[0m" 404 -
+2025-04-25 23:01:44,912 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:01:44] "[33mGET /socket.io/?EIO=4&transport=polling&t=x6loi3cw HTTP/1.1[0m" 404 -
+2025-04-25 23:01:47,410 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:01:47] "GET / HTTP/1.1" 200 -
+2025-04-25 23:01:47,442 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:01:47] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-04-25 23:01:47,452 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:01:47] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-04-25 23:01:49,952 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:01:49] "[33mGET /socket.io/?EIO=4&transport=polling&t=x6pkrt01 HTTP/1.1[0m" 404 -
+2025-04-25 23:01:50,236 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:01:50] "[33mGET /socket.io/?EIO=4&transport=polling&t=x6q6ie72 HTTP/1.1[0m" 404 -
+2025-04-25 23:01:50,272 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:01:50] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-25 23:01:51,786 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:01:51] "[33mGET /socket.io/?EIO=4&transport=polling&t=x6rdd6uw HTTP/1.1[0m" 404 -
+2025-04-25 23:01:53,400 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:01:53] "[33mGET /socket.io/?EIO=4&transport=polling&t=x6sm3i5t HTTP/1.1[0m" 404 -
+2025-04-25 23:01:55,009 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:01:55] "[33mGET /socket.io/?EIO=4&transport=polling&t=x6tgzwrt HTTP/1.1[0m" 404 -
+2025-04-25 23:01:57,001 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:01:57] "[33mGET /socket.io/?EIO=4&transport=polling&t=x6ve8pfn HTTP/1.1[0m" 404 -
+2025-04-25 23:02:00,065 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:02:00] "[33mGET /socket.io/?EIO=4&transport=polling&t=x6xdhj22 HTTP/1.1[0m" 404 -
+2025-04-25 23:02:02,061 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:02] "[33mGET /socket.io/?EIO=4&transport=polling&t=x6zachdo HTTP/1.1[0m" 404 -
+2025-04-25 23:02:05,122 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:02:05] "[33mGET /socket.io/?EIO=4&transport=polling&t=x719wu39 HTTP/1.1[0m" 404 -
+2025-04-25 23:02:07,228 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:07] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7371pvt HTTP/1.1[0m" 404 -
+2025-04-25 23:02:10,174 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:02:10] "[33mGET /socket.io/?EIO=4&transport=polling&t=x756c2ht HTTP/1.1[0m" 404 -
+2025-04-25 23:02:12,288 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:12] "[33mGET /socket.io/?EIO=4&transport=polling&t=x776ghzm HTTP/1.1[0m" 404 -
+2025-04-25 23:02:15,828 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:02:15] "[33mGET /socket.io/?EIO=4&transport=polling&t=x792mb1u HTTP/1.1[0m" 404 -
+2025-04-25 23:02:17,351 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:17] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7b353l3 HTTP/1.1[0m" 404 -
+2025-04-25 23:02:20,865 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:02:20] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7dfjucx HTTP/1.1[0m" 404 -
+2025-04-25 23:02:22,410 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:22] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7eztj1u HTTP/1.1[0m" 404 -
+2025-04-25 23:02:25,994 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:02:25] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7hdl4ud HTTP/1.1[0m" 404 -
+2025-04-25 23:02:27,458 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:27] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7iw7vqp HTTP/1.1[0m" 404 -
+2025-04-25 23:02:31,051 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:02:31] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7la5vpw HTTP/1.1[0m" 404 -
+2025-04-25 23:02:32,504 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:32] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7msfhgj HTTP/1.1[0m" 404 -
+2025-04-25 23:02:36,101 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:02:36] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7p6hg35 HTTP/1.1[0m" 404 -
+2025-04-25 23:02:37,564 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:37] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7qoji54 HTTP/1.1[0m" 404 -
+2025-04-25 23:02:41,149 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:02:41] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7t2p4x7 HTTP/1.1[0m" 404 -
+2025-04-25 23:02:42,625 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:42] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7ul5h3f HTTP/1.1[0m" 404 -
+2025-04-25 23:02:43,027 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:43] "GET / HTTP/1.1" 200 -
+2025-04-25 23:02:43,070 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-25 23:02:43,079 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-25 23:02:43,122 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:43] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7uzl9ef HTTP/1.1[0m" 404 -
+2025-04-25 23:02:43,141 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:43] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-25 23:02:43,823 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:43] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7vizoel HTTP/1.1[0m" 404 -
+2025-04-25 23:02:46,196 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:02:46] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7wyxncm HTTP/1.1[0m" 404 -
+2025-04-25 23:02:46,818 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:46] "[33mGET /socket.io/?EIO=4&transport=polling&t=x7xtv3vt HTTP/1.1[0m" 404 -
+2025-04-25 23:02:50,219 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:50] "GET / HTTP/1.1" 200 -
+2025-04-25 23:02:50,258 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-25 23:02:50,270 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-25 23:02:50,293 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:50] "[33mGET /socket.io/?EIO=4&transport=polling&t=x80ixcfl HTTP/1.1[0m" 404 -
+2025-04-25 23:02:50,320 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:50] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-25 23:02:51,255 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:02:51] "[33mGET /socket.io/?EIO=4&transport=polling&t=x80vak8q HTTP/1.1[0m" 404 -
+2025-04-25 23:02:51,301 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:51] "[33mGET /socket.io/?EIO=4&transport=polling&t=x81agkna HTTP/1.1[0m" 404 -
+2025-04-25 23:02:53,317 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:53] "[33mGET /socket.io/?EIO=4&transport=polling&t=x82ujnnn HTTP/1.1[0m" 404 -
+2025-04-25 23:02:56,306 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:02:56] "[33mGET /socket.io/?EIO=4&transport=polling&t=x84rpke7 HTTP/1.1[0m" 404 -
+2025-04-25 23:02:58,000 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:02:58] "[33mGET /socket.io/?EIO=4&transport=polling&t=x86ggwai HTTP/1.1[0m" 404 -
+2025-04-25 23:03:01,353 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:03:01] "[33mGET /socket.io/?EIO=4&transport=polling&t=x88nxz8l HTTP/1.1[0m" 404 -
+2025-04-25 23:03:03,058 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:03:03] "[33mGET /socket.io/?EIO=4&transport=polling&t=x8acp82e HTTP/1.1[0m" 404 -
+2025-04-25 23:03:06,401 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:03:06] "[33mGET /socket.io/?EIO=4&transport=polling&t=x8ck8v35 HTTP/1.1[0m" 404 -
+2025-04-25 23:03:08,204 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:03:08] "[33mGET /socket.io/?EIO=4&transport=polling&t=x8e9ej9b HTTP/1.1[0m" 404 -
+2025-04-25 23:03:11,442 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:03:11] "[33mGET /socket.io/?EIO=4&transport=polling&t=x8gghxng HTTP/1.1[0m" 404 -
+2025-04-25 23:03:13,259 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:03:13] "[33mGET /socket.io/?EIO=4&transport=polling&t=x8i86t6x HTTP/1.1[0m" 404 -
+2025-04-25 23:03:16,496 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:03:16] "[33mGET /socket.io/?EIO=4&transport=polling&t=x8kcc7co HTTP/1.1[0m" 404 -
+2025-04-25 23:03:18,324 - werkzeug - INFO - 192.168.5.99 - - [25/Apr/2025 23:03:18] "[33mGET /socket.io/?EIO=4&transport=polling&t=x8m4o6xk HTTP/1.1[0m" 404 -
+2025-04-25 23:03:22,111 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:03:22] "[33mGET /socket.io/?EIO=4&transport=polling&t=x8o8vh5s HTTP/1.1[0m" 404 -
+2025-04-25 23:03:27,156 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:03:27] "[33mGET /socket.io/?EIO=4&transport=polling&t=x8skvo8h HTTP/1.1[0m" 404 -
+2025-04-25 23:03:32,213 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:03:32] "[33mGET /socket.io/?EIO=4&transport=polling&t=x8wgykjy HTTP/1.1[0m" 404 -
+2025-04-25 23:03:37,691 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:03:37] "[33mGET /socket.io/?EIO=4&transport=polling&t=x90dk9si HTTP/1.1[0m" 404 -
+2025-04-25 23:03:42,882 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:03:42] "[33mGET /socket.io/?EIO=4&transport=polling&t=x94ph5zn HTTP/1.1[0m" 404 -
+2025-04-25 23:03:48,892 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:03:48] "[33mGET /socket.io/?EIO=4&transport=polling&t=x99bzxrv HTTP/1.1[0m" 404 -
+2025-04-25 23:03:54,890 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:03:54] "[33mGET /socket.io/?EIO=4&transport=polling&t=x9dynvrv HTTP/1.1[0m" 404 -
+2025-04-25 23:04:00,899 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:04:00] "[33mGET /socket.io/?EIO=4&transport=polling&t=x9ilhbt2 HTTP/1.1[0m" 404 -
+2025-04-25 23:04:06,888 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:04:06] "[33mGET /socket.io/?EIO=4&transport=polling&t=x9n7z3vm HTTP/1.1[0m" 404 -
+2025-04-25 23:04:12,889 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:04:12] "[33mGET /socket.io/?EIO=4&transport=polling&t=x9rupg6o HTTP/1.1[0m" 404 -
+2025-04-25 23:04:18,892 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:04:18] "[33mGET /socket.io/?EIO=4&transport=polling&t=x9whai70 HTTP/1.1[0m" 404 -
+2025-04-25 23:04:24,894 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:04:24] "[33mGET /socket.io/?EIO=4&transport=polling&t=xa144hf0 HTTP/1.1[0m" 404 -
+2025-04-25 23:04:30,897 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:04:30] "[33mGET /socket.io/?EIO=4&transport=polling&t=xa5qtqlj HTTP/1.1[0m" 404 -
+2025-04-25 23:04:36,889 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:04:36] "[33mGET /socket.io/?EIO=4&transport=polling&t=xaadedis HTTP/1.1[0m" 404 -
+2025-04-25 23:04:42,887 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:04:42] "[33mGET /socket.io/?EIO=4&transport=polling&t=xaezxywt HTTP/1.1[0m" 404 -
+2025-04-25 23:04:48,883 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:04:48] "[33mGET /socket.io/?EIO=4&transport=polling&t=xajmn3zv HTTP/1.1[0m" 404 -
+2025-04-25 23:04:54,884 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:04:54] "[33mGET /socket.io/?EIO=4&transport=polling&t=xao99b1f HTTP/1.1[0m" 404 -
+2025-04-25 23:05:00,903 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:05:00] "[33mGET /socket.io/?EIO=4&transport=polling&t=xasw111w HTTP/1.1[0m" 404 -
+2025-04-25 23:05:06,898 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:05:06] "[33mGET /socket.io/?EIO=4&transport=polling&t=xaxip7wu HTTP/1.1[0m" 404 -
+2025-04-25 23:05:12,892 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:05:12] "[33mGET /socket.io/?EIO=4&transport=polling&t=xb25g4fp HTTP/1.1[0m" 404 -
+2025-04-25 23:05:18,916 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:05:18] "[33mGET /socket.io/?EIO=4&transport=polling&t=xb6s5xvd HTTP/1.1[0m" 404 -
+2025-04-25 23:05:24,095 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:05:24] "GET /api/data/current HTTP/1.1" 200 -
+2025-04-25 23:05:24,867 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:05:24] "[33mGET /socket.io/?EIO=4&transport=polling&t=xbbeng37 HTTP/1.1[0m" 404 -
+2025-04-25 23:05:30,905 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:05:30] "[33mGET /socket.io/?EIO=4&transport=polling&t=xbg1ju1g HTTP/1.1[0m" 404 -
+2025-04-25 23:05:36,898 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:05:36] "[33mGET /socket.io/?EIO=4&transport=polling&t=xbko0ucg HTTP/1.1[0m" 404 -
+2025-04-25 23:05:42,895 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:05:42] "[33mGET /socket.io/?EIO=4&transport=polling&t=xbpar4dc HTTP/1.1[0m" 404 -
+2025-04-25 23:05:48,890 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:05:48] "[33mGET /socket.io/?EIO=4&transport=polling&t=xbtxa7p7 HTTP/1.1[0m" 404 -
+2025-04-25 23:05:54,900 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:05:54] "[33mGET /socket.io/?EIO=4&transport=polling&t=xbyk6245 HTTP/1.1[0m" 404 -
+2025-04-25 23:06:00,885 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:06:00] "[33mGET /socket.io/?EIO=4&transport=polling&t=xc36ljyf HTTP/1.1[0m" 404 -
+2025-04-25 23:06:06,912 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:06:06] "[33mGET /socket.io/?EIO=4&transport=polling&t=xc7tfs67 HTTP/1.1[0m" 404 -
+2025-04-25 23:06:12,884 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:06:12] "[33mGET /socket.io/?EIO=4&transport=polling&t=xccfxo2v HTTP/1.1[0m" 404 -
+2025-04-25 23:06:18,902 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:06:18] "[33mGET /socket.io/?EIO=4&transport=polling&t=xch2rykz HTTP/1.1[0m" 404 -
+2025-04-25 23:06:24,899 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:06:24] "[33mGET /socket.io/?EIO=4&transport=polling&t=xclpf6xi HTTP/1.1[0m" 404 -
+2025-04-25 23:06:30,883 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:06:30] "[33mGET /socket.io/?EIO=4&transport=polling&t=xcqbwqtn HTTP/1.1[0m" 404 -
+2025-04-25 23:06:36,902 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:06:36] "[33mGET /socket.io/?EIO=4&transport=polling&t=xcuyu8iq HTTP/1.1[0m" 404 -
+2025-04-25 23:06:42,890 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:06:42] "[33mGET /socket.io/?EIO=4&transport=polling&t=xczl8njp HTTP/1.1[0m" 404 -
+2025-04-25 23:06:48,362 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:06:48] "[33mGET /socket.io/?EIO=4&transport=polling&t=xd3syj9f HTTP/1.1[0m" 404 -
+2025-04-25 23:06:53,420 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:06:53] "[33mGET /socket.io/?EIO=4&transport=polling&t=xd7ptsxz HTTP/1.1[0m" 404 -
+2025-04-25 23:06:58,903 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:06:58] "[33mGET /socket.io/?EIO=4&transport=polling&t=xdby0quk HTTP/1.1[0m" 404 -
+2025-04-25 23:07:04,888 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:07:04] "[33mGET /socket.io/?EIO=4&transport=polling&t=xdgkcnro HTTP/1.1[0m" 404 -
+2025-04-25 23:07:10,900 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:07:10] "[33mGET /socket.io/?EIO=4&transport=polling&t=xdl79iug HTTP/1.1[0m" 404 -
+2025-04-25 23:07:16,900 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:07:16] "[33mGET /socket.io/?EIO=4&transport=polling&t=xdpttflb HTTP/1.1[0m" 404 -
+2025-04-25 23:07:22,905 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:07:22] "[33mGET /socket.io/?EIO=4&transport=polling&t=xdughuwr HTTP/1.1[0m" 404 -
+2025-04-25 23:07:28,893 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:07:28] "[33mGET /socket.io/?EIO=4&transport=polling&t=xdz36vux HTTP/1.1[0m" 404 -
+2025-04-25 23:07:34,890 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:07:34] "[33mGET /socket.io/?EIO=4&transport=polling&t=xe3po43j HTTP/1.1[0m" 404 -
+2025-04-25 23:07:40,899 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:07:40] "[33mGET /socket.io/?EIO=4&transport=polling&t=xe8cifn2 HTTP/1.1[0m" 404 -
+2025-04-25 23:07:46,894 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:07:46] "[33mGET /socket.io/?EIO=4&transport=polling&t=xecz6e7p HTTP/1.1[0m" 404 -
+2025-04-25 23:07:52,896 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:07:52] "[33mGET /socket.io/?EIO=4&transport=polling&t=xehlq03d HTTP/1.1[0m" 404 -
+2025-04-25 23:07:58,907 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:07:58] "[33mGET /socket.io/?EIO=4&transport=polling&t=xem8huwk HTTP/1.1[0m" 404 -
+2025-04-25 23:08:04,906 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:08:04] "[33mGET /socket.io/?EIO=4&transport=polling&t=xeqvbt2i HTTP/1.1[0m" 404 -
+2025-04-25 23:08:10,899 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:08:10] "[33mGET /socket.io/?EIO=4&transport=polling&t=xevhye65 HTTP/1.1[0m" 404 -
+2025-04-25 23:08:16,900 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:08:16] "[33mGET /socket.io/?EIO=4&transport=polling&t=xf04iuru HTTP/1.1[0m" 404 -
+2025-04-25 23:08:22,905 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:08:22] "[33mGET /socket.io/?EIO=4&transport=polling&t=xf4r5me4 HTTP/1.1[0m" 404 -
+2025-04-25 23:08:28,900 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:08:28] "[33mGET /socket.io/?EIO=4&transport=polling&t=xf9dwqdp HTTP/1.1[0m" 404 -
+2025-04-25 23:08:34,904 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:08:34] "[33mGET /socket.io/?EIO=4&transport=polling&t=xfe0hra5 HTTP/1.1[0m" 404 -
+2025-04-25 23:08:40,893 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:08:40] "[33mGET /socket.io/?EIO=4&transport=polling&t=xfin5dww HTTP/1.1[0m" 404 -
+2025-04-25 23:08:46,898 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:08:46] "[33mGET /socket.io/?EIO=4&transport=polling&t=xfn9y52p HTTP/1.1[0m" 404 -
+2025-04-25 23:08:52,909 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:08:52] "[33mGET /socket.io/?EIO=4&transport=polling&t=xfrwiyxg HTTP/1.1[0m" 404 -
+2025-04-25 23:08:58,892 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:08:58] "[33mGET /socket.io/?EIO=4&transport=polling&t=xfwj1lyz HTTP/1.1[0m" 404 -
+2025-04-25 23:09:04,897 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:04] "[33mGET /socket.io/?EIO=4&transport=polling&t=xg15slsu HTTP/1.1[0m" 404 -
+2025-04-25 23:09:10,896 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:10] "[33mGET /socket.io/?EIO=4&transport=polling&t=xg5si99f HTTP/1.1[0m" 404 -
+2025-04-25 23:09:15,552 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:15] "GET / HTTP/1.1" 200 -
+2025-04-25 23:09:15,600 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-25 23:09:15,636 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-25 23:09:15,680 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:15] "[33mGET /socket.io/?EIO=4&transport=polling&t=xg9hibb0 HTTP/1.1[0m" 404 -
+2025-04-25 23:09:15,707 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:15] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-25 23:09:16,806 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:16] "[33mGET /socket.io/?EIO=4&transport=polling&t=xgacjyw7 HTTP/1.1[0m" 404 -
+2025-04-25 23:09:19,346 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:19] "[33mGET /socket.io/?EIO=4&transport=polling&t=xgcazzzm HTTP/1.1[0m" 404 -
+2025-04-25 23:09:23,364 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:23] "[33mGET /socket.io/?EIO=4&transport=polling&t=xgfeo5bi HTTP/1.1[0m" 404 -
+2025-04-25 23:09:28,421 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:28] "[33mGET /socket.io/?EIO=4&transport=polling&t=xgjbba35 HTTP/1.1[0m" 404 -
+2025-04-25 23:09:33,488 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:33] "[33mGET /socket.io/?EIO=4&transport=polling&t=xgn7tqxr HTTP/1.1[0m" 404 -
+2025-04-25 23:09:37,716 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:37] "GET /api/data/current HTTP/1.1" 200 -
+2025-04-25 23:09:38,560 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:38] "GET /api/data/current HTTP/1.1" 200 -
+2025-04-25 23:09:38,871 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:38] "[33mGET /socket.io/?EIO=4&transport=polling&t=xgre59wh HTTP/1.1[0m" 404 -
+2025-04-25 23:09:39,867 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:39] "GET /api/data/current HTTP/1.1" 200 -
+2025-04-25 23:09:44,885 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:44] "[33mGET /socket.io/?EIO=4&transport=polling&t=xgw11qrf HTTP/1.1[0m" 404 -
+2025-04-25 23:09:50,909 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:50] "[33mGET /socket.io/?EIO=4&transport=polling&t=xh0npzl8 HTTP/1.1[0m" 404 -
+2025-04-25 23:09:56,894 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:09:56] "[33mGET /socket.io/?EIO=4&transport=polling&t=xh5a9lma HTTP/1.1[0m" 404 -
+2025-04-25 23:10:02,903 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:10:02] "[33mGET /socket.io/?EIO=4&transport=polling&t=xh9wx2c6 HTTP/1.1[0m" 404 -
+2025-04-25 23:10:08,903 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:10:08] "[33mGET /socket.io/?EIO=4&transport=polling&t=xhejhmu9 HTTP/1.1[0m" 404 -
+2025-04-25 23:10:14,907 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:10:14] "[33mGET /socket.io/?EIO=4&transport=polling&t=xhj6apvl HTTP/1.1[0m" 404 -
+2025-04-25 23:10:20,912 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:10:20] "[33mGET /socket.io/?EIO=4&transport=polling&t=xhnt27e0 HTTP/1.1[0m" 404 -
+2025-04-25 23:10:26,896 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:10:26] "[33mGET /socket.io/?EIO=4&transport=polling&t=xhsfkrzt HTTP/1.1[0m" 404 -
+2025-04-25 23:10:32,908 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:10:32] "[33mGET /socket.io/?EIO=4&transport=polling&t=xhx2cyxf HTTP/1.1[0m" 404 -
+2025-04-25 23:10:38,908 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:10:38] "[33mGET /socket.io/?EIO=4&transport=polling&t=xi1oznor HTTP/1.1[0m" 404 -
+2025-04-25 23:10:44,913 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:10:44] "[33mGET /socket.io/?EIO=4&transport=polling&t=xi6bop14 HTTP/1.1[0m" 404 -
+2025-04-25 23:10:50,909 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:10:50] "[33mGET /socket.io/?EIO=4&transport=polling&t=xiaydspn HTTP/1.1[0m" 404 -
+2025-04-25 23:10:56,899 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:10:56] "[33mGET /socket.io/?EIO=4&transport=polling&t=xifkz6n6 HTTP/1.1[0m" 404 -
+2025-04-25 23:11:01,083 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:01] "GET / HTTP/1.1" 200 -
+2025-04-25 23:11:01,132 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-25 23:11:01,154 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-25 23:11:01,198 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:01] "[33mGET /socket.io/?EIO=4&transport=polling&t=xiiwfpkj HTTP/1.1[0m" 404 -
+2025-04-25 23:11:01,214 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:01] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-25 23:11:02,267 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:02] "[33mGET /socket.io/?EIO=4&transport=polling&t=xijpwwab HTTP/1.1[0m" 404 -
+2025-04-25 23:11:03,905 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:03] "[33mGET /socket.io/?EIO=4&transport=polling&t=xikzc9zr HTTP/1.1[0m" 404 -
+2025-04-25 23:11:07,912 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:07] "[33mGET /socket.io/?EIO=4&transport=polling&t=xio2lxb3 HTTP/1.1[0m" 404 -
+2025-04-25 23:11:14,257 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:14] "[33mGET /socket.io/?EIO=4&transport=polling&t=xisp4l7a HTTP/1.1[0m" 404 -
+2025-04-25 23:11:19,884 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:19] "[33mGET /socket.io/?EIO=4&transport=polling&t=xixbx270 HTTP/1.1[0m" 404 -
+2025-04-25 23:11:25,892 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:25] "[33mGET /socket.io/?EIO=4&transport=polling&t=xj1yklx7 HTTP/1.1[0m" 404 -
+2025-04-25 23:11:31,895 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:31] "[33mGET /socket.io/?EIO=4&transport=polling&t=xj6l7o2n HTTP/1.1[0m" 404 -
+2025-04-25 23:11:38,058 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:38] "[33mGET /socket.io/?EIO=4&transport=polling&t=xjb7qlwq HTTP/1.1[0m" 404 -
+2025-04-25 23:11:43,894 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:43] "[33mGET /socket.io/?EIO=4&transport=polling&t=xjfuks58 HTTP/1.1[0m" 404 -
+2025-04-25 23:11:49,887 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:49] "[33mGET /socket.io/?EIO=4&transport=polling&t=xjkh10xl HTTP/1.1[0m" 404 -
+2025-04-25 23:11:55,890 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:11:55] "[33mGET /socket.io/?EIO=4&transport=polling&t=xjp3q2o5 HTTP/1.1[0m" 404 -
+2025-04-25 23:12:01,894 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:12:01] "[33mGET /socket.io/?EIO=4&transport=polling&t=xjtqi6sg HTTP/1.1[0m" 404 -
+2025-04-25 23:12:07,896 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:12:07] "[33mGET /socket.io/?EIO=4&transport=polling&t=xjyd6kyx HTTP/1.1[0m" 404 -
+2025-04-25 23:12:13,891 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:12:13] "[33mGET /socket.io/?EIO=4&transport=polling&t=xk2zpyng HTTP/1.1[0m" 404 -
+2025-04-25 23:12:20,486 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:12:20] "[33mGET /socket.io/?EIO=4&transport=polling&t=xk7mi9d8 HTTP/1.1[0m" 404 -
+2025-04-25 23:12:25,882 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:12:25] "[33mGET /socket.io/?EIO=4&transport=polling&t=xkc93tru HTTP/1.1[0m" 404 -
+2025-04-25 23:12:31,899 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:12:31] "[33mGET /socket.io/?EIO=4&transport=polling&t=xkgvrokz HTTP/1.1[0m" 404 -
+2025-04-25 23:12:37,889 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:12:37] "[33mGET /socket.io/?EIO=4&transport=polling&t=xklid1qf HTTP/1.1[0m" 404 -
+2025-04-25 23:12:43,899 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:12:43] "[33mGET /socket.io/?EIO=4&transport=polling&t=xkq59pfr HTTP/1.1[0m" 404 -
+2025-04-25 23:12:49,898 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:12:49] "[33mGET /socket.io/?EIO=4&transport=polling&t=xkuruj9p HTTP/1.1[0m" 404 -
+2025-04-25 23:12:55,889 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:12:55] "[33mGET /socket.io/?EIO=4&transport=polling&t=xkzecwnd HTTP/1.1[0m" 404 -
+2025-04-25 23:13:01,892 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:13:01] "[33mGET /socket.io/?EIO=4&transport=polling&t=xl412528 HTTP/1.1[0m" 404 -
+2025-04-25 23:13:07,895 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:13:07] "[33mGET /socket.io/?EIO=4&transport=polling&t=xl8nzixu HTTP/1.1[0m" 404 -
+2025-04-25 23:13:13,905 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:13:13] "[33mGET /socket.io/?EIO=4&transport=polling&t=xldansp3 HTTP/1.1[0m" 404 -
+2025-04-25 23:13:19,901 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:13:19] "[33mGET /socket.io/?EIO=4&transport=polling&t=xlhxc2gs HTTP/1.1[0m" 404 -
+2025-04-25 23:13:25,893 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:13:25] "[33mGET /socket.io/?EIO=4&transport=polling&t=xlmjoupt HTTP/1.1[0m" 404 -
+2025-04-25 23:13:31,898 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:13:31] "[33mGET /socket.io/?EIO=4&transport=polling&t=xlr6hobd HTTP/1.1[0m" 404 -
+2025-04-25 23:13:37,895 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:13:37] "[33mGET /socket.io/?EIO=4&transport=polling&t=xlvt3ki8 HTTP/1.1[0m" 404 -
+2025-04-25 23:13:43,901 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:13:43] "[33mGET /socket.io/?EIO=4&transport=polling&t=xm0fy9pe HTTP/1.1[0m" 404 -
+2025-04-25 23:13:49,899 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:13:49] "[33mGET /socket.io/?EIO=4&transport=polling&t=xm52iyjg HTTP/1.1[0m" 404 -
+2025-04-25 23:13:55,895 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:13:55] "[33mGET /socket.io/?EIO=4&transport=polling&t=xm9p6i7q HTTP/1.1[0m" 404 -
+2025-04-25 23:14:01,900 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:14:01] "[33mGET /socket.io/?EIO=4&transport=polling&t=xmebufhj HTTP/1.1[0m" 404 -
+2025-04-25 23:14:07,890 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:14:07] "[33mGET /socket.io/?EIO=4&transport=polling&t=xmiydc3x HTTP/1.1[0m" 404 -
+2025-04-25 23:14:13,901 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:14:13] "[33mGET /socket.io/?EIO=4&transport=polling&t=xmnl7v1f HTTP/1.1[0m" 404 -
+2025-04-25 23:14:19,898 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:14:19] "[33mGET /socket.io/?EIO=4&transport=polling&t=xms7suvn HTTP/1.1[0m" 404 -
+2025-04-25 23:14:25,893 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:14:25] "[33mGET /socket.io/?EIO=4&transport=polling&t=xmwuhfv2 HTTP/1.1[0m" 404 -
+2025-04-25 23:14:31,898 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:14:31] "[33mGET /socket.io/?EIO=4&transport=polling&t=xn1h531b HTTP/1.1[0m" 404 -
+2025-04-25 23:14:37,894 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:14:37] "[33mGET /socket.io/?EIO=4&transport=polling&t=xn63r8hm HTTP/1.1[0m" 404 -
+2025-04-25 23:14:43,907 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:14:43] "[33mGET /socket.io/?EIO=4&transport=polling&t=xnaqljm1 HTTP/1.1[0m" 404 -
+2025-04-25 23:14:49,896 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:14:49] "[33mGET /socket.io/?EIO=4&transport=polling&t=xnfd0o3k HTTP/1.1[0m" 404 -
+2025-04-25 23:14:55,894 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:14:55] "[33mGET /socket.io/?EIO=4&transport=polling&t=xnjznpvi HTTP/1.1[0m" 404 -
+2025-04-25 23:15:01,903 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:15:01] "[33mGET /socket.io/?EIO=4&transport=polling&t=xnoml4rm HTTP/1.1[0m" 404 -
+2025-04-25 23:15:07,896 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:15:07] "[33mGET /socket.io/?EIO=4&transport=polling&t=xnt907f5 HTTP/1.1[0m" 404 -
+2025-04-25 23:15:13,894 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:15:13] "[33mGET /socket.io/?EIO=4&transport=polling&t=xnxvneib HTTP/1.1[0m" 404 -
+2025-04-25 23:15:19,896 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:15:19] "[33mGET /socket.io/?EIO=4&transport=polling&t=xo2ifm9w HTTP/1.1[0m" 404 -
+2025-04-25 23:15:25,902 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:15:25] "[33mGET /socket.io/?EIO=4&transport=polling&t=xo756r5q HTTP/1.1[0m" 404 -
+2025-04-25 23:15:31,905 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:15:31] "[33mGET /socket.io/?EIO=4&transport=polling&t=xobrw5di HTTP/1.1[0m" 404 -
+2025-04-25 23:15:36,117 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-25 23:15:36,118 - WebServer - INFO - 正在停止Web服务器...
+2025-04-25 23:15:36,118 - WebServer - INFO - Web服务器已停止
+2025-04-25 23:15:36,119 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-25 23:15:37,904 - werkzeug - INFO - 192.168.5.248 - - [25/Apr/2025 23:15:37] "[33mGET /socket.io/?EIO=4&transport=polling&t=xogel82q HTTP/1.1[0m" 404 -
+2025-04-25 23:15:38,168 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-25 23:15:38,169 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-25 23:15:40,170 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-25 23:15:40,171 - SensorModule - WARNING - 读取DHT11数据失败: The queue no longer exists
+2025-04-25 23:15:40,173 - Main - INFO - 系统已安全关闭

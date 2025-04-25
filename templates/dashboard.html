@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能农业大棚监控系统</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-flower1"></i> 智能农业大棚监控系统</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#dashboard">仪表盘</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#control">控制面板</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#charts">数据图表</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#settings">系统设置</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- 状态通知 -->
+        <div class="alert alert-info" id="connection-status">
+            <i class="bi bi-info-circle"></i> 正在连接到服务器...
+        </div>
+
+        <!-- 仪表盘 -->
+        <section id="dashboard" class="mb-5">
+            <h2 class="border-bottom pb-2 mb-4">实时监控数据</h2>
+            <div class="row g-4">
+                <!-- 温度卡片 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 dashboard-card">
+                        <div class="card-body text-center">
+                            <div class="icon-circle bg-primary">
+                                <i class="bi bi-thermometer-half"></i>
+                            </div>
+                            <h5 class="card-title mt-3">空气温度</h5>
+                            <h2 class="sensor-value" id="air-temperature">--</h2>
+                            <p class="text-muted mb-0">度 (°C)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 湿度卡片 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 dashboard-card">
+                        <div class="card-body text-center">
+                            <div class="icon-circle bg-info">
+                                <i class="bi bi-droplet"></i>
+                            </div>
+                            <h5 class="card-title mt-3">空气湿度</h5>
+                            <h2 class="sensor-value" id="air-humidity">--</h2>
+                            <p class="text-muted mb-0">百分比 (%)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 土壤湿度卡片 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 dashboard-card">
+                        <div class="card-body text-center">
+                            <div class="icon-circle bg-success">
+                                <i class="bi bi-moisture"></i>
+                            </div>
+                            <h5 class="card-title mt-3">土壤湿度</h5>
+                            <h2 class="sensor-value" id="soil-moisture">--</h2>
+                            <p class="text-muted mb-0">百分比 (%)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 光照强度卡片 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 dashboard-card">
+                        <div class="card-body text-center">
+                            <div class="icon-circle bg-warning">
+                                <i class="bi bi-brightness-high"></i>
+                            </div>
+                            <h5 class="card-title mt-3">光照强度</h5>
+                            <h2 class="sensor-value" id="light-intensity">--</h2>
+                            <p class="text-muted mb-0">勒克斯 (lux)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 土壤温度卡片 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 dashboard-card">
+                        <div class="card-body text-center">
+                            <div class="icon-circle bg-danger">
+                                <i class="bi bi-thermometer-low"></i>
+                            </div>
+                            <h5 class="card-title mt-3">土壤温度</h5>
+                            <h2 class="sensor-value" id="soil-temperature">--</h2>
+                            <p class="text-muted mb-0">度 (°C)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 系统模式卡片 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 dashboard-card">
+                        <div class="card-body text-center">
+                            <div class="icon-circle bg-secondary">
+                                <i class="bi bi-toggle-on"></i>
+                            </div>
+                            <h5 class="card-title mt-3">系统模式</h5>
+                            <h2 class="sensor-value" id="system-mode">--</h2>
+                            <p class="text-muted mb-0">自动/手动</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 最后更新时间卡片 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 dashboard-card">
+                        <div class="card-body text-center">
+                            <div class="icon-circle bg-dark">
+                                <i class="bi bi-clock"></i>
+                            </div>
+                            <h5 class="card-title mt-3">最后更新</h5>
+                            <h2 class="sensor-value" id="last-update">--</h2>
+                            <p class="text-muted mb-0">时间</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 控制面板 -->
+        <section id="control" class="mb-5">
+            <h2 class="border-bottom pb-2 mb-4">控制面板</h2>
+            <div class="row g-4">
+                <!-- 模式选择 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-secondary text-white">
+                            <i class="bi bi-gear"></i> 系统模式
+                        </div>
+                        <div class="card-body">
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="auto-mode-switch" checked>
+                                <label class="form-check-label" for="auto-mode-switch" id="auto-mode-label">自动模式</label>
+                            </div>
+                            <p class="text-muted small">自动模式下，系统将根据传感器数据自动控制设备。手动模式下，您可以直接控制各个设备。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 风扇控制 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <i class="bi bi-fan"></i> 风扇控制
+                        </div>
+                        <div class="card-body">
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="fan-switch">
+                                <label class="form-check-label" for="fan-switch" id="fan-label">风扇已关闭</label>
+                            </div>
+                            <p class="text-muted small">风扇用于控制大棚内的温度和湿度，当温度过高时自动开启。</p>
+                            <div class="device-status">
+                                <span class="badge rounded-pill text-bg-danger" id="fan-status">已关闭</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 水泵控制 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-info text-white">
+                            <i class="bi bi-water"></i> 水泵控制
+                        </div>
+                        <div class="card-body">
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="pump-switch">
+                                <label class="form-check-label" for="pump-switch" id="pump-label">水泵已关闭</label>
+                            </div>
+                            <p class="text-muted small">水泵用于灌溉植物，当土壤湿度低于阈值时自动开启。</p>
+                            <div class="device-status">
+                                <span class="badge rounded-pill text-bg-danger" id="pump-status">已关闭</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 灯光控制 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-warning text-dark">
+                            <i class="bi bi-lightbulb"></i> 灯光控制
+                        </div>
+                        <div class="card-body">
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="light-switch">
+                                <label class="form-check-label" for="light-switch" id="light-label">灯光已关闭</label>
+                            </div>
+                            <p class="text-muted small">补光灯用于在光照不足时为植物提供额外光照。</p>
+                            <div class="device-status">
+                                <span class="badge rounded-pill text-bg-danger" id="light-status">已关闭</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 窗口控制（步进电机） -->
+                <div class="col-md-6 col-lg-8">
+                    <div class="card h-100">
+                        <div class="card-header bg-success text-white">
+                            <i class="bi bi-window"></i> 窗口开度控制
+                        </div>
+                        <div class="card-body">
+                            <label for="stepper-range" class="form-label">窗口开度: <span id="stepper-value">0</span>%</label>
+                            <input type="range" class="form-range" min="0" max="100" step="5" id="stepper-range">
+                            <p class="text-muted small">调节窗口开度可以控制通风量和自然光照强度。</p>
+                            <button class="btn btn-sm btn-outline-success" id="stepper-apply">应用</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 数据图表 -->
+        <section id="charts" class="mb-5">
+            <h2 class="border-bottom pb-2 mb-4">数据图表</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <i class="bi bi-graph-up"></i> 温度变化趋势 (24小时)
+                        </div>
+                        <div class="card-body">
+                            <canvas id="temperature-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-success text-white">
+                            <i class="bi bi-graph-up"></i> 湿度变化趋势 (24小时)
+                        </div>
+                        <div class="card-body">
+                            <canvas id="humidity-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-info text-white">
+                            <i class="bi bi-graph-up"></i> 土壤湿度变化趋势 (24小时)
+                        </div>
+                        <div class="card-body">
+                            <canvas id="soil-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-warning text-dark">
+                            <i class="bi bi-graph-up"></i> 光照强度变化趋势 (24小时)
+                        </div>
+                        <div class="card-body">
+                            <canvas id="light-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 系统设置 -->
+        <section id="settings" class="mb-5">
+            <h2 class="border-bottom pb-2 mb-4">系统设置</h2>
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    <i class="bi bi-sliders"></i> 阈值设置
+                </div>
+                <div class="card-body">
+                    <form id="thresholds-form">
+                        <div class="row g-3">
+                            <!-- 温度阈值设置 -->
+                            <div class="col-md-6 col-lg-3">
+                                <label for="temp-min" class="form-label">最低温度 (°C)</label>
+                                <input type="number" class="form-control" id="temp-min" min="0" max="40">
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <label for="temp-max" class="form-label">最高温度 (°C)</label>
+                                <input type="number" class="form-control" id="temp-max" min="0" max="40">
+                            </div>
+                            
+                            <!-- 湿度阈值设置 -->
+                            <div class="col-md-6 col-lg-3">
+                                <label for="humidity-min" class="form-label">最低湿度 (%)</label>
+                                <input type="number" class="form-control" id="humidity-min" min="0" max="100">
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <label for="humidity-max" class="form-label">最高湿度 (%)</label>
+                                <input type="number" class="form-control" id="humidity-max" min="0" max="100">
+                            </div>
+                            
+                            <!-- 土壤湿度阈值设置 -->
+                            <div class="col-md-6 col-lg-3">
+                                <label for="soil-moisture-min" class="form-label">最低土壤湿度 (%)</label>
+                                <input type="number" class="form-control" id="soil-moisture-min" min="0" max="100">
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <label for="soil-moisture-max" class="form-label">最高土壤湿度 (%)</label>
+                                <input type="number" class="form-control" id="soil-moisture-max" min="0" max="100">
+                            </div>
+                            
+                            <!-- 光照阈值设置 -->
+                            <div class="col-md-6 col-lg-3">
+                                <label for="light-min" class="form-label">最低光照 (lux)</label>
+                                <input type="number" class="form-control" id="light-min" min="0" max="100000">
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <label for="light-max" class="form-label">最高光照 (lux)</label>
+                                <input type="number" class="form-control" id="light-max" min="0" max="100000">
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-primary">保存设置</button>
+                            <button type="reset" class="btn btn-secondary">重置</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>智能农业大棚监控系统 &copy; 2025</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript依赖 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/socket.io/client-dist/socket.io.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
