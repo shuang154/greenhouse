@@ -12,6 +12,7 @@ import os
 import io
 from flask.helpers import send_from_directory
 import socket
+from flask_socketio import SocketIO
 
 # 导入配置文件 - 修复导入错误
 from config import SYSTEM_CONFIG
@@ -42,8 +43,17 @@ class WebServer:
         # 创建Flask应用
         self.app = Flask(__name__)
         
+        # 添加SocketIO支持 - 注意位置在创建Flask应用之后
+        self.socketio = SocketIO(self.app)
+        
         # 设置路由
         self._setup_routes()
+        
+        # 设置Socket.IO事件
+        self._setup_socketio()
+        
+        # 数据推送定时器
+        self.push_timer = None
         
         # 服务器线程
         self.server_thread = None
@@ -126,15 +136,114 @@ class WebServer:
         def serve_static(path):
             """提供静态文件"""
             return send_from_directory('static', path)
+
+    def _setup_socketio(self):
+        """设置Socket.IO事件处理"""
+        @self.socketio.on('connect')
+        def handle_connect():
+            logger.info('客户端已连接')
+            # 连接后立即发送一次当前状态
+            self._push_sensor_data()
+        
+        @self.socketio.on('disconnect')
+        def handle_disconnect():
+            logger.info('客户端已断开连接')
+        
+        @self.socketio.on('control_mode')
+        def handle_control_mode(data):
+            auto_mode = data.get('auto_mode', True)
+            logger.info(f'收到模式控制请求: {"自动" if auto_mode else "手动"}模式')
+            self.controller_module.set_auto_mode(auto_mode)
+            # 发送状态更新
+            self._push_sensor_data()
+            
+        @self.socketio.on('control_fan')
+        def handle_control_fan(data):
+            state = data.get('state', False)
+            logger.info(f'收到风扇控制请求: {"开启" if state else "关闭"}')
+            self.controller_module.manual_control('fan', 'set', state)
+            # 发送状态更新
+            self._push_sensor_data()
+            
+        @self.socketio.on('control_pump')
+        def handle_control_pump(data):
+            state = data.get('state', False)
+            logger.info(f'收到水泵控制请求: {"开启" if state else "关闭"}')
+            self.controller_module.manual_control('pump', 'set', state)
+            # 发送状态更新
+            self._push_sensor_data()
+            
+        @self.socketio.on('control_light')
+        def handle_control_light(data):
+            state = data.get('state', False)
+            logger.info(f'收到灯光控制请求: {"开启" if state else "关闭"}')
+            self.controller_module.manual_control('light', 'set', state)
+            # 发送状态更新
+            self._push_sensor_data()
+            
+        @self.socketio.on('control_stepper')
+        def handle_control_stepper(data):
+            position = data.get('position', 0)
+            logger.info(f'收到窗口控制请求: {position}%开度')
+            self.controller_module.manual_control('stepper', 'set', position)
+            # 发送状态更新
+            self._push_sensor_data()
+            
+        @self.socketio.on('update_thresholds')
+        def handle_update_thresholds(data):
+            logger.info(f'收到阈值更新请求: {data}')
+            # 这里需要实现阈值更新的逻辑
+            # 可能需要添加到controller_module中
+            # 发送状态更新
+            self._push_sensor_data()
+
+    def _push_sensor_data(self):
+        """推送传感器数据和系统状态到客户端"""
+        try:
+            sensor_data = self.sensor_module.get_latest_readings()
+            controller_status = self.controller_module.get_status()
+            
+            # 格式化为前端期望的格式
+            data = {
+                "sensors": sensor_data,
+                "devices": controller_status["devices"],
+                "auto_mode": controller_status["auto_mode"],
+                "system_time": datetime.now().isoformat(),
+                "thresholds": {
+                    # 这里需要获取当前阈值设置
+                    # 例如:
+                    "temp_min": 20,
+                    "temp_max": 30,
+                    "humidity_min": 40,
+                    "humidity_max": 70,
+                    "soil_moisture_min": 30,
+                    "soil_moisture_max": 70,
+                    "light_min": 1000,
+                    "light_max": 8000
+                }
+            }
+            
+            # 发送到客户端
+            self.socketio.emit('status_update', data)
+            logger.debug('状态数据已推送到客户端')
+        except Exception as e:
+            logger.error(f'推送数据时发生错误: {e}')
+
+    def _data_push_loop(self):
+        """定时推送数据的循环"""
+        while self.running:
+            self._push_sensor_data()
+            time.sleep(3)  # 每3秒更新一次
+
     def _run_server(self):
         """在线程中运行Flask服务器"""
         try:
-            self.app.run(
+            self.socketio.run(
+                self.app,
                 host='0.0.0.0',
                 port=SYSTEM_CONFIG["WEB_PORT"],
                 debug=False,
-                use_reloader=False,
-                threaded=True
+                use_reloader=False
             )
         except Exception as e:
             logger.error(f"Web服务器运行错误: {e}")
@@ -146,9 +255,16 @@ class WebServer:
             return
         
         self.running = True
+        
+        # 启动服务器线程
         self.server_thread = threading.Thread(target=self._run_server)
         self.server_thread.daemon = True
         self.server_thread.start()
+        
+        # 启动数据推送线程
+        self.push_thread = threading.Thread(target=self._data_push_loop)
+        self.push_thread.daemon = True
+        self.push_thread.start()
         
         logger.info(f"Web服务器已启动，访问地址: http://0.0.0.0:{SYSTEM_CONFIG['WEB_PORT']}")
     
@@ -156,6 +272,10 @@ class WebServer:
         """停止Web服务器"""
         logger.info("正在停止Web服务器...")
         self.running = False
+        
+        # 等待线程结束
+        if self.push_thread and self.push_thread.is_alive():
+            self.push_thread.join(timeout=2.0)
         
         # Flask没有优雅的停止方法，只能依赖线程结束
         # 实际生产环境应使用更健壮的Web服务器如Gunicorn

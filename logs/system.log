@@ -984,3 +984,397 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd6 in position 161: invali
 2025-04-25 23:15:40,170 - SensorModule - INFO - 传感器模块资源已清理
 2025-04-25 23:15:40,171 - SensorModule - WARNING - 读取DHT11数据失败: The queue no longer exists
 2025-04-25 23:15:40,173 - Main - INFO - 系统已安全关闭
+2025-04-26 13:16:52,190 - Main - INFO - 智能温室监控系统启动中...
+2025-04-26 13:16:52,196 - Main - INFO - 初始化传感器模块...
+2025-04-26 13:16:52,197 - SensorModule - INFO - 初始化传感器模块...
+2025-04-26 13:16:52,203 - SensorModule - INFO - 数据库初始化成功
+2025-04-26 13:16:53,663 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-26 13:16:53,716 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-26 13:16:53,889 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-26 13:16:53,941 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-26 13:16:53,943 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-26 13:16:53,945 - Main - INFO - 初始化控制器模块...
+2025-04-26 13:16:53,945 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-26 13:16:53,948 - ControllerModule - INFO - 舵机初始化成功
+2025-04-26 13:16:53,950 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-26 13:16:53,951 - Main - INFO - 初始化Web服务器...
+2025-04-26 13:16:53,952 - WebServer - INFO - 初始化Web服务器...
+2025-04-26 13:16:54,012 - WebServer - INFO - Web服务器初始化完成
+2025-04-26 13:16:54,035 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-26 13:16:54,047 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-26 13:16:54,059 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-26 13:16:54,176 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.15:8000
+2025-04-26 13:16:54,177 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 13:17:00,694 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:00] "[33mGET /socket.io/?EIO=4&transport=polling&t=rqgjv3ph HTTP/1.1[0m" 404 -
+2025-04-26 13:17:02,437 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:02] "GET / HTTP/1.1" 200 -
+2025-04-26 13:17:02,702 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-26 13:17:02,721 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-26 13:17:02,785 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:02] "[33mGET /socket.io/?EIO=4&transport=polling&t=rqi65s1i HTTP/1.1[0m" 404 -
+2025-04-26 13:17:02,798 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:02] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-26 13:17:03,950 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:03] "[33mGET /socket.io/?EIO=4&transport=polling&t=rqj2rdpz HTTP/1.1[0m" 404 -
+2025-04-26 13:17:04,786 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:04] "GET / HTTP/1.1" 200 -
+2025-04-26 13:17:04,830 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-26 13:17:04,844 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-26 13:17:04,874 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:04] "[33mGET /socket.io/?EIO=4&transport=polling&t=rqjsmowk HTTP/1.1[0m" 404 -
+2025-04-26 13:17:04,889 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:04] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-26 13:17:06,287 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:06] "[33mGET /socket.io/?EIO=4&transport=polling&t=rqkvpqkp HTTP/1.1[0m" 404 -
+2025-04-26 13:17:08,932 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:08] "[33mGET /socket.io/?EIO=4&transport=polling&t=rqmx4ji6 HTTP/1.1[0m" 404 -
+2025-04-26 13:17:12,933 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:12] "[33mGET /socket.io/?EIO=4&transport=polling&t=rqq0dmex HTTP/1.1[0m" 404 -
+2025-04-26 13:17:17,999 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:17] "[33mGET /socket.io/?EIO=4&transport=polling&t=rqtww6qx HTTP/1.1[0m" 404 -
+2025-04-26 13:17:23,058 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:23] "[33mGET /socket.io/?EIO=4&transport=polling&t=rqxtf7ss HTTP/1.1[0m" 404 -
+2025-04-26 13:17:28,936 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:28] "[33mGET /socket.io/?EIO=4&transport=polling&t=rr2cqohk HTTP/1.1[0m" 404 -
+2025-04-26 13:17:34,927 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:34] "[33mGET /socket.io/?EIO=4&transport=polling&t=rr6zbm7d HTTP/1.1[0m" 404 -
+2025-04-26 13:17:40,941 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:40] "[33mGET /socket.io/?EIO=4&transport=polling&t=rrbm68nl HTTP/1.1[0m" 404 -
+2025-04-26 13:17:46,931 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:46] "[33mGET /socket.io/?EIO=4&transport=polling&t=rrg8mh1o HTTP/1.1[0m" 404 -
+2025-04-26 13:17:52,933 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:52] "[33mGET /socket.io/?EIO=4&transport=polling&t=rrkva7a0 HTTP/1.1[0m" 404 -
+2025-04-26 13:17:58,935 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:17:58] "[33mGET /socket.io/?EIO=4&transport=polling&t=rrpi0cgg HTTP/1.1[0m" 404 -
+2025-04-26 13:18:04,932 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:18:04] "[33mGET /socket.io/?EIO=4&transport=polling&t=rru4mvof HTTP/1.1[0m" 404 -
+2025-04-26 13:18:10,935 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:18:10] "[33mGET /socket.io/?EIO=4&transport=polling&t=rryrbjfg HTTP/1.1[0m" 404 -
+2025-04-26 13:18:16,941 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:18:16] "[33mGET /socket.io/?EIO=4&transport=polling&t=rs3dyxkj HTTP/1.1[0m" 404 -
+2025-04-26 13:18:22,940 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:18:22] "[33mGET /socket.io/?EIO=4&transport=polling&t=rs80o05r HTTP/1.1[0m" 404 -
+2025-04-26 13:18:27,997 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:18:27] "[33mGET /socket.io/?EIO=4&transport=polling&t=rsbxesw3 HTTP/1.1[0m" 404 -
+2025-04-26 13:18:33,940 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:18:33] "[33mGET /socket.io/?EIO=4&transport=polling&t=rsgicamt HTTP/1.1[0m" 404 -
+2025-04-26 13:18:39,931 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:18:39] "[33mGET /socket.io/?EIO=4&transport=polling&t=rsl4tfpz HTTP/1.1[0m" 404 -
+2025-04-26 13:18:45,928 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:18:45] "[33mGET /socket.io/?EIO=4&transport=polling&t=rsprk7fk HTTP/1.1[0m" 404 -
+2025-04-26 13:18:51,748 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-26 13:18:51,750 - WebServer - INFO - 正在停止Web服务器...
+2025-04-26 13:18:51,752 - WebServer - INFO - Web服务器已停止
+2025-04-26 13:18:51,755 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-26 13:18:51,934 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:18:51] "[33mGET /socket.io/?EIO=4&transport=polling&t=rsue7hz9 HTTP/1.1[0m" 404 -
+2025-04-26 13:18:54,262 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-26 13:18:54,263 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-26 13:18:54,327 - SensorModule - WARNING - 读取DHT11数据失败: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2025-04-26 13:18:56,264 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-26 13:18:56,265 - Main - INFO - 系统已安全关闭
+2025-04-26 13:37:46,711 - Main - INFO - 智能温室监控系统启动中...
+2025-04-26 13:37:46,713 - Main - INFO - 初始化传感器模块...
+2025-04-26 13:37:46,715 - SensorModule - INFO - 初始化传感器模块...
+2025-04-26 13:37:46,720 - SensorModule - INFO - 数据库初始化成功
+2025-04-26 13:37:49,562 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-26 13:37:49,592 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-26 13:37:49,766 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-26 13:37:49,814 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-26 13:37:49,817 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-26 13:37:49,822 - Main - INFO - 初始化控制器模块...
+2025-04-26 13:37:49,824 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-26 13:37:49,826 - ControllerModule - INFO - 舵机初始化成功
+2025-04-26 13:37:49,828 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-26 13:37:49,829 - Main - INFO - 初始化Web服务器...
+2025-04-26 13:37:49,831 - WebServer - INFO - 初始化Web服务器...
+2025-04-26 13:37:50,379 - WebServer - INFO - Web服务器初始化完成
+2025-04-26 13:37:50,383 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:37:50,384 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-26 13:37:50,387 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-26 13:37:50,389 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-26 13:37:50,425 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.15:8000
+2025-04-26 13:37:50,426 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 13:37:51,964 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:37:51] "GET /socket.io/?EIO=4&transport=polling&t=sha0rvh5 HTTP/1.1" 200 -
+2025-04-26 13:37:52,011 - WebServer - INFO - 客户端已连接
+2025-04-26 13:37:52,024 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:37:52,028 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:37:52] "GET /socket.io/?EIO=4&transport=polling&t=sha295hl&sid=gOZLOb6za2XWB1ofAAAA HTTP/1.1" 200 -
+2025-04-26 13:37:52,031 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:37:52] "POST /socket.io/?EIO=4&transport=polling&t=sha2824a&sid=gOZLOb6za2XWB1ofAAAA HTTP/1.1" 200 -
+2025-04-26 13:37:53,385 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:37:56,388 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:37:59,394 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:00,400 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:00] "GET / HTTP/1.1" 200 -
+2025-04-26 13:38:00,421 - WebServer - INFO - 客户端已断开连接
+2025-04-26 13:38:00,424 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:00] "GET /socket.io/?EIO=4&transport=websocket&sid=gOZLOb6za2XWB1ofAAAA HTTP/1.1" 200 -
+2025-04-26 13:38:00,555 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-26 13:38:00,560 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-26 13:38:00,615 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:00] "GET /socket.io/?EIO=4&transport=polling&t=shgp77pe HTTP/1.1" 200 -
+2025-04-26 13:38:00,630 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:00] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-26 13:38:00,658 - WebServer - INFO - 客户端已连接
+2025-04-26 13:38:00,661 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:00,669 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:00] "POST /socket.io/?EIO=4&transport=polling&t=shgqilhl&sid=UoDiiPc7H9dJXfVhAAAC HTTP/1.1" 200 -
+2025-04-26 13:38:00,675 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:00] "GET /socket.io/?EIO=4&transport=polling&t=shgqj627&sid=UoDiiPc7H9dJXfVhAAAC HTTP/1.1" 200 -
+2025-04-26 13:38:01,682 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:01] "GET / HTTP/1.1" 200 -
+2025-04-26 13:38:01,711 - WebServer - INFO - 客户端已断开连接
+2025-04-26 13:38:01,714 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:01] "GET /socket.io/?EIO=4&transport=websocket&sid=UoDiiPc7H9dJXfVhAAAC HTTP/1.1" 200 -
+2025-04-26 13:38:01,739 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-26 13:38:01,755 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-26 13:38:01,784 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:01] "GET /socket.io/?EIO=4&transport=polling&t=shhlt08h HTTP/1.1" 200 -
+2025-04-26 13:38:01,802 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:01] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-26 13:38:01,864 - WebServer - INFO - 客户端已连接
+2025-04-26 13:38:01,881 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:01,889 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:01] "POST /socket.io/?EIO=4&transport=polling&t=shhnb1t5&sid=ayUqRgzZRIFPCEl8AAAE HTTP/1.1" 200 -
+2025-04-26 13:38:01,900 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:01] "GET /socket.io/?EIO=4&transport=polling&t=shhnbvkv&sid=ayUqRgzZRIFPCEl8AAAE HTTP/1.1" 200 -
+2025-04-26 13:38:02,354 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:02] "GET / HTTP/1.1" 200 -
+2025-04-26 13:38:02,375 - WebServer - INFO - 客户端已断开连接
+2025-04-26 13:38:02,377 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:02] "GET /socket.io/?EIO=4&transport=websocket&sid=ayUqRgzZRIFPCEl8AAAE HTTP/1.1" 200 -
+2025-04-26 13:38:02,398 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-26 13:38:02,406 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:02,417 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-26 13:38:02,447 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:02] "GET /socket.io/?EIO=4&transport=polling&t=shi47t58 HTTP/1.1" 200 -
+2025-04-26 13:38:02,464 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:02] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-26 13:38:02,493 - WebServer - INFO - 客户端已连接
+2025-04-26 13:38:02,500 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:02,514 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:02] "POST /socket.io/?EIO=4&transport=polling&t=shi5g3la&sid=SZ8RA7gyA9qVoQLGAAAG HTTP/1.1" 200 -
+2025-04-26 13:38:02,516 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:02] "GET /socket.io/?EIO=4&transport=polling&t=shi5gj4z&sid=SZ8RA7gyA9qVoQLGAAAG HTTP/1.1" 200 -
+2025-04-26 13:38:02,580 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:02] "GET /socket.io/?EIO=4&transport=polling&t=shi7pxxf&sid=SZ8RA7gyA9qVoQLGAAAG HTTP/1.1" 200 -
+2025-04-26 13:38:03,327 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:03] "GET / HTTP/1.1" 200 -
+2025-04-26 13:38:03,346 - WebServer - INFO - 客户端已断开连接
+2025-04-26 13:38:03,348 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:03] "GET /socket.io/?EIO=4&transport=websocket&sid=SZ8RA7gyA9qVoQLGAAAG HTTP/1.1" 200 -
+2025-04-26 13:38:03,371 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-26 13:38:03,390 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-26 13:38:03,419 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:03] "GET /socket.io/?EIO=4&transport=polling&t=shiv7kmh HTTP/1.1" 200 -
+2025-04-26 13:38:03,431 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:03] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-26 13:38:03,465 - WebServer - INFO - 客户端已连接
+2025-04-26 13:38:03,472 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:03,474 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:03] "GET /socket.io/?EIO=4&transport=polling&t=shiwcvz8&sid=22o7QIpV85nVg_b-AAAI HTTP/1.1" 200 -
+2025-04-26 13:38:03,475 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:03] "POST /socket.io/?EIO=4&transport=polling&t=shiwblos&sid=22o7QIpV85nVg_b-AAAI HTTP/1.1" 200 -
+2025-04-26 13:38:05,408 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:08,409 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:08,919 - WebServer - INFO - 收到风扇控制请求: 开启
+2025-04-26 13:38:08,920 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:09,342 - WebServer - INFO - 收到风扇控制请求: 关闭
+2025-04-26 13:38:09,343 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:11,410 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:14,411 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:14,878 - WebServer - INFO - 客户端已断开连接
+2025-04-26 13:38:14,881 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:14] "GET /socket.io/?EIO=4&transport=websocket&sid=22o7QIpV85nVg_b-AAAI HTTP/1.1" 200 -
+2025-04-26 13:38:17,413 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:20,414 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:23,415 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:26,417 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:26,766 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:26] "GET / HTTP/1.1" 200 -
+2025-04-26 13:38:26,829 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-26 13:38:26,870 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-26 13:38:26,945 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:26] "GET /socket.io/?EIO=4&transport=polling&t=si10h8oi HTTP/1.1" 200 -
+2025-04-26 13:38:27,042 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:27] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-26 13:38:27,059 - WebServer - INFO - 客户端已连接
+2025-04-26 13:38:27,065 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:27,070 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:27] "POST /socket.io/?EIO=4&transport=polling&t=si13m4sr&sid=syM91rT8JasSwo8VAAAK HTTP/1.1" 200 -
+2025-04-26 13:38:27,071 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 13:38:27] "GET /socket.io/?EIO=4&transport=polling&t=si13m43i&sid=syM91rT8JasSwo8VAAAK HTTP/1.1" 200 -
+2025-04-26 13:38:29,424 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:32,426 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:35,431 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:38,432 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:41,438 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:44,439 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:47,441 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:50,442 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:53,444 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:56,455 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:38:59,462 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:02,468 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:05,469 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:08,475 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:11,487 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:14,489 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:17,490 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:20,497 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:23,508 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:26,510 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:29,511 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:32,512 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:35,513 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:38,514 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:41,517 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:44,519 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:47,521 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:50,527 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:53,529 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:56,531 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:39:59,532 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:02,534 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:05,539 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:08,554 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:11,555 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:14,558 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:17,559 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:20,561 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:23,567 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:26,573 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:29,575 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:32,577 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:35,579 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:38,580 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:41,581 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:44,583 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:47,584 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:50,585 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:53,593 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:56,610 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:40:59,622 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:02,623 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:05,625 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:08,626 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:11,627 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:14,629 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:17,630 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:20,632 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:23,633 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:26,635 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:29,637 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:32,638 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:35,639 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:38,646 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:41,657 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:44,658 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:47,660 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:50,661 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:53,662 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:56,663 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:41:59,665 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:02,667 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:05,668 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:08,669 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:11,671 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:14,676 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:17,677 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:20,678 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:23,685 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:26,696 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:29,698 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:32,699 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:35,707 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:38,713 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:41,714 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:44,716 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:47,717 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:50,723 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:53,735 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:56,736 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:42:59,737 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:02,739 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:05,740 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:08,742 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:11,749 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:14,751 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:17,753 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:20,759 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:23,771 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:26,772 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:29,773 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:32,775 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:35,777 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:38,778 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:41,779 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:44,786 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:47,797 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:50,798 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:53,801 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:56,807 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:43:59,819 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:44:02,821 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:44:05,822 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:44:08,829 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 13:44:09,382 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-26 13:44:09,383 - WebServer - INFO - 正在停止Web服务器...
+2025-04-26 13:44:11,385 - WebServer - INFO - Web服务器已停止
+2025-04-26 13:44:11,386 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-26 13:44:13,887 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-26 13:44:13,888 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-26 13:44:14,057 - SensorModule - WARNING - 读取DHT11数据失败: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2025-04-26 13:44:15,893 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-26 13:44:15,895 - Main - INFO - 系统已安全关闭
+2025-04-26 14:48:33,157 - Main - INFO - 智能温室监控系统启动中...
+2025-04-26 14:48:33,161 - Main - INFO - 初始化传感器模块...
+2025-04-26 14:48:33,162 - SensorModule - INFO - 初始化传感器模块...
+2025-04-26 14:48:33,168 - SensorModule - INFO - 数据库初始化成功
+2025-04-26 14:48:37,429 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-26 14:48:37,486 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-26 14:48:37,659 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-26 14:48:37,721 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-26 14:48:37,724 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-26 14:48:37,725 - Main - INFO - 初始化控制器模块...
+2025-04-26 14:48:37,726 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-26 14:48:37,728 - ControllerModule - INFO - 舵机初始化成功
+2025-04-26 14:48:37,731 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-26 14:48:37,733 - Main - INFO - 初始化Web服务器...
+2025-04-26 14:48:37,734 - WebServer - INFO - 初始化Web服务器...
+2025-04-26 14:48:38,279 - WebServer - INFO - Web服务器初始化完成
+2025-04-26 14:48:38,283 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 14:48:38,284 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-26 14:48:38,288 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-26 14:48:38,291 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-26 14:48:38,341 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.124:8000
+2025-04-26 14:48:38,342 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 14:48:41,286 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 14:48:41,994 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-26 14:48:41,995 - WebServer - INFO - 正在停止Web服务器...
+2025-04-26 14:48:43,996 - WebServer - INFO - Web服务器已停止
+2025-04-26 14:48:43,997 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-26 14:48:46,503 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-26 14:48:46,504 - SensorModule - WARNING - 读取DHT11数据失败: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2025-04-26 14:48:46,506 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-26 14:48:48,507 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-26 14:48:48,508 - Main - INFO - 系统已安全关闭
+2025-04-26 14:50:13,545 - Main - INFO - 智能温室监控系统启动中...
+2025-04-26 14:50:13,546 - Main - INFO - 初始化传感器模块...
+2025-04-26 14:50:13,547 - SensorModule - INFO - 初始化传感器模块...
+2025-04-26 14:50:13,551 - SensorModule - INFO - 数据库初始化成功
+2025-04-26 14:50:15,663 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-26 14:50:15,693 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-26 14:50:15,866 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-26 14:50:15,913 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-26 14:50:15,916 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-26 14:50:15,918 - Main - INFO - 初始化控制器模块...
+2025-04-26 14:50:15,919 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-26 14:50:15,922 - ControllerModule - INFO - 舵机初始化成功
+2025-04-26 14:50:15,925 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-26 14:50:15,926 - Main - INFO - 初始化Web服务器...
+2025-04-26 14:50:15,926 - WebServer - INFO - 初始化Web服务器...
+2025-04-26 14:50:16,271 - WebServer - INFO - Web服务器初始化完成
+2025-04-26 14:50:16,276 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 14:50:16,276 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-26 14:50:16,279 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-26 14:50:16,281 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-26 14:50:16,317 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.124:8000
+2025-04-26 14:50:16,318 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 14:50:19,283 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 14:50:19,924 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:19] "GET / HTTP/1.1" 200 -
+2025-04-26 14:50:20,119 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:20] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-04-26 14:50:20,125 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:20] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-04-26 14:50:21,055 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:21] "GET /socket.io/?EIO=4&transport=polling&t=v2hp7rn7 HTTP/1.1" 200 -
+2025-04-26 14:50:21,087 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:21] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-26 14:50:21,120 - WebServer - INFO - 客户端已连接
+2025-04-26 14:50:21,126 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:21] "GET /socket.io/?EIO=4&transport=polling&t=v2hqy160&sid=4Wff0lCQ5L-zqQjKAAAA HTTP/1.1" 200 -
+2025-04-26 14:50:21,127 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 14:50:21,131 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:21] "POST /socket.io/?EIO=4&transport=polling&t=v2hqx1rh&sid=4Wff0lCQ5L-zqQjKAAAA HTTP/1.1" 200 -
+2025-04-26 14:50:22,296 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 14:50:22,626 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-26 14:50:23,629 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:23] "GET / HTTP/1.1" 200 -
+2025-04-26 14:50:23,647 - WebServer - INFO - 客户端已断开连接
+2025-04-26 14:50:23,650 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:23] "GET /socket.io/?EIO=4&transport=websocket&sid=4Wff0lCQ5L-zqQjKAAAA HTTP/1.1" 200 -
+2025-04-26 14:50:23,679 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-26 14:50:23,706 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-26 14:50:23,735 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:23] "GET /socket.io/?EIO=4&transport=polling&t=v2jrvlbq HTTP/1.1" 200 -
+2025-04-26 14:50:23,750 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:23] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-26 14:50:23,775 - WebServer - INFO - 客户端已连接
+2025-04-26 14:50:23,783 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 14:50:23,790 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:23] "POST /socket.io/?EIO=4&transport=polling&t=v2jt16qm&sid=I1u49l2ZgpYvbUKEAAAC HTTP/1.1" 200 -
+2025-04-26 14:50:23,791 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:23] "GET /socket.io/?EIO=4&transport=polling&t=v2jt2ewu&sid=I1u49l2ZgpYvbUKEAAAC HTTP/1.1" 200 -
+2025-04-26 14:50:24,504 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:24] "GET / HTTP/1.1" 200 -
+2025-04-26 14:50:24,525 - WebServer - INFO - 客户端已断开连接
+2025-04-26 14:50:24,528 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:24] "GET /socket.io/?EIO=4&transport=websocket&sid=I1u49l2ZgpYvbUKEAAAC HTTP/1.1" 200 -
+2025-04-26 14:50:24,557 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-26 14:50:24,574 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-26 14:50:24,603 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:24] "GET /socket.io/?EIO=4&transport=polling&t=v2kg0kv4 HTTP/1.1" 200 -
+2025-04-26 14:50:24,618 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:24] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-26 14:50:24,652 - WebServer - INFO - 客户端已连接
+2025-04-26 14:50:24,655 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:24] "GET /socket.io/?EIO=4&transport=polling&t=v2kh52kh&sid=glh-BzLzQzCrB1WsAAAE HTTP/1.1" 200 -
+2025-04-26 14:50:24,657 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 14:50:24,663 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 14:50:24] "POST /socket.io/?EIO=4&transport=polling&t=v2kh55di&sid=glh-BzLzQzCrB1WsAAAE HTTP/1.1" 200 -
+2025-04-26 14:50:25,297 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 14:50:28,298 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 14:50:30,271 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-26 14:50:30,283 - WebServer - INFO - 正在停止Web服务器...
+2025-04-26 14:50:31,299 - WebServer - INFO - Web服务器已停止
+2025-04-26 14:50:31,301 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-26 14:50:33,802 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-26 14:50:33,803 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-26 14:50:35,792 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-26 14:50:35,793 - Main - INFO - 系统已安全关闭

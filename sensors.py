@@ -4,7 +4,7 @@
 
 import time
 import board
-import adafruit_dht
+# 移除 import adafruit_dht 和 Adafruit_DHT
 import busio
 import digitalio
 from adafruit_ssd1306 import SSD1306_I2C
@@ -64,14 +64,17 @@ class SensorModule:
         # 初始化数据库
         self._init_database()
         
-        # 初始化DHT11传感器
+        # 初始化DHT11传感器 - 使用直接GPIO方法
         try:
-            self.dht_device = adafruit_dht.DHT11(getattr(board, f"D{GPIO_CONFIG['DHT11_PIN']}"))
+            # 测试传感器是否可用
+            self.DHT_PIN = GPIO_CONFIG['DHT11_PIN']
+            humidity, temperature = self._read_dht11_direct()
+            if humidity is None and temperature is None:
+                logger.warning("DHT11传感器初始测试失败，但继续尝试")
             logger.info("DHT11传感器初始化成功")
         except Exception as e:
             logger.error(f"DHT11传感器初始化失败: {e}")
             self.sensor_status["dht11"] = False
-            self.dht_device = None
         
         # 初始化土壤湿度传感器数字输入
         GPIO.setup(GPIO_CONFIG["SOIL_MOISTURE_PIN"], GPIO.IN)
@@ -185,14 +188,115 @@ class SensorModule:
         except Exception as e:
             logger.error(f"保存数据到数据库失败: {e}")
     
+    def _read_dht11_once(self):
+        """单次读取DHT11数据"""
+        data = []
+        
+        # 发送启动信号
+        GPIO.setup(self.DHT_PIN, GPIO.OUT)
+        GPIO.output(self.DHT_PIN, GPIO.LOW)
+        time.sleep(0.025)  # 增加到25ms，确保传感器能检测到信号
+        GPIO.output(self.DHT_PIN, GPIO.HIGH)
+        
+        # 设为输入并等待DHT11响应
+        GPIO.setup(self.DHT_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+        
+        # 等待低电平响应，增加超时值
+        timeout = 0
+        while GPIO.input(self.DHT_PIN) == GPIO.HIGH:
+            timeout += 1
+            if timeout > 200000:  # 增加超时时间
+                return None
+        
+        # 等待高电平响应
+        timeout = 0
+        while GPIO.input(self.DHT_PIN) == GPIO.LOW:
+            timeout += 1
+            if timeout > 200000:
+                return None
+        
+        timeout = 0
+        while GPIO.input(self.DHT_PIN) == GPIO.HIGH:
+            timeout += 1
+            if timeout > 200000:
+                return None
+        
+        # 读取40位数据
+        for i in range(40):
+            timeout = 0
+            while GPIO.input(self.DHT_PIN) == GPIO.LOW:
+                timeout += 1
+                if timeout > 50000:  # 增加超时
+                    return None
+            
+            start = time.time()
+            
+            timeout = 0
+            while GPIO.input(self.DHT_PIN) == GPIO.HIGH:
+                timeout += 1
+                if timeout > 50000:  # 增加超时
+                    return None
+            
+            duration = time.time() - start
+            
+            # 判断数据位，调整阈值
+            if duration > 0.00004:  # 调整到40微秒
+                data.append(1)
+            else:
+                data.append(0)
+        
+        # 解析数据
+        humidity = 0
+        humidity_decimal = 0
+        temperature = 0
+        temperature_decimal = 0
+        checksum = 0
+        
+        for i in range(8):
+            humidity = (humidity << 1) | data[i]
+        
+        for i in range(8, 16):
+            humidity_decimal = (humidity_decimal << 1) | data[i]
+        
+        for i in range(16, 24):
+            temperature = (temperature << 1) | data[i]
+        
+        for i in range(24, 32):
+            temperature_decimal = (temperature_decimal << 1) | data[i]
+        
+        for i in range(32, 40):
+            checksum = (checksum << 1) | data[i]
+        
+        calculated_checksum = (humidity + humidity_decimal + temperature + temperature_decimal) & 0xFF
+        
+        if calculated_checksum == checksum:
+            return humidity, temperature
+        else:
+            return None
+    
+    def _read_dht11_direct(self, max_attempts=15):
+        """直接使用GPIO读取DHT11传感器数据，增加多次尝试的功能"""
+        for attempt in range(max_attempts):
+            result = self._read_dht11_once()
+            if result:
+                # 验证读取的数据是否合理
+                humidity, temperature = result
+                if 0 <= humidity <= 100 and 0 <= temperature <= 50:
+                    logger.debug(f"DHT11读取成功: 温度={temperature:.1f}°C 湿度={humidity:.1f}%")
+                    return humidity, temperature
+            # 读取失败，等待再试
+            time.sleep(0.5)
+        logger.warning("DHT11读取失败，无有效数据")
+        return None, None
+    
     def _read_dht11(self):
-        """读取DHT11温湿度传感器数据"""
-        if not self.sensor_status["dht11"] or self.dht_device is None:
+        """读取DHT11温湿度传感器数据 - 直接GPIO方法"""
+        if not self.sensor_status["dht11"]:
             return None, None
         
         try:
-            temperature = self.dht_device.temperature
-            humidity = self.dht_device.humidity
+            # 使用直接GPIO方法读取DHT11
+            humidity, temperature = self._read_dht11_direct()
             return temperature, humidity
         except Exception as e:
             logger.warning(f"读取DHT11数据失败: {e}")
@@ -387,9 +491,6 @@ class SensorModule:
         
         if self.collect_thread.is_alive():
             self.collect_thread.join(timeout=2.0)
-        
-        if self.dht_device:
-            self.dht_device.exit()
         
         if self.oled:
             try:
