@@ -2029,3 +2029,77 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd6 in position 161: invali
 2025-04-26 23:56:58,560 - picamera2.picamera2 - INFO - Camera closed successfully.
 2025-04-26 23:56:58,561 - CameraModule - INFO - 摄像头模块资源已清理
 2025-04-26 23:56:58,562 - Main - INFO - 系统已安全关闭
+2025-04-27 00:00:18,579 - Main - INFO - 智能温室监控系统启动中...
+2025-04-27 00:00:18,591 - Main - INFO - 初始化传感器模块...
+2025-04-27 00:00:18,592 - SensorModule - INFO - 初始化传感器模块...
+2025-04-27 00:00:18,607 - SensorModule - INFO - 数据库初始化成功
+2025-04-27 00:00:26,256 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-27 00:00:26,299 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-27 00:00:26,477 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-27 00:00:26,556 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-27 00:00:26,558 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-27 00:00:26,559 - Main - INFO - 初始化控制器模块...
+2025-04-27 00:00:26,560 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-27 00:00:26,562 - ControllerModule - INFO - 舵机初始化成功
+2025-04-27 00:00:26,565 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-27 00:00:26,566 - Main - INFO - 初始化摄像头模块...
+2025-04-27 00:00:26,567 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-27 00:00:26,755 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-27 00:00:26,761 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-27 00:00:26,833 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 00:00:27,004 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 00:00:27,209 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 00:00:27,381 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 00:00:27,565 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 46.34, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (86, 3066985, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 32.81, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (110, 3066979, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-27 00:00:27,578 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 00:00:27,613 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-27 00:00:27,742 - picamera2.picamera2 - INFO - Camera started
+2025-04-27 00:00:27,746 - CameraModule - INFO - 摄像头已启动
+2025-04-27 00:00:27,748 - Main - INFO - 初始化Web服务器...
+2025-04-27 00:00:27,749 - WebServer - INFO - 初始化Web服务器...
+2025-04-27 00:00:28,328 - WebServer - INFO - Web服务器初始化完成
+2025-04-27 00:00:28,337 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-27 00:00:28,338 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-27 00:00:28,340 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-27 00:00:28,346 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-27 00:00:28,549 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.124:8000
+2025-04-27 00:00:28,550 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 00:00:28,751 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 00:00:28] "GET / HTTP/1.1" 200 -
+2025-04-27 00:00:28,865 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 00:00:28] "GET /video_feed HTTP/1.1" 200 -
+2025-04-27 00:00:29,046 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 00:00:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-27 00:00:29,052 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 00:00:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-27 00:00:29,199 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 00:00:29] "GET /socket.io/?EIO=4&transport=polling&t=eq0fbbdi HTTP/1.1" 200 -
+2025-04-27 00:00:29,263 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 00:00:29] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-27 00:00:29,279 - WebServer - INFO - 客户端已连接
+2025-04-27 00:00:29,289 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-27 00:00:29,296 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 00:00:29] "POST /socket.io/?EIO=4&transport=polling&t=eq0h8q44&sid=SjGl3yrDqcHcR8yzAAAA HTTP/1.1" 200 -
+2025-04-27 00:00:29,300 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 00:00:29] "GET /socket.io/?EIO=4&transport=polling&t=eq0h9p4y&sid=SjGl3yrDqcHcR8yzAAAA HTTP/1.1" 200 -
+2025-04-27 00:00:31,340 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-27 00:00:34,344 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-27 00:00:35,517 - WebServer - INFO - 客户端已断开连接
+2025-04-27 00:00:35,533 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 00:00:35] "GET /socket.io/?EIO=4&transport=websocket&sid=SjGl3yrDqcHcR8yzAAAA HTTP/1.1" 200 -
+2025-04-27 00:00:37,357 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-27 00:00:38,787 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-27 00:00:38,802 - WebServer - INFO - 正在停止Web服务器...
+2025-04-27 00:00:40,358 - WebServer - INFO - Web服务器已停止
+2025-04-27 00:00:40,360 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-27 00:00:42,089 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-27 00:00:42,092 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-27 00:00:42,607 - SensorModule - WARNING - 读取DHT11数据失败: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2025-04-27 00:00:44,095 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-27 00:00:44,096 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-27 00:00:44,107 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-27 00:00:44,109 - WebServer - INFO - 正在停止Web服务器...
+2025-04-27 00:00:44,110 - WebServer - INFO - Web服务器已停止
+2025-04-27 00:00:44,111 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-27 00:00:44,613 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-27 00:00:44,614 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-27 00:00:44,615 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-27 00:00:44,615 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-27 00:00:44,633 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-27 00:00:45,047 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-27 00:00:45,048 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-27 00:00:45,049 - Main - INFO - 系统已安全关闭
