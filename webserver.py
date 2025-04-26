@@ -32,13 +32,14 @@ logger = logging.getLogger("WebServer")
 class WebServer:
     """Web服务器类"""
     
-    def __init__(self, sensor_module, controller_module):
+    def __init__(self, sensor_module, controller_module, camera_module=None):
         """初始化Web服务器"""
         logger.info("初始化Web服务器...")
         
         # 保存传感器和控制器模块引用
         self.sensor_module = sensor_module
         self.controller_module = controller_module
+        self.camera_module = camera_module
         
         # 创建Flask应用
         self.app = Flask(__name__)
@@ -77,7 +78,13 @@ class WebServer:
             finally:
                 s.close()
                 
-            return render_template('dashboard.html', server_ip=ip, server_port=SYSTEM_CONFIG["WEB_PORT"])
+            # 添加摄像头状态到模板变量
+            camera_enabled = SYSTEM_CONFIG["ENABLE_CAMERA"] and self.camera_module is not None
+                
+            return render_template('dashboard.html', 
+                                  server_ip=ip, 
+                                  server_port=SYSTEM_CONFIG["WEB_PORT"],
+                                  camera_enabled=camera_enabled)
         
         @self.app.route('/api/data/current')
         def current_data():
@@ -136,6 +143,35 @@ class WebServer:
         def serve_static(path):
             """提供静态文件"""
             return send_from_directory('static', path)
+            
+        # 添加视频流路由
+        @self.app.route('/video_feed')
+        def video_feed():
+            """提供视频流"""
+            if not SYSTEM_CONFIG["ENABLE_CAMERA"] or self.camera_module is None:
+                return "摄像头未启用", 404
+                
+            return Response(self._generate_video_frames(),
+                           mimetype='multipart/x-mixed-replace; boundary=frame')
+    
+    def _generate_video_frames(self):
+        """生成视频帧"""
+        if not self.camera_module:
+            return
+            
+        while self.running:
+            try:
+                # 获取当前帧
+                frame_data = self.camera_module.get_frame()
+                if frame_data:
+                    yield (b'--frame\r\n'
+                          b'Content-Type: image/jpeg\r\n\r\n' + frame_data + b'\r\n')
+                
+                # 控制帧率
+                time.sleep(1.0 / SYSTEM_CONFIG["CAMERA_FRAMERATE"])
+            except Exception as e:
+                logger.error(f"生成视频帧错误: {e}")
+                time.sleep(0.5)  # 出错后暂停一下
 
     def _setup_socketio(self):
         """设置Socket.IO事件处理"""

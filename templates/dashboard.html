@@ -22,6 +22,9 @@
                         <a class="nav-link active" href="#dashboard">仪表盘</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#camera">摄像头</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#control">控制面板</a>
                     </li>
                     <li class="nav-item">
@@ -139,6 +142,29 @@
                             <h5 class="card-title mt-3">最后更新</h5>
                             <h2 class="sensor-value" id="last-update">--</h2>
                             <p class="text-muted mb-0">时间</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 摄像头部分 -->
+        <section id="camera" class="mb-5">
+            <h2 class="border-bottom pb-2 mb-4">实时摄像头</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            <i class="bi bi-camera-video"></i> 温室实时画面
+                        </div>
+                        <div class="card-body text-center">
+                            {% if camera_enabled %}
+                            <img src="{{ url_for('video_feed') }}" class="img-fluid rounded" alt="实时摄像头画面">
+                            {% else %}
+                            <div class="alert alert-warning">
+                                <i class="bi bi-exclamation-triangle"></i> 摄像头未启用或初始化失败
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-
-
 import time
 import logging
 import signal
@@ -12,7 +10,6 @@ from pathlib import Path
 project_root = Path(os.path.dirname(os.path.realpath(__file__)))
 logs_dir = project_root / "logs"
 data_dir = project_root / "data"
-
 logs_dir.mkdir(exist_ok=True)
 data_dir.mkdir(exist_ok=True)
 
@@ -35,14 +32,16 @@ logger = logging.getLogger("Main")
 from sensors import SensorModule
 from controllers import ControllerModule
 from webserver import WebServer
+from camera import CameraModule  # 新增：导入摄像头模块
 
 # 全局变量
 sensor_module = None
 controller_module = None
+camera_module = None  # 新增：摄像头模块全局变量
 web_server = None
 
 def signal_handler(sig, frame):
- 
+    """信号处理器，处理系统退出"""
     logger.info("收到退出信号，正在关闭系统...")
     
     if web_server:
@@ -54,12 +53,16 @@ def signal_handler(sig, frame):
     if sensor_module:
         sensor_module.cleanup()
     
+    # 新增：清理摄像头模块资源
+    if camera_module:
+        camera_module.cleanup()
+    
     logger.info("系统已安全关闭")
     sys.exit(0)
 
 def main():
-   
-    global sensor_module, controller_module, web_server
+    """主函数"""
+    global sensor_module, controller_module, camera_module, web_server
     
     logger.info("智能温室监控系统启动中...")
     
@@ -72,9 +75,20 @@ def main():
         logger.info("初始化控制器模块...")
         controller_module = ControllerModule(sensor_module)
         
+        # 新增：初始化摄像头模块（仅当配置启用时）
+        camera_module = None
+        if SYSTEM_CONFIG.get("ENABLE_CAMERA", False):
+            logger.info("初始化摄像头模块...")
+            camera_module = CameraModule()
+            if camera_module.camera is None:
+                logger.warning("摄像头初始化失败，系统将继续但没有摄像头功能")
+                camera_module = None
+            else:
+                camera_module.start()
+        
         # 初始化Web服务器
         logger.info("初始化Web服务器...")
-        web_server = WebServer(sensor_module, controller_module)
+        web_server = WebServer(sensor_module, controller_module, camera_module)
         
         # 启动Web服务器
         web_server.start()
@@ -102,6 +116,10 @@ def main():
         
         if sensor_module:
             sensor_module.cleanup()
+        
+        # 新增：清理摄像头模块资源
+        if camera_module:
+            camera_module.cleanup()
         
         sys.exit(1)
 

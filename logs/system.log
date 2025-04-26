@@ -1378,3 +1378,654 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd6 in position 161: invali
 2025-04-26 14:50:33,803 - SensorModule - INFO - 正在清理传感器模块资源...
 2025-04-26 14:50:35,792 - SensorModule - INFO - 传感器模块资源已清理
 2025-04-26 14:50:35,793 - Main - INFO - 系统已安全关闭
+2025-04-26 22:08:58,348 - Main - INFO - 智能温室监控系统启动中...
+2025-04-26 22:08:58,352 - Main - INFO - 初始化传感器模块...
+2025-04-26 22:08:58,352 - SensorModule - INFO - 初始化传感器模块...
+2025-04-26 22:08:58,359 - SensorModule - INFO - 数据库初始化成功
+2025-04-26 22:08:59,796 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-26 22:08:59,853 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-26 22:09:00,027 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-26 22:09:00,088 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-26 22:09:00,091 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-26 22:09:00,093 - Main - INFO - 初始化控制器模块...
+2025-04-26 22:09:00,094 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-26 22:09:00,097 - ControllerModule - INFO - 舵机初始化成功
+2025-04-26 22:09:00,099 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-26 22:09:00,100 - Main - INFO - 初始化Web服务器...
+2025-04-26 22:09:00,101 - WebServer - INFO - 初始化Web服务器...
+2025-04-26 22:09:00,517 - WebServer - INFO - Web服务器初始化完成
+2025-04-26 22:09:00,522 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:00,523 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-26 22:09:00,525 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-26 22:09:00,527 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-26 22:09:00,581 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.124:8000
+2025-04-26 22:09:00,582 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 22:09:03,529 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:05,060 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 22:09:05] "GET / HTTP/1.1" 200 -
+2025-04-26 22:09:05,240 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 22:09:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-26 22:09:05,244 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 22:09:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-26 22:09:05,349 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 22:09:05] "GET /socket.io/?EIO=4&transport=polling&t=aqq3ierg HTTP/1.1" 200 -
+2025-04-26 22:09:05,413 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 22:09:05] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-26 22:09:05,425 - WebServer - INFO - 客户端已连接
+2025-04-26 22:09:05,432 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:05,441 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 22:09:05] "POST /socket.io/?EIO=4&transport=polling&t=aqq5h9ar&sid=M0kplDDv5r8TMbcuAAAA HTTP/1.1" 200 -
+2025-04-26 22:09:05,445 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 22:09:05] "GET /socket.io/?EIO=4&transport=polling&t=aqq5iajt&sid=M0kplDDv5r8TMbcuAAAA HTTP/1.1" 200 -
+2025-04-26 22:09:05,457 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 22:09:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-26 22:09:06,536 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:09,054 - WebServer - INFO - 收到风扇控制请求: 开启
+2025-04-26 22:09:09,056 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:09,290 - WebServer - INFO - 收到风扇控制请求: 关闭
+2025-04-26 22:09:09,291 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:09,537 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:09,923 - WebServer - INFO - 收到水泵控制请求: 开启
+2025-04-26 22:09:09,925 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:10,068 - WebServer - INFO - 收到水泵控制请求: 关闭
+2025-04-26 22:09:10,071 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:10,842 - WebServer - INFO - 收到灯光控制请求: 开启
+2025-04-26 22:09:10,843 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:11,068 - WebServer - INFO - 收到灯光控制请求: 关闭
+2025-04-26 22:09:11,070 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:12,538 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:15,539 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:18,541 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:21,542 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:24,543 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:27,549 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:30,561 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:33,562 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:36,563 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:39,565 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:42,566 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:45,567 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:48,569 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:51,570 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:54,571 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:09:57,573 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:10:00,579 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:10:03,586 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:10:06,588 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:10:09,590 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:10:12,591 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:10:15,592 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:10:18,594 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:10:21,596 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:10:24,600 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:10:27,602 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 22:10:28,612 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-26 22:10:28,613 - WebServer - INFO - 正在停止Web服务器...
+2025-04-26 22:10:28,834 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-26 22:10:28,835 - WebServer - INFO - 正在停止Web服务器...
+2025-04-26 22:10:30,603 - WebServer - INFO - Web服务器已停止
+2025-04-26 22:10:30,604 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-26 22:10:33,106 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-26 22:10:33,107 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-26 22:10:33,454 - SensorModule - WARNING - 读取DHT11数据失败: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2025-04-26 22:10:35,108 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-26 22:10:35,109 - Main - INFO - 系统已安全关闭
+2025-04-26 23:09:47,962 - Main - INFO - 智能温室监控系统启动中...
+2025-04-26 23:09:47,973 - Main - INFO - 初始化传感器模块...
+2025-04-26 23:09:47,974 - SensorModule - INFO - 初始化传感器模块...
+2025-04-26 23:09:47,980 - SensorModule - INFO - 数据库初始化成功
+2025-04-26 23:09:50,735 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-26 23:09:50,774 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-26 23:09:50,948 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-26 23:09:51,017 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-26 23:09:51,020 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-26 23:09:51,021 - Main - INFO - 初始化控制器模块...
+2025-04-26 23:09:51,022 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-26 23:09:51,024 - ControllerModule - INFO - 舵机初始化成功
+2025-04-26 23:09:51,026 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-26 23:09:51,027 - Main - INFO - 初始化摄像头模块...
+2025-04-26 23:09:51,028 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-26 23:09:51,131 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-26 23:09:51,164 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:51,171 - CameraModule - INFO - 摄像头已启动
+2025-04-26 23:09:51,192 - Main - INFO - 初始化Web服务器...
+2025-04-26 23:09:51,204 - WebServer - INFO - 初始化Web服务器...
+2025-04-26 23:09:51,277 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:51,387 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:51,489 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:51,734 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:51,830 - WebServer - INFO - Web服务器初始化完成
+2025-04-26 23:09:51,835 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:09:51,836 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-26 23:09:51,838 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-26 23:09:51,839 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-26 23:09:51,847 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:51,886 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.124:8000
+2025-04-26 23:09:51,887 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 23:09:51,950 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:52,051 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:52,153 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:52,254 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:52,355 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:52,456 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:52,557 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:52,659 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:52,761 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:52,863 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:52,965 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:53,066 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:53,168 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:53,269 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:53,370 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:53,471 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:53,572 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:53,673 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:53,775 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:53,876 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:53,977 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:54,078 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:54,179 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:54,281 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:54,382 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:54,484 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:54,585 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:54,691 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:54,711 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 23:09:54] "GET / HTTP/1.1" 200 -
+2025-04-26 23:09:54,785 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 23:09:54] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-04-26 23:09:54,815 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:54,838 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:09:54,842 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 23:09:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-26 23:09:54,918 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:55,020 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:55,122 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:55,223 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:55,325 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:55,426 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:55,528 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:55,629 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:55,731 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:55,842 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:55,964 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:56,086 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:56,207 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:56,330 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:56,442 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:56,543 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:56,644 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:56,745 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:56,847 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:56,948 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:57,049 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:57,150 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:57,251 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:57,352 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:57,454 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:57,555 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:57,656 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:57,757 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:57,844 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:09:57,858 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:57,960 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:58,061 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:58,162 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:58,263 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:58,364 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:58,466 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:58,567 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:58,668 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:58,769 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:58,870 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:58,982 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:59,093 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:59,194 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:59,295 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:59,396 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:59,498 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:59,599 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:59,704 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:59,805 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:09:59,906 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:00,007 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:00,109 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:00,210 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:00,311 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:00,412 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:00,513 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:00,614 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:00,716 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:00,817 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:00,845 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:10:00,918 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:01,019 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:01,121 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:01,222 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:01,323 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:01,424 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:01,525 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:01,627 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:01,738 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:01,850 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:01,951 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:02,052 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:02,153 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:02,255 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:02,368 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:02,479 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:02,580 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:02,682 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:02,783 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:02,884 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:02,995 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:03,107 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:03,208 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:03,310 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:03,411 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:03,512 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:03,613 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:03,714 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:03,815 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:03,846 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:10:03,916 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:04,018 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:04,119 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:04,220 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:04,322 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:04,423 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:04,524 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:04,625 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:04,726 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:04,827 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:04,928 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:05,030 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:05,131 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:05,233 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:05,334 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:05,435 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:05,536 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:05,637 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:05,749 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:05,871 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:05,993 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:06,114 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:06,227 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:06,328 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:06,430 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:06,532 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:06,634 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:06,735 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:06,848 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:06,849 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:10:06,971 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:07,094 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:07,211 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:07,324 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:07,426 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:07,527 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:07,628 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:07,730 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:07,841 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:07,964 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:08,087 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:08,209 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:08,332 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:08,444 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:08,546 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:08,647 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:08,749 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:08,850 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:08,951 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:09,052 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:09,153 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:09,254 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:09,356 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:09,457 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:09,558 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:09,659 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:09,760 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:09,861 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:09,872 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:10:09,963 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:10,064 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:10,165 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:10,266 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:10,368 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:10,469 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:10,570 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:10,672 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:10,773 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:10,874 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:10,975 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:11,077 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:11,178 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:11,279 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:11,380 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:11,482 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:11,583 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:11,684 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:11,785 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:11,886 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:11,988 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:12,089 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:12,190 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:12,291 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:12,392 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:12,493 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:12,595 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:12,696 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:12,797 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:12,873 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:10:12,898 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:12,999 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:13,100 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:13,201 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:13,302 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:13,404 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:13,515 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:13,627 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:13,728 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:13,829 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:13,930 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:14,031 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:14,132 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:14,244 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:14,355 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:14,456 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:14,557 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:14,659 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:14,760 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:14,861 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:14,962 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:15,064 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:15,165 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:15,266 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:15,367 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:15,468 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:15,570 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:15,672 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:15,773 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:15,874 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:15,875 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:10:15,977 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:16,078 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:16,180 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:16,281 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:16,383 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:16,484 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:16,586 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:16,688 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:16,789 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:16,890 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:16,991 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:17,093 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:17,194 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:17,295 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:17,396 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:17,497 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:17,598 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:17,699 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:17,801 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:17,902 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:18,003 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:18,104 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:18,205 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:18,306 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:18,408 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:18,509 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:18,610 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:18,711 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:18,812 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:18,882 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:10:18,924 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:19,046 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:19,118 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-26 23:10:19,129 - WebServer - INFO - 正在停止Web服务器...
+2025-04-26 23:10:19,168 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 23:10:19] "GET /video_feed HTTP/1.1" 200 -
+2025-04-26 23:10:19,168 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:19,307 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:19,419 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:19,520 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:19,621 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:19,723 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:19,825 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:19,927 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:20,029 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:20,131 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:20,232 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:20,334 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:20,436 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:20,537 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:20,639 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:20,740 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:20,842 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:20,944 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:21,046 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:21,140 - WebServer - INFO - Web服务器已停止
+2025-04-26 23:10:21,142 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-26 23:10:21,148 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:21,249 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:21,310 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-26 23:10:21,311 - WebServer - INFO - 正在停止Web服务器...
+2025-04-26 23:10:21,351 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:21,452 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:21,553 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:21,655 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:21,756 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:21,802 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-26 23:10:21,804 - WebServer - INFO - 正在停止Web服务器...
+2025-04-26 23:10:21,857 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:21,862 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-26 23:10:21,863 - WebServer - INFO - 正在停止Web服务器...
+2025-04-26 23:10:21,890 - WebServer - INFO - Web服务器已停止
+2025-04-26 23:10:21,891 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-26 23:10:21,893 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-26 23:10:21,894 - WebServer - INFO - 正在停止Web服务器...
+2025-04-26 23:10:21,895 - WebServer - INFO - Web服务器已停止
+2025-04-26 23:10:21,895 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-26 23:10:21,958 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:22,060 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:22,161 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:22,262 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:22,363 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:22,464 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:22,565 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:22,666 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-26 23:10:22,666 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:22,667 - WebServer - INFO - 正在停止Web服务器...
+2025-04-26 23:10:22,668 - WebServer - INFO - Web服务器已停止
+2025-04-26 23:10:22,669 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-26 23:10:22,768 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:22,869 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:22,971 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:23,072 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:23,173 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:23,274 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:23,375 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:23,477 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:23,578 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:23,679 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:23,780 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:23,881 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:23,982 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:24,084 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:24,186 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:24,287 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:24,389 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:24,490 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:24,591 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:24,692 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:24,793 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:24,894 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:24,996 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:25,097 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:25,171 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-26 23:10:25,171 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-26 23:10:25,199 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:25,301 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:25,402 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:25,503 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:25,605 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:25,706 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:25,807 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:25,908 - CameraModule - WARNING - 无法读取摄像头帧
+2025-04-26 23:10:26,003 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-26 23:10:26,005 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-26 23:10:26,011 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-26 23:10:26,013 - Main - INFO - 系统已安全关闭
+2025-04-26 23:52:22,976 - Main - INFO - 智能温室监控系统启动中...
+2025-04-26 23:52:22,981 - Main - INFO - 初始化传感器模块...
+2025-04-26 23:52:22,982 - SensorModule - INFO - 初始化传感器模块...
+2025-04-26 23:52:22,988 - SensorModule - INFO - 数据库初始化成功
+2025-04-26 23:52:25,077 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-26 23:52:25,096 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-26 23:52:25,269 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-26 23:52:25,339 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-26 23:52:25,342 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-26 23:52:25,343 - Main - INFO - 初始化控制器模块...
+2025-04-26 23:52:25,344 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-26 23:52:25,346 - ControllerModule - INFO - 舵机初始化成功
+2025-04-26 23:52:25,348 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-26 23:52:25,350 - Main - INFO - 初始化摄像头模块...
+2025-04-26 23:52:25,350 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-26 23:52:25,567 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-26 23:52:25,579 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-26 23:52:25,649 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-26 23:52:25,773 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-26 23:52:25,914 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-26 23:52:26,068 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-26 23:52:26,249 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 46.34, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (86, 3066985, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 32.81, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (110, 3066979, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-26 23:52:26,265 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-26 23:52:26,297 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-26 23:52:26,426 - picamera2.picamera2 - INFO - Camera started
+2025-04-26 23:52:26,429 - CameraModule - INFO - 摄像头已启动
+2025-04-26 23:52:26,430 - Main - INFO - 初始化Web服务器...
+2025-04-26 23:52:26,431 - WebServer - INFO - 初始化Web服务器...
+2025-04-26 23:52:27,142 - WebServer - INFO - Web服务器初始化完成
+2025-04-26 23:52:27,164 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:52:27,174 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-26 23:52:27,212 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-26 23:52:27,230 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-26 23:52:27,585 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.124:8000
+2025-04-26 23:52:27,596 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 23:52:30,202 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:52:30,510 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 23:52:30] "GET / HTTP/1.1" 200 -
+2025-04-26 23:52:30,592 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 23:52:30] "GET /video_feed HTTP/1.1" 200 -
+2025-04-26 23:52:30,751 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 23:52:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-26 23:52:30,761 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 23:52:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-26 23:52:30,825 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 23:52:30] "GET /socket.io/?EIO=4&transport=polling&t=efrb7wzf HTTP/1.1" 200 -
+2025-04-26 23:52:30,836 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 23:52:30] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-26 23:52:30,880 - WebServer - INFO - 客户端已连接
+2025-04-26 23:52:30,889 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:52:30,901 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 23:52:30] "POST /socket.io/?EIO=4&transport=polling&t=efrcxnk2&sid=paLqM3E-UCVukJfkAAAA HTTP/1.1" 200 -
+2025-04-26 23:52:30,904 - werkzeug - INFO - 192.168.5.248 - - [26/Apr/2025 23:52:30] "GET /socket.io/?EIO=4&transport=polling&t=efrcyctu&sid=paLqM3E-UCVukJfkAAAA HTTP/1.1" 200 -
+2025-04-26 23:52:33,208 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:52:36,210 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:52:39,212 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:52:42,213 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:52:45,225 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:52:48,240 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:52:51,243 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:52:54,244 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:52:57,246 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:00,247 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:03,267 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:06,282 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:09,289 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:12,292 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:15,293 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:18,300 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:21,346 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:24,347 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:27,349 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:30,352 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:33,354 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:36,361 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:39,374 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:42,387 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:45,402 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:48,408 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:51,417 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:54,419 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:53:57,421 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:00,000 - werkzeug - INFO - 192.168.5.99 - - [26/Apr/2025 23:54:00] "GET / HTTP/1.1" 200 -
+2025-04-26 23:54:00,054 - werkzeug - INFO - 192.168.5.99 - - [26/Apr/2025 23:54:00] "GET /video_feed HTTP/1.1" 200 -
+2025-04-26 23:54:00,055 - werkzeug - INFO - 192.168.5.99 - - [26/Apr/2025 23:54:00] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-04-26 23:54:00,070 - werkzeug - INFO - 192.168.5.99 - - [26/Apr/2025 23:54:00] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-04-26 23:54:00,181 - werkzeug - INFO - 192.168.5.99 - - [26/Apr/2025 23:54:00] "GET /socket.io/?EIO=4&transport=polling&t=ehnxn4di HTTP/1.1" 200 -
+2025-04-26 23:54:00,258 - werkzeug - INFO - 192.168.5.99 - - [26/Apr/2025 23:54:00] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-26 23:54:00,348 - WebServer - INFO - 客户端已连接
+2025-04-26 23:54:00,379 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:00,381 - werkzeug - INFO - 192.168.5.99 - - [26/Apr/2025 23:54:00] "POST /socket.io/?EIO=4&transport=polling&t=eho09r3m&sid=sJQ8teMulMf5Mnc1AAAC HTTP/1.1" 200 -
+2025-04-26 23:54:00,393 - werkzeug - INFO - 192.168.5.99 - - [26/Apr/2025 23:54:00] "GET /socket.io/?EIO=4&transport=polling&t=eho0ao8y&sid=sJQ8teMulMf5Mnc1AAAC HTTP/1.1" 200 -
+2025-04-26 23:54:00,408 - werkzeug - INFO - 192.168.5.99 - - [26/Apr/2025 23:54:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-26 23:54:00,434 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:03,443 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:06,444 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:09,446 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:12,482 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:15,488 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:18,492 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:21,497 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:24,498 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:27,500 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:30,502 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:33,524 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:36,527 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:39,534 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:42,535 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:45,551 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:48,564 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:51,566 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:54,567 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:54:57,574 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:00,586 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:03,588 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:06,590 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:09,593 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:12,611 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:15,617 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:18,628 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:21,658 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:24,672 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:27,686 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:30,693 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:33,709 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:36,710 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:39,712 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:42,715 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:45,727 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:48,740 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:51,757 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:54,759 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:55:57,765 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:00,777 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:03,778 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:06,791 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:09,793 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:12,800 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:15,818 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:18,823 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:21,824 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:24,826 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:27,833 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:30,835 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:33,852 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:36,853 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:39,887 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:42,890 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:45,893 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:48,908 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:51,915 - WebServer - ERROR - 推送数据时发生错误: 'devices'
+2025-04-26 23:56:54,378 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-26 23:56:54,391 - WebServer - INFO - 正在停止Web服务器...
+2025-04-26 23:56:54,929 - WebServer - INFO - Web服务器已停止
+2025-04-26 23:56:54,930 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-26 23:56:56,093 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-26 23:56:56,095 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-26 23:56:56,283 - SensorModule - WARNING - 读取DHT11数据失败: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2025-04-26 23:56:58,096 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-26 23:56:58,097 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-26 23:56:58,149 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-26 23:56:58,560 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-26 23:56:58,561 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-26 23:56:58,562 - Main - INFO - 系统已安全关闭
