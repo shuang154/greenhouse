@@ -3292,3 +3292,166 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd6 in position 161: invali
 2025-04-27 15:23:01,077 - picamera2.picamera2 - INFO - Camera closed successfully.
 2025-04-27 15:23:01,078 - CameraModule - INFO - 摄像头模块资源已清理
 2025-04-27 15:23:01,079 - Main - INFO - 系统已安全关闭
+2025-04-27 18:25:56,940 - Main - INFO - 智能温室监控系统启动中...
+2025-04-27 18:25:56,945 - Main - INFO - 初始化传感器模块...
+2025-04-27 18:25:56,946 - SensorModule - INFO - 初始化传感器模块...
+2025-04-27 18:25:56,952 - SensorModule - INFO - 数据库初始化成功
+2025-04-27 18:25:59,783 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-27 18:25:59,802 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-27 18:26:00,608 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-27 18:26:00,768 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-27 18:26:00,771 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-27 18:26:00,772 - Main - INFO - 初始化控制器模块...
+2025-04-27 18:26:00,773 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-27 18:26:00,776 - ControllerModule - INFO - 舵机初始化成功
+2025-04-27 18:26:00,778 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-27 18:26:00,779 - Main - INFO - 初始化摄像头模块...
+2025-04-27 18:26:00,780 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-27 18:26:00,939 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-27 18:26:00,956 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-27 18:26:01,025 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 18:26:01,182 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 18:26:01,334 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 18:26:01,505 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 18:26:01,643 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 46.34, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (86, 3066985, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 32.81, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (110, 3066979, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-27 18:26:01,655 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 18:26:01,674 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-27 18:26:01,815 - picamera2.picamera2 - INFO - Camera started
+2025-04-27 18:26:02,830 - CameraModule - INFO - 摄像头已启动
+2025-04-27 18:26:02,842 - Main - INFO - 初始化Web服务器...
+2025-04-27 18:26:02,854 - WebServer - INFO - 初始化Web服务器...
+2025-04-27 18:26:03,734 - WebServer - INFO - Web服务器初始化完成
+2025-04-27 18:26:03,777 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:03,783 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-27 18:26:03,796 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-27 18:26:03,802 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-27 18:26:04,299 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.124:8000
+2025-04-27 18:26:04,301 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 18:26:04,429 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 18:26:04] "GET /socket.io/?EIO=4&transport=polling&t=i7sqg229 HTTP/1.1" 200 -
+2025-04-27 18:26:04,475 - WebServer - INFO - 客户端已连接
+2025-04-27 18:26:04,486 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:04,493 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 18:26:04] "POST /socket.io/?EIO=4&transport=polling&t=i7srv24o&sid=U_OhH4lXryL8i71lAAAA HTTP/1.1" 200 -
+2025-04-27 18:26:04,495 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 18:26:04] "GET /socket.io/?EIO=4&transport=polling&t=i7srw6vo&sid=U_OhH4lXryL8i71lAAAA HTTP/1.1" 200 -
+2025-04-27 18:26:06,808 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:09,934 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:12,940 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:15,952 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:18,963 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:21,995 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:24,389 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 18:26:24] "GET / HTTP/1.1" 200 -
+2025-04-27 18:26:24,416 - WebServer - INFO - 客户端已断开连接
+2025-04-27 18:26:24,421 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 18:26:24] "GET /socket.io/?EIO=4&transport=websocket&sid=U_OhH4lXryL8i71lAAAA HTTP/1.1" 200 -
+2025-04-27 18:26:24,460 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 18:26:24] "GET /video_feed HTTP/1.1" 200 -
+2025-04-27 18:26:24,585 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 18:26:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-27 18:26:24,590 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 18:26:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-27 18:26:24,659 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 18:26:24] "GET /socket.io/?EIO=4&transport=polling&t=i88ckodv HTTP/1.1" 200 -
+2025-04-27 18:26:24,679 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 18:26:24] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-27 18:26:24,732 - WebServer - INFO - 客户端已连接
+2025-04-27 18:26:24,741 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:24,750 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 18:26:24] "GET /socket.io/?EIO=4&transport=polling&t=i88dr5iy&sid=uvWRhM6x6GNKg6ncAAAC HTTP/1.1" 200 -
+2025-04-27 18:26:24,758 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 18:26:24] "POST /socket.io/?EIO=4&transport=polling&t=i88dq77l&sid=uvWRhM6x6GNKg6ncAAAC HTTP/1.1" 200 -
+2025-04-27 18:26:25,005 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:28,007 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:31,034 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:34,043 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:37,045 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:40,052 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:43,054 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:46,070 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:49,083 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:52,084 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:55,085 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:26:58,087 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:01,089 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:04,106 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:07,112 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:10,136 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:13,154 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:16,171 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:19,190 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:22,210 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:25,212 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:28,214 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:31,218 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:34,249 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:37,260 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:40,268 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 18:27:42,303 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-27 18:27:42,304 - WebServer - INFO - 正在停止Web服务器...
+2025-04-27 18:27:43,281 - WebServer - INFO - Web服务器已停止
+2025-04-27 18:27:43,282 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-27 18:27:45,784 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-27 18:27:45,785 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-27 18:27:47,768 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-27 18:27:47,769 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-27 18:27:47,824 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-27 18:27:48,234 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-27 18:27:48,235 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-27 18:27:48,236 - Main - INFO - 系统已安全关闭
+2025-04-27 19:32:38,449 - Main - INFO - 智能温室监控系统启动中...
+2025-04-27 19:32:38,450 - Main - INFO - 初始化传感器模块...
+2025-04-27 19:32:38,451 - SensorModule - INFO - 初始化传感器模块...
+2025-04-27 19:32:38,455 - SensorModule - INFO - 数据库初始化成功
+2025-04-27 19:32:38,485 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-27 19:32:38,497 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-27 19:32:39,089 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-27 19:32:39,138 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-27 19:32:39,141 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-27 19:32:39,142 - Main - INFO - 初始化控制器模块...
+2025-04-27 19:32:39,143 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-27 19:32:39,145 - ControllerModule - INFO - 舵机初始化成功
+2025-04-27 19:32:39,148 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-27 19:32:39,149 - Main - INFO - 初始化摄像头模块...
+2025-04-27 19:32:39,149 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-27 19:32:39,310 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-27 19:32:39,317 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-27 19:32:39,382 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 19:32:39,523 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 19:32:39,678 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 19:32:39,839 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 19:32:39,987 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 46.34, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (86, 3066985, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 32.81, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (110, 3066979, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-27 19:32:39,999 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 19:32:40,018 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-27 19:32:40,155 - picamera2.picamera2 - INFO - Camera started
+2025-04-27 19:32:41,157 - CameraModule - INFO - 摄像头已启动
+2025-04-27 19:32:41,158 - Main - INFO - 初始化Web服务器...
+2025-04-27 19:32:41,159 - WebServer - INFO - 初始化Web服务器...
+2025-04-27 19:32:41,619 - WebServer - INFO - Web服务器初始化完成
+2025-04-27 19:32:41,628 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-27 19:32:41,630 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-27 19:32:41,632 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-27 19:32:41,712 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.124:8000
+2025-04-27 19:32:41,720 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 19:32:50,426 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 19:32:50] "GET /socket.io/?EIO=4&transport=polling&t=klnphtek HTTP/1.1" 200 -
+2025-04-27 19:32:50,484 - WebServer - INFO - 客户端已连接
+2025-04-27 19:32:50,490 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 19:32:50] "POST /socket.io/?EIO=4&transport=polling&t=klnqvtno&sid=kV5pITSrtmPeCop1AAAA HTTP/1.1" 200 -
+2025-04-27 19:32:50,495 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 19:32:50] "GET /socket.io/?EIO=4&transport=polling&t=klnqw0kp&sid=kV5pITSrtmPeCop1AAAA HTTP/1.1" 200 -
+2025-04-27 19:32:53,276 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 19:32:53] "GET / HTTP/1.1" 200 -
+2025-04-27 19:32:53,320 - WebServer - INFO - 客户端已断开连接
+2025-04-27 19:32:53,322 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 19:32:53] "GET /socket.io/?EIO=4&transport=websocket&sid=kV5pITSrtmPeCop1AAAA HTTP/1.1" 200 -
+2025-04-27 19:32:53,370 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 19:32:53] "GET /video_feed HTTP/1.1" 200 -
+2025-04-27 19:32:53,460 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 19:32:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-27 19:32:53,472 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 19:32:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-27 19:32:53,546 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 19:32:53] "GET /socket.io/?EIO=4&transport=polling&t=klq44q9n HTTP/1.1" 200 -
+2025-04-27 19:32:53,556 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 19:32:53] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-27 19:32:53,601 - WebServer - INFO - 客户端已连接
+2025-04-27 19:32:53,607 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 19:32:53] "POST /socket.io/?EIO=4&transport=polling&t=klq5y3vw&sid=FY6aKKEZj7Ambt32AAAC HTTP/1.1" 200 -
+2025-04-27 19:32:53,625 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 19:32:53] "GET /socket.io/?EIO=4&transport=polling&t=klq5y16i&sid=FY6aKKEZj7Ambt32AAAC HTTP/1.1" 200 -
+2025-04-27 19:36:16,054 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-27 19:36:16,056 - WebServer - INFO - 正在停止Web服务器...
+2025-04-27 19:36:17,903 - WebServer - INFO - Web服务器已停止
+2025-04-27 19:36:17,908 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-27 19:36:19,736 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-27 19:36:19,737 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-27 19:36:20,654 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-27 19:36:20,656 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-27 19:36:20,709 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-27 19:36:21,118 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-27 19:36:21,120 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-27 19:36:21,121 - Main - INFO - 系统已安全关闭

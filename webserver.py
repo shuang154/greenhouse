@@ -15,7 +15,7 @@ import socket
 from flask_socketio import SocketIO
 
 # 导入配置文件 - 修复导入错误
-from config import SYSTEM_CONFIG
+from config import SYSTEM_CONFIG, THRESHOLD_CONFIG
 
 # 配置日志
 logging.basicConfig(
@@ -43,6 +43,9 @@ class WebServer:
         
         # 创建Flask应用
         self.app = Flask(__name__)
+        
+        #尝试解决乱码
+        self.app.config['JSON_AS_ASCII'] = False
         
         # 添加SocketIO支持 - 注意位置在创建Flask应用之后
         self.socketio = SocketIO(self.app)
@@ -251,11 +254,17 @@ class WebServer:
         # 格式化为前端期望的格式
         data = {
             "sensors": sensor_data,
-            "devices": controller_status["devices"],
-            "auto_mode": controller_status.get("auto_mode", True),
+            "devices": {
+                # 映射控制器状态到前端期望的格式
+                "fan": controller_status["fan_status"],
+                "pump": False,  # 目前没有水泵控制，设为默认值
+                "light": False, # 目前没有灯光控制，设为默认值
+                "stepper": controller_status["servo_angle"] / 180 * 100  # 将舵机角度转换为百分比
+            },
+            "auto_mode": controller_status["auto_mode"],
             "system_time": datetime.now().isoformat(),
             "thresholds": {
-                # 从配置文件获取阈值
+                # 使用配置文件中的阈值
                 "temp_min": THRESHOLD_CONFIG["TEMP_MIN"],
                 "temp_max": THRESHOLD_CONFIG["TEMP_MAX"],
                 "humidity_min": THRESHOLD_CONFIG["HUMIDITY_MIN"],
