@@ -32,7 +32,7 @@ logger = logging.getLogger("Main")
 from sensors import SensorModule
 from controllers import ControllerModule
 from webserver import WebServer
-from camera import CameraModule  # 新增：导入摄像头模块
+from camera import CameraModule 
 
 # 全局变量
 sensor_module = None

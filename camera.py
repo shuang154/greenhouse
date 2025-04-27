@@ -9,6 +9,8 @@ import time
 from picamera2 import Picamera2
 from picamera2.encoders import JpegEncoder
 from picamera2.outputs import FileOutput
+from PIL import Image
+import numpy as np
 
 # 导入配置文件
 from config import SYSTEM_CONFIG
@@ -47,12 +49,10 @@ class CameraModule:
             camera_configs = self.camera.sensor_modes
             logger.info(f"摄像头支持的模式: {camera_configs}")
             
-            # 配置摄像头 - 使用更简单的配置
+            # 配置摄像头 - 使用测试脚本中可行的配置
             width, height = SYSTEM_CONFIG["CAMERA_RESOLUTION"]
-            self.camera.configure(self.camera.create_preview_configuration(
-                main={"size": (width, height), "format": "RGB888"},
-                lores={"size": (width // 2, height // 2), "format": "YUV420"},
-                display="lores"
+            self.camera.configure(self.camera.create_still_configuration(
+                main={"size": (width, height), "format": "RGB888"}
             ))
             
             logger.info("摄像头模块初始化成功")
@@ -80,6 +80,9 @@ class CameraModule:
             self.camera.start()
             self.running = True
             
+            # 等待1秒让摄像头稳定
+            time.sleep(1)
+            
             # 启动视频流线程
             self.stream_thread = threading.Thread(target=self._stream_loop)
             self.stream_thread.daemon = True
@@ -99,9 +102,17 @@ class CameraModule:
                 # 捕获一帧
                 frame = self.camera.capture_array()
                 
-                # 将RGB帧转换为JPEG
-                from PIL import Image
-                image = Image.fromarray(frame)
+                # 执行RGB通道交换 - 解决色彩问题
+                # 创建新数组以避免修改原始数据
+                corrected_frame = np.zeros_like(frame)
+                
+                # 通道交换：BGR -> RGB
+                corrected_frame[:,:,0] = frame[:,:,2]  # 蓝色 -> 红色
+                corrected_frame[:,:,1] = frame[:,:,1]  # 绿色保持不变
+                corrected_frame[:,:,2] = frame[:,:,0]  # 红色 -> 蓝色
+                
+                # 创建图像对象
+                image = Image.fromarray(corrected_frame)
                 
                 # 安全地更新帧缓冲区
                 with self.frame_lock:

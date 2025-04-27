@@ -234,36 +234,46 @@ class WebServer:
             self._push_sensor_data()
 
     def _push_sensor_data(self):
-        """推送传感器数据和系统状态到客户端"""
-        try:
-            sensor_data = self.sensor_module.get_latest_readings()
-            controller_status = self.controller_module.get_status()
-            
-            # 格式化为前端期望的格式
-            data = {
-                "sensors": sensor_data,
-                "devices": controller_status["devices"],
-                "auto_mode": controller_status["auto_mode"],
-                "system_time": datetime.now().isoformat(),
-                "thresholds": {
-                    # 这里需要获取当前阈值设置
-                    # 例如:
-                    "temp_min": 20,
-                    "temp_max": 30,
-                    "humidity_min": 40,
-                    "humidity_max": 70,
-                    "soil_moisture_min": 30,
-                    "soil_moisture_max": 70,
-                    "light_min": 1000,
-                    "light_max": 8000
-                }
+     try:
+        sensor_data = self.sensor_module.get_latest_readings()
+        controller_status = self.controller_module.get_status()
+        
+        # 确保设备状态结构一致
+        if "devices" not in controller_status:
+            controller_status["devices"] = {
+                "fan": controller_status.get("fan_status", False),
+                "fan_speed": controller_status.get("fan_speed", 0),
+                "pump": False,  # 如果没有水泵，提供默认值
+                "light": False, # 如果没有灯，提供默认值
+                "stepper": controller_status.get("servo_angle", 0)
             }
-            
-            # 发送到客户端
-            self.socketio.emit('status_update', data)
-            logger.debug('状态数据已推送到客户端')
-        except Exception as e:
-            logger.error(f'推送数据时发生错误: {e}')
+        
+        # 格式化为前端期望的格式
+        data = {
+            "sensors": sensor_data,
+            "devices": controller_status["devices"],
+            "auto_mode": controller_status.get("auto_mode", True),
+            "system_time": datetime.now().isoformat(),
+            "thresholds": {
+                # 从配置文件获取阈值
+                "temp_min": THRESHOLD_CONFIG["TEMP_MIN"],
+                "temp_max": THRESHOLD_CONFIG["TEMP_MAX"],
+                "humidity_min": THRESHOLD_CONFIG["HUMIDITY_MIN"],
+                "humidity_max": THRESHOLD_CONFIG["HUMIDITY_MAX"],
+                "soil_moisture_min": THRESHOLD_CONFIG["SOIL_MOISTURE_MIN"],
+                "soil_moisture_max": THRESHOLD_CONFIG["SOIL_MOISTURE_MAX"],
+                "light_min": THRESHOLD_CONFIG["LIGHT_MIN"],
+                "light_max": THRESHOLD_CONFIG["LIGHT_MAX"]
+            }
+        }
+        
+        # 发送到客户端
+        self.socketio.emit('status_update', data)
+        logger.debug('状态数据已推送到客户端')
+     except Exception as e:
+        logger.error(f'推送数据时发生错误: {e}')
+        
+        
 
     def _data_push_loop(self):
         """定时推送数据的循环"""

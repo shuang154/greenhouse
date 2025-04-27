@@ -2,7 +2,7 @@
 
 /* 全局样式 */
 body {
-    font-family: 'Microsoft YaHei', 'Heiti SC', sans-serif;
+    font-family: 'Microsoft YaHei', 'SimHei', 'STHeiti', 'Heiti SC', 'Source Han Sans CN', sans-serif;
     background-color: #f8f9fa;
     color: #333;
     position: relative;
