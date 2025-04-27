@@ -2738,3 +2738,557 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd6 in position 161: invali
 2025-04-27 12:59:50,858 - picamera2.picamera2 - INFO - Camera closed successfully.
 2025-04-27 12:59:50,859 - CameraModule - INFO - 摄像头模块资源已清理
 2025-04-27 12:59:50,860 - Main - INFO - 系统已安全关闭
+2025-04-27 14:49:15,333 - Main - INFO - 智能温室监控系统启动中...
+2025-04-27 14:49:15,338 - Main - INFO - 初始化传感器模块...
+2025-04-27 14:49:15,339 - SensorModule - INFO - 初始化传感器模块...
+2025-04-27 14:49:15,345 - SensorModule - INFO - 数据库初始化成功
+2025-04-27 14:49:33,848 - SensorModule - WARNING - DHT11读取失败，无有效数据
+2025-04-27 14:49:33,849 - SensorModule - WARNING - DHT11传感器初始测试失败，但继续尝试
+2025-04-27 14:49:33,850 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-27 14:49:33,862 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-27 14:49:34,036 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-27 14:49:34,102 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-27 14:49:34,105 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-27 14:49:34,106 - Main - INFO - 初始化控制器模块...
+2025-04-27 14:49:34,107 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-27 14:49:34,109 - ControllerModule - INFO - 舵机初始化成功
+2025-04-27 14:49:34,112 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-27 14:49:34,113 - Main - INFO - 初始化摄像头模块...
+2025-04-27 14:49:34,114 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-27 14:49:34,313 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-27 14:49:34,329 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-27 14:49:34,402 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 14:49:34,544 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 14:49:34,686 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 14:49:34,853 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 14:49:34,989 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 46.34, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (86, 3066985, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 32.81, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (110, 3066979, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-27 14:49:35,027 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 14:49:35,073 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-27 14:49:35,202 - picamera2.picamera2 - INFO - Camera started
+2025-04-27 14:49:36,205 - CameraModule - INFO - 摄像头已启动
+2025-04-27 14:49:36,207 - Main - INFO - 初始化Web服务器...
+2025-04-27 14:49:36,208 - WebServer - INFO - 初始化Web服务器...
+2025-04-27 14:49:36,902 - WebServer - INFO - Web服务器初始化完成
+2025-04-27 14:49:36,929 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:49:36,935 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-27 14:49:36,954 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-27 14:49:36,981 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-27 14:49:37,484 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.124:8000
+2025-04-27 14:49:37,486 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 14:49:39,286 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 14:49:39] "GET /socket.io/?EIO=4&transport=polling&t=ahhfxrrt HTTP/1.1" 200 -
+2025-04-27 14:49:39,362 - WebServer - INFO - 客户端已连接
+2025-04-27 14:49:39,377 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:49:39,416 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 14:49:39] "POST /socket.io/?EIO=4&transport=polling&t=ahhj0da8&sid=xERcBeSHGApkFFcVAAAA HTTP/1.1" 200 -
+2025-04-27 14:49:39,443 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 14:49:39] "GET /socket.io/?EIO=4&transport=polling&t=ahhj1tql&sid=xERcBeSHGApkFFcVAAAA HTTP/1.1" 200 -
+2025-04-27 14:49:39,942 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:49:42,948 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:49:45,960 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:49:48,967 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:49:51,979 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:49:52,150 - SensorModule - WARNING - DHT11读取失败，无有效数据
+2025-04-27 14:49:54,991 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:49:57,998 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:08,913 - Main - INFO - 智能温室监控系统启动中...
+2025-04-27 14:52:08,914 - Main - INFO - 初始化传感器模块...
+2025-04-27 14:52:08,915 - SensorModule - INFO - 初始化传感器模块...
+2025-04-27 14:52:08,920 - SensorModule - INFO - 数据库初始化成功
+2025-04-27 14:52:10,341 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-27 14:52:10,351 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-27 14:52:10,524 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-27 14:52:10,575 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-27 14:52:10,578 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-27 14:52:10,579 - Main - INFO - 初始化控制器模块...
+2025-04-27 14:52:10,580 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-27 14:52:10,582 - ControllerModule - INFO - 舵机初始化成功
+2025-04-27 14:52:10,585 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-27 14:52:10,586 - Main - INFO - 初始化摄像头模块...
+2025-04-27 14:52:10,587 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-27 14:52:10,733 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-27 14:52:10,741 - picamera2.picamera2 - ERROR - Camera __init__ sequence did not complete.
+2025-04-27 14:52:10,753 - CameraModule - ERROR - 摄像头模块初始化失败: Camera __init__ sequence did not complete.
+2025-04-27 14:52:10,764 - Main - WARNING - 摄像头初始化失败，系统将继续但没有摄像头功能
+2025-04-27 14:52:10,776 - Main - INFO - 初始化Web服务器...
+2025-04-27 14:52:10,787 - WebServer - INFO - 初始化Web服务器...
+2025-04-27 14:52:11,648 - WebServer - INFO - Web服务器初始化完成
+2025-04-27 14:52:11,653 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:11,653 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-27 14:52:11,659 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-27 14:52:11,662 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-27 14:52:14,656 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:17,658 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:20,660 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:23,661 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:26,667 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:29,679 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:32,681 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:35,683 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:38,684 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:41,685 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:44,688 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:47,691 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:50,692 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:53,694 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:56,696 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:52:59,698 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:02,699 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:05,700 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:08,701 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:11,703 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:14,704 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:17,706 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:20,708 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:23,716 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:26,727 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:29,729 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:32,730 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:35,737 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:38,750 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:41,751 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:44,753 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:47,759 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:50,761 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:53,763 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:56,764 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:53:59,771 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:02,783 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:05,785 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:08,791 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:11,812 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:14,814 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:17,816 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:20,817 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:23,818 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:26,820 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:29,821 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:32,822 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:35,832 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:38,834 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:41,835 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 14:54:41,865 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-27 14:54:41,866 - WebServer - INFO - 正在停止Web服务器...
+2025-04-27 14:54:43,872 - WebServer - INFO - Web服务器已停止
+2025-04-27 14:54:43,884 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-27 14:54:46,124 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-27 14:54:46,124 - SensorModule - WARNING - 读取DHT11数据失败: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2025-04-27 14:54:46,125 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-27 14:54:48,127 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-27 14:54:48,128 - Main - INFO - 系统已安全关闭
+2025-04-27 15:08:00,649 - Main - INFO - 智能温室监控系统启动中...
+2025-04-27 15:08:00,650 - Main - INFO - 初始化传感器模块...
+2025-04-27 15:08:00,652 - SensorModule - INFO - 初始化传感器模块...
+2025-04-27 15:08:00,656 - SensorModule - INFO - 数据库初始化成功
+2025-04-27 15:08:02,741 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-27 15:08:02,751 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-27 15:08:02,925 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-27 15:08:02,972 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-27 15:08:02,975 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-27 15:08:02,976 - Main - INFO - 初始化控制器模块...
+2025-04-27 15:08:02,977 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-27 15:08:02,979 - ControllerModule - INFO - 舵机初始化成功
+2025-04-27 15:08:02,982 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-27 15:08:02,983 - Main - INFO - 初始化摄像头模块...
+2025-04-27 15:08:02,984 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-27 15:08:03,124 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-27 15:08:03,138 - picamera2.picamera2 - ERROR - Camera __init__ sequence did not complete.
+2025-04-27 15:08:03,150 - CameraModule - ERROR - 摄像头模块初始化失败: Camera __init__ sequence did not complete.
+2025-04-27 15:08:03,163 - Main - WARNING - 摄像头初始化失败，系统将继续但没有摄像头功能
+2025-04-27 15:08:03,175 - Main - INFO - 初始化Web服务器...
+2025-04-27 15:08:03,187 - WebServer - INFO - 初始化Web服务器...
+2025-04-27 15:08:04,041 - WebServer - INFO - Web服务器初始化完成
+2025-04-27 15:08:04,046 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:08:04,047 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-27 15:08:04,051 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-27 15:08:04,053 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-27 15:08:07,050 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:08:10,052 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:08:13,054 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:08:15,847 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-27 15:08:15,848 - WebServer - INFO - 正在停止Web服务器...
+2025-04-27 15:08:16,056 - WebServer - INFO - Web服务器已停止
+2025-04-27 15:08:16,057 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-27 15:08:18,483 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-27 15:08:18,485 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-27 15:08:19,030 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-27 15:08:19,031 - Main - INFO - 系统已安全关闭
+2025-04-27 15:12:14,646 - Main - INFO - 智能温室监控系统启动中...
+2025-04-27 15:12:14,648 - Main - INFO - 初始化传感器模块...
+2025-04-27 15:12:14,649 - SensorModule - INFO - 初始化传感器模块...
+2025-04-27 15:12:14,653 - SensorModule - INFO - 数据库初始化成功
+2025-04-27 15:12:20,461 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-27 15:12:20,471 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-27 15:12:20,644 - SensorModule - ERROR - OLED显示屏初始化失败: [Errno 2] No such file or directory: 'font5x8.bin'
+2025-04-27 15:12:20,692 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-27 15:12:20,694 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-27 15:12:20,695 - Main - INFO - 初始化控制器模块...
+2025-04-27 15:12:20,697 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-27 15:12:20,699 - ControllerModule - INFO - 舵机初始化成功
+2025-04-27 15:12:20,701 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-27 15:12:20,702 - Main - INFO - 初始化摄像头模块...
+2025-04-27 15:12:20,704 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-27 15:12:20,844 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-27 15:12:20,857 - picamera2.picamera2 - ERROR - Camera __init__ sequence did not complete.
+2025-04-27 15:12:20,871 - CameraModule - ERROR - 摄像头模块初始化失败: Camera __init__ sequence did not complete.
+2025-04-27 15:12:20,884 - Main - WARNING - 摄像头初始化失败，系统将继续但没有摄像头功能
+2025-04-27 15:12:20,897 - Main - INFO - 初始化Web服务器...
+2025-04-27 15:12:20,908 - WebServer - INFO - 初始化Web服务器...
+2025-04-27 15:12:21,761 - WebServer - INFO - Web服务器初始化完成
+2025-04-27 15:12:21,766 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:12:21,769 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-27 15:12:21,771 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-27 15:12:21,773 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-27 15:12:24,775 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:12:27,787 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:12:29,935 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-27 15:12:29,936 - WebServer - INFO - 正在停止Web服务器...
+2025-04-27 15:12:30,788 - WebServer - INFO - Web服务器已停止
+2025-04-27 15:12:30,789 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-27 15:12:33,291 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-27 15:12:33,292 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-27 15:12:33,816 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-27 15:12:33,817 - Main - INFO - 系统已安全关闭
+2025-04-27 15:12:41,155 - Main - INFO - 智能温室监控系统启动中...
+2025-04-27 15:12:41,156 - Main - INFO - 初始化传感器模块...
+2025-04-27 15:12:41,157 - SensorModule - INFO - 初始化传感器模块...
+2025-04-27 15:12:41,161 - SensorModule - INFO - 数据库初始化成功
+2025-04-27 15:12:43,124 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-27 15:12:43,134 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-27 15:12:43,723 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-27 15:12:43,770 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-27 15:12:43,773 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-27 15:12:43,774 - Main - INFO - 初始化控制器模块...
+2025-04-27 15:12:43,775 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-27 15:12:43,777 - ControllerModule - INFO - 舵机初始化成功
+2025-04-27 15:12:43,780 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-27 15:12:43,782 - Main - INFO - 初始化摄像头模块...
+2025-04-27 15:12:43,783 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-27 15:12:43,931 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-27 15:12:43,950 - picamera2.picamera2 - ERROR - Camera __init__ sequence did not complete.
+2025-04-27 15:12:43,961 - CameraModule - ERROR - 摄像头模块初始化失败: Camera __init__ sequence did not complete.
+2025-04-27 15:12:43,968 - Main - WARNING - 摄像头初始化失败，系统将继续但没有摄像头功能
+2025-04-27 15:12:43,974 - Main - INFO - 初始化Web服务器...
+2025-04-27 15:12:43,986 - WebServer - INFO - 初始化Web服务器...
+2025-04-27 15:12:44,828 - WebServer - INFO - Web服务器初始化完成
+2025-04-27 15:12:44,834 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:12:44,840 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-27 15:12:44,842 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-27 15:12:44,843 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-27 15:12:47,843 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:12:50,855 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:12:53,857 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:12:56,858 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:12:59,860 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:02,861 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:05,862 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:08,864 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:11,865 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:14,867 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:17,868 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:20,870 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:23,872 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:26,879 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:29,891 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:32,899 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:35,911 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:38,912 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:41,914 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:44,920 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:47,933 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:50,935 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:53,936 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:56,938 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:13:59,939 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:02,940 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:05,943 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:08,949 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:11,961 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:14,963 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:17,964 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:20,965 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:23,967 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:26,969 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:29,977 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:32,989 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:35,990 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:38,992 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:42,000 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:45,016 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:48,017 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:51,018 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:54,028 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:14:57,030 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:15:00,031 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:15:03,033 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:15:06,034 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:15:06,198 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-27 15:15:06,199 - WebServer - INFO - 正在停止Web服务器...
+2025-04-27 15:15:08,200 - WebServer - INFO - Web服务器已停止
+2025-04-27 15:15:08,201 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-27 15:15:09,342 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-27 15:15:09,343 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-27 15:15:10,797 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-27 15:15:10,797 - Main - INFO - 系统已安全关闭
+2025-04-27 15:15:31,469 - Main - INFO - 智能温室监控系统启动中...
+2025-04-27 15:15:31,470 - Main - INFO - 初始化传感器模块...
+2025-04-27 15:15:31,471 - SensorModule - INFO - 初始化传感器模块...
+2025-04-27 15:15:31,475 - SensorModule - INFO - 数据库初始化成功
+2025-04-27 15:15:32,896 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-27 15:15:32,906 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-27 15:15:33,495 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-27 15:15:33,543 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-27 15:15:33,545 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-27 15:15:33,547 - Main - INFO - 初始化控制器模块...
+2025-04-27 15:15:33,548 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-27 15:15:33,550 - ControllerModule - INFO - 舵机初始化成功
+2025-04-27 15:15:33,553 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-27 15:15:33,554 - Main - INFO - 初始化摄像头模块...
+2025-04-27 15:15:33,555 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-27 15:15:33,694 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-27 15:15:33,709 - picamera2.picamera2 - ERROR - Camera __init__ sequence did not complete.
+2025-04-27 15:15:33,721 - CameraModule - ERROR - 摄像头模块初始化失败: Camera __init__ sequence did not complete.
+2025-04-27 15:15:33,732 - Main - WARNING - 摄像头初始化失败，系统将继续但没有摄像头功能
+2025-04-27 15:15:33,744 - Main - INFO - 初始化Web服务器...
+2025-04-27 15:15:33,755 - WebServer - INFO - 初始化Web服务器...
+2025-04-27 15:15:34,603 - WebServer - INFO - Web服务器初始化完成
+2025-04-27 15:15:34,608 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:15:34,608 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-27 15:15:34,613 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-27 15:15:34,615 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-27 15:15:37,612 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:15:40,613 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:15:43,614 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:15:46,617 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:15:49,618 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:15:52,619 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:15:55,621 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:15:58,622 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:16:01,625 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:16:04,627 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:16:07,633 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:16:10,635 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:16:13,641 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:16:14,550 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-27 15:16:14,552 - WebServer - INFO - 正在停止Web服务器...
+2025-04-27 15:16:16,552 - WebServer - INFO - Web服务器已停止
+2025-04-27 15:16:16,553 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-27 15:16:19,055 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-27 15:16:19,056 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-27 15:16:20,226 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-27 15:16:20,228 - Main - INFO - 系统已安全关闭
+2025-04-27 15:18:51,935 - Main - INFO - 智能温室监控系统启动中...
+2025-04-27 15:18:51,954 - Main - INFO - 初始化传感器模块...
+2025-04-27 15:18:51,956 - SensorModule - INFO - 初始化传感器模块...
+2025-04-27 15:18:51,966 - SensorModule - INFO - 数据库初始化成功
+2025-04-27 15:18:56,514 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-27 15:18:58,484 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-27 15:19:05,376 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-27 15:19:05,534 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-27 15:19:05,537 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-27 15:19:05,539 - Main - INFO - 初始化控制器模块...
+2025-04-27 15:19:05,540 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-27 15:19:05,543 - ControllerModule - INFO - 舵机初始化成功
+2025-04-27 15:19:05,546 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-27 15:19:05,547 - Main - INFO - 初始化摄像头模块...
+2025-04-27 15:19:05,548 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-27 15:19:05,806 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-27 15:19:05,814 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-27 15:19:05,907 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 15:19:06,110 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 15:19:06,320 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 15:19:06,554 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 15:19:06,654 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 46.34, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (86, 3066985, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 32.81, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (110, 3066979, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-27 15:19:06,667 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 15:19:06,688 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-27 15:19:06,842 - picamera2.picamera2 - INFO - Camera started
+2025-04-27 15:19:07,860 - CameraModule - INFO - 摄像头已启动
+2025-04-27 15:19:07,873 - Main - INFO - 初始化Web服务器...
+2025-04-27 15:19:07,885 - WebServer - INFO - 初始化Web服务器...
+2025-04-27 15:19:08,931 - WebServer - INFO - Web服务器初始化完成
+2025-04-27 15:19:08,938 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:08,939 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-27 15:19:08,942 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-27 15:19:08,944 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-27 15:19:09,084 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.124:8000
+2025-04-27 15:19:09,091 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 15:19:11,946 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:14,955 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:17,957 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:20,964 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:23,967 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:26,981 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:29,999 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:33,001 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:33,966 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:19:33] "GET / HTTP/1.1" 200 -
+2025-04-27 15:19:34,082 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:19:34] "GET /video_feed HTTP/1.1" 200 -
+2025-04-27 15:19:34,192 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:19:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-27 15:19:34,226 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:19:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-27 15:19:34,388 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:19:34] "GET /socket.io/?EIO=4&transport=polling&t=bjyinfeu HTTP/1.1" 200 -
+2025-04-27 15:19:34,417 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:19:34] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-27 15:19:34,485 - WebServer - INFO - 客户端已连接
+2025-04-27 15:19:34,490 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:34,498 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:19:34] "POST /socket.io/?EIO=4&transport=polling&t=bjykuwd2&sid=e12fWsdCpNNyOn_KAAAA HTTP/1.1" 200 -
+2025-04-27 15:19:34,503 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:19:34] "GET /socket.io/?EIO=4&transport=polling&t=bjykvs1y&sid=e12fWsdCpNNyOn_KAAAA HTTP/1.1" 200 -
+2025-04-27 15:19:34,576 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:19:34] "GET /socket.io/?EIO=4&transport=polling&t=bjyo88f6&sid=e12fWsdCpNNyOn_KAAAA HTTP/1.1" 200 -
+2025-04-27 15:19:36,012 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:39,032 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:42,035 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:45,052 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:48,054 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:51,055 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:54,057 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:19:57,059 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:00,067 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:03,079 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:06,092 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:09,094 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:12,096 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:15,098 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:18,100 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:21,111 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:24,118 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:27,119 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:30,121 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:33,123 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:36,124 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:39,131 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:42,143 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:45,150 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:48,162 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:51,170 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:54,173 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:20:57,179 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:00,197 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:03,216 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:06,218 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:09,233 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:12,262 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:15,264 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:18,285 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:21,287 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:24,288 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:27,290 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:30,292 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:33,294 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:36,295 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:39,317 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:42,318 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:21:43,260 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-27 15:21:43,261 - WebServer - INFO - 正在停止Web服务器...
+2025-04-27 15:21:45,262 - WebServer - INFO - Web服务器已停止
+2025-04-27 15:21:45,263 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-27 15:21:46,099 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-27 15:21:46,100 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-27 15:21:46,326 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-27 15:21:46,327 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-27 15:21:46,442 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-27 15:21:46,853 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-27 15:21:46,859 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-27 15:21:46,860 - Main - INFO - 系统已安全关闭
+2025-04-27 15:22:12,401 - Main - INFO - 智能温室监控系统启动中...
+2025-04-27 15:22:12,403 - Main - INFO - 初始化传感器模块...
+2025-04-27 15:22:12,404 - SensorModule - INFO - 初始化传感器模块...
+2025-04-27 15:22:12,413 - SensorModule - INFO - 数据库初始化成功
+2025-04-27 15:22:13,856 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-27 15:22:13,873 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-27 15:22:14,463 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-27 15:22:14,511 - SensorModule - ERROR - 未找到DS18B20设备
+2025-04-27 15:22:14,515 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-27 15:22:14,516 - Main - INFO - 初始化控制器模块...
+2025-04-27 15:22:14,517 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-27 15:22:14,519 - ControllerModule - INFO - 舵机初始化成功
+2025-04-27 15:22:14,522 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-27 15:22:14,523 - Main - INFO - 初始化摄像头模块...
+2025-04-27 15:22:14,524 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-27 15:22:14,659 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-27 15:22:14,672 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-27 15:22:14,740 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 15:22:14,855 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 15:22:15,005 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 15:22:15,156 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 15:22:15,288 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 46.34, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (86, 3066985, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 32.81, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (110, 3066979, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-27 15:22:15,321 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-27 15:22:15,378 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-27 15:22:15,513 - picamera2.picamera2 - INFO - Camera started
+2025-04-27 15:22:16,515 - CameraModule - INFO - 摄像头已启动
+2025-04-27 15:22:16,517 - Main - INFO - 初始化Web服务器...
+2025-04-27 15:22:16,519 - WebServer - INFO - 初始化Web服务器...
+2025-04-27 15:22:17,031 - WebServer - INFO - Web服务器初始化完成
+2025-04-27 15:22:17,058 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:17,061 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-27 15:22:17,076 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-27 15:22:17,084 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-27 15:22:17,599 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.5.124:8000
+2025-04-27 15:22:17,616 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 15:22:17,700 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:22:17] "GET /socket.io/?EIO=4&transport=polling&t=bnfjvrtd HTTP/1.1" 200 -
+2025-04-27 15:22:17,769 - WebServer - INFO - 客户端已连接
+2025-04-27 15:22:17,780 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:17,785 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:22:17] "POST /socket.io/?EIO=4&transport=polling&t=bngl7jya&sid=7Mxyhm-llEoKRsPpAAAA HTTP/1.1" 200 -
+2025-04-27 15:22:17,789 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:22:17] "GET /socket.io/?EIO=4&transport=polling&t=bngl8flu&sid=7Mxyhm-llEoKRsPpAAAA HTTP/1.1" 200 -
+2025-04-27 15:22:17,801 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:22:17] "GET /socket.io/?EIO=4&transport=websocket&sid=7Mxyhm-llEoKRsPpAAAA HTTP/1.1" 200 -
+2025-04-27 15:22:18,970 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:22:18] "GET / HTTP/1.1" 200 -
+2025-04-27 15:22:19,087 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:22:19] "GET /video_feed HTTP/1.1" 200 -
+2025-04-27 15:22:19,146 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:22:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-27 15:22:19,180 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:22:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-27 15:22:19,254 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:22:19] "GET /socket.io/?EIO=4&transport=polling&t=bnhqhk6s HTTP/1.1" 200 -
+2025-04-27 15:22:19,288 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:22:19] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-27 15:22:19,349 - WebServer - INFO - 客户端已连接
+2025-04-27 15:22:19,354 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:22:19] "GET /socket.io/?EIO=4&transport=polling&t=bnhs0kr4&sid=rCCuxcl3qpurBbkpAAAC HTTP/1.1" 200 -
+2025-04-27 15:22:19,360 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:19,367 - werkzeug - INFO - 192.168.5.248 - - [27/Apr/2025 15:22:19] "POST /socket.io/?EIO=4&transport=polling&t=bnhrzuoo&sid=rCCuxcl3qpurBbkpAAAC HTTP/1.1" 200 -
+2025-04-27 15:22:20,074 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:23,103 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:26,105 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:27,251 - WebServer - INFO - 收到风扇控制请求: 开启
+2025-04-27 15:22:27,252 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:27,919 - WebServer - INFO - 收到风扇控制请求: 关闭
+2025-04-27 15:22:27,920 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:29,107 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:32,110 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:32,502 - WebServer - INFO - 收到模式控制请求: 手动模式
+2025-04-27 15:22:32,520 - ControllerModule - INFO - 系统模式已设置为: 手动
+2025-04-27 15:22:32,534 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:33,207 - WebServer - INFO - 收到风扇控制请求: 开启
+2025-04-27 15:22:33,209 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:33,738 - WebServer - INFO - 收到风扇控制请求: 关闭
+2025-04-27 15:22:33,739 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:34,121 - WebServer - INFO - 收到风扇控制请求: 开启
+2025-04-27 15:22:34,123 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:34,719 - WebServer - INFO - 收到模式控制请求: 自动模式
+2025-04-27 15:22:34,721 - ControllerModule - INFO - 系统模式已设置为: 自动
+2025-04-27 15:22:34,722 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:35,112 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:36,469 - WebServer - INFO - 收到模式控制请求: 手动模式
+2025-04-27 15:22:36,470 - ControllerModule - INFO - 系统模式已设置为: 手动
+2025-04-27 15:22:36,471 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:36,842 - WebServer - INFO - 收到模式控制请求: 自动模式
+2025-04-27 15:22:36,845 - ControllerModule - INFO - 系统模式已设置为: 自动
+2025-04-27 15:22:36,848 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:37,708 - WebServer - INFO - 收到模式控制请求: 手动模式
+2025-04-27 15:22:37,709 - ControllerModule - INFO - 系统模式已设置为: 手动
+2025-04-27 15:22:37,711 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:38,113 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:41,135 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:44,136 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:47,143 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:50,155 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:53,157 - WebServer - ERROR - 推送数据时发生错误: name 'THRESHOLD_CONFIG' is not defined
+2025-04-27 15:22:54,597 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-27 15:22:54,600 - WebServer - INFO - 正在停止Web服务器...
+2025-04-27 15:22:56,158 - WebServer - INFO - Web服务器已停止
+2025-04-27 15:22:56,159 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-27 15:22:58,661 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-27 15:22:58,662 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-27 15:23:00,632 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-27 15:23:00,633 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-27 15:23:00,667 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-27 15:23:01,077 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-27 15:23:01,078 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-27 15:23:01,079 - Main - INFO - 系统已安全关闭

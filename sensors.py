@@ -96,18 +96,29 @@ class SensorModule:
         try:
             i2c_display = busio.I2C(board.SCL, board.SDA)
             self.oled = SSD1306_I2C(
-                I2C_CONFIG["OLED_WIDTH"], 
-                I2C_CONFIG["OLED_HEIGHT"], 
-                i2c_display, 
-                addr=I2C_CONFIG["OLED_ADDRESS"]
+            I2C_CONFIG["OLED_WIDTH"], 
+            I2C_CONFIG["OLED_HEIGHT"], 
+            i2c_display, 
+            addr=I2C_CONFIG["OLED_ADDRESS"]
             )
-            self.oled.fill(0)
-            self.oled.text("System Starting...", 0, 0, 1)
+            # 初始化显示
+            self.oled.fill(0)  # 清空显示
+            self.oled.show()   # 更新显示
+    
+            # 使用PIL绘制初始文本
+            from PIL import Image, ImageDraw, ImageFont
+            image = Image.new("1", (I2C_CONFIG["OLED_WIDTH"], I2C_CONFIG["OLED_HEIGHT"]))
+            draw = ImageDraw.Draw(image)
+            font = ImageFont.load_default()
+            draw.text((0, 0), "System Starting...", font=font, fill=255)
+            self.oled.image(image)
             self.oled.show()
+    
             logger.info("OLED显示屏初始化成功")
         except Exception as e:
             logger.error(f"OLED显示屏初始化失败: {e}")
             self.oled = None
+         
         
         # 初始化DS18B20土壤温度传感器(1-Wire协议)
         try:
@@ -344,7 +355,7 @@ class SensorModule:
         except Exception as e:
             logger.warning(f"读取土壤温度数据失败: {e}")
             return None
-    
+
     def _read_light_intensity(self):
         """读取光照强度传感器数据"""
         if not self.sensor_status["light_sensor"] or self.ads is None:
@@ -362,33 +373,76 @@ class SensorModule:
         except Exception as e:
             logger.warning(f"读取光照强度数据失败: {e}")
             return None
-    
+            
+            
+            
+            
     def _update_oled(self):
         """更新OLED显示屏"""
         if self.oled is None:
             return
-        
+    
         try:
-            self.oled.fill(0)  # 清空显示
+            # 使用PIL创建图像对象
+            from PIL import Image, ImageDraw, ImageFont
+        
+            # 创建图像缓冲区
+            width = I2C_CONFIG["OLED_WIDTH"]
+            height = I2C_CONFIG["OLED_HEIGHT"]
+            image = Image.new("1", (width, height))
+            draw = ImageDraw.Draw(image)
+        
+            # 清空背景
+            draw.rectangle((0, 0, width, height), outline=0, fill=0)
+        
+            # 尝试加载字体
+            try:
+                # 尝试加载中文字体
+                font_paths = [
+                    "/usr/share/fonts/truetype/wqy/wqy-microhei.ttc",
+                    "/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf",
+                    "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc"
+                ]
             
-            # 显示温湿度
-            self.oled.text(f"Temp: {self.latest_readings['air_temperature']:.1f}C", 0, 0, 1)
-            self.oled.text(f"Humi: {self.latest_readings['air_humidity']:.1f}%", 0, 10, 1)
-            
-            # 显示土壤信息
-            self.oled.text(f"Soil M: {self.latest_readings['soil_moisture']:.1f}%", 0, 20, 1)
-            self.oled.text(f"Soil T: {self.latest_readings['soil_temperature']:.1f}C", 0, 30, 1)
-            
-            # 显示光照
-            self.oled.text(f"Light: {self.latest_readings['light_intensity']:.0f} lux", 0, 40, 1)
-            
-            # 显示时间
+                font = None
+                small_font = None
+                for path in font_paths:
+                    try:
+                        font = ImageFont.truetype(path, 12)
+                        small_font = ImageFont.truetype(path, 10)
+                        break
+                    except IOError:
+                        continue
+                
+                if font is None:
+                    # 使用默认字体
+                    font = ImageFont.load_default()
+                    small_font = font
+            except Exception as e:
+                logger.warning(f"加载字体出错: {e}")
+                font = ImageFont.load_default()
+                small_font = font
+        
+            # 绘制传感器数据
+            draw.text((0, 0), f"温度: {self.latest_readings['air_temperature']:.1f}°C", font=font, fill=255)
+            draw.text((0, 16), f"湿度: {self.latest_readings['air_humidity']:.1f}%", font=font, fill=255)
+            draw.text((0, 32), f"土壤: {self.latest_readings['soil_moisture']:.1f}%", font=font, fill=255)
+            draw.text((0, 48), f"光照: {int(self.latest_readings['light_intensity'])}", font=small_font, fill=255)
+        
+            # 显示时间（右下角）
             current_time = datetime.now().strftime("%H:%M:%S")
-            self.oled.text(current_time, 0, 50, 1)
+            time_width = font.getlength(current_time)
+            draw.text((width - time_width - 2, height - 12), current_time, font=small_font, fill=255)
             
+            # 将PIL图像转换为OLED显示
+            self.oled.image(image)
             self.oled.show()
+        
         except Exception as e:
-            logger.warning(f"更新OLED显示失败: {e}")
+            logger.warning(f"更新OLED显示失败: {e}")           
+            
+            
+            
     
     def _collect_data_loop(self):
         """数据采集循环"""
