@@ -1,0 +1,35 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+my-env/
+
+# Ignore environment files
+.env
+
+# Ignore logs and data (optional,视项目决定)
+*.log
+logs/
+*.sqlite3
+
+# Ignore IDE/editor settings
+.vscode/
+.idea/
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dll
+*.dylib
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
