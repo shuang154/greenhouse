@@ -69,8 +69,8 @@ class ControllerModule:
             # 创建舵机对象
             self.servo = servo.Servo(
                 pwm, 
-                min_pulse=1000,  # 舵机最小脉冲宽度 (微秒)
-                max_pulse=2000   # 舵机最大脉冲宽度 (微秒)
+                min_pulse=SYSTEM_CONFIG["SERVO_MIN_PULSE"],  # 使用配置的最小脉冲宽度
+                max_pulse=SYSTEM_CONFIG["SERVO_MAX_PULSE"]   # 使用配置的最大脉冲宽度
             )
             
             # 将舵机移动到初始位置
@@ -188,24 +188,34 @@ class ControllerModule:
     
     def get_status(self):
        #"""获取控制器状态"""
-        return {
-            "fan_status": self.device_status["fan"],
-            "fan_speed": self.device_status["fan_speed"],
-            "servo_status": self.device_status["servo"],
-            "servo_angle": self.device_status["servo_angle"],
-            "auto_mode": self.auto_mode
+       # 计算舵机角度对应的百分比位置（0-100%）
+       servo_percentage = int(self.device_status["servo_angle"] / 1.8)
+    
+       return {
+          "fan_status": self.device_status["fan"],
+          "fan_speed": self.device_status["fan_speed"],
+          "servo_status": self.device_status["servo"],
+          "servo_angle": self.device_status["servo_angle"],
+          "auto_mode": self.auto_mode,
+          # 添加设备状态对象，兼容前端预期
+          "devices": {
+              "fan": self.device_status["fan"],
+              "pump": False,  # 当前系统没有水泵控制，填充假值
+              "light": False, # 当前系统没有灯光控制，填充假值
+              "stepper": servo_percentage  # 用百分比表示的舵机位置
         }
+    }
     
     def manual_control(self, device, action, value=None):
-      #  """手动控制设备
-      # Args:
-      #      device: 设备名称 ('fan' 或 'servo')
-     #       action: 动作 ('on', 'off', 'set')
-      #      value: 设置值 (可选，风扇速度或舵机角度)
+        """手动控制设备
+        Args:
+            device: 设备名称 ('fan' 或 'servo')
+            action: 动作 ('on', 'off', 'set')
+            value: 设置值 (可选，风扇速度或舵机角度)
         
-      #  Returns:
-     #       bool: 操作是否成功
-      #  """
+        Returns:
+            bool: 操作是否成功
+        """
         try:
             if device.lower() == "fan":
                 if action.lower() == "on":
@@ -222,6 +232,16 @@ class ControllerModule:
                     self.set_servo_angle(int(value))  # 设置特定角度
                 else:
                     return False
+                    
+            elif device.lower() == "stepper":
+              # 添加对stepper类型的处理（映射到舵机控制）
+                if action.lower() == "set" and value is not None:
+                  # 将0-100的位置值转换为0-180的角度
+                  angle = int(float(value) * 1.8)
+                  self.set_servo_angle(angle)
+                else:
+                  return False
+                    
             
             else:
                 return False
@@ -231,6 +251,7 @@ class ControllerModule:
         except Exception as e:
             logger.error(f"手动控制失败: {e}")
             return False
+    
     
     def cleanup(self):
        # """清理资源"""

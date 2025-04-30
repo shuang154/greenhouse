@@ -41,8 +41,8 @@ SYSTEM_CONFIG = {
     "AUTO_MODE": True,         # 默认启用自动模式
     
     # 舵机配置
-    "SERVO_MIN_PULSE": 1000,   # 舵机最小脉冲宽度 (微秒)
-    "SERVO_MAX_PULSE": 2000,   # 舵机最大脉冲宽度 (微秒)
+    "SERVO_MIN_PULSE": 500,   # 舵机最小脉冲宽度 (微秒)
+    "SERVO_MAX_PULSE": 2500,   # 舵机最大脉冲宽度 (微秒)
     "SERVO_MIN_ANGLE": 0,      # 舵机最小角度
     "SERVO_MAX_ANGLE": 180,    # 舵机最大角度
 }

@@ -235,6 +235,21 @@ class WebServer:
             # 可能需要添加到controller_module中
             # 发送状态更新
             self._push_sensor_data()
+        @self.socketio.on('control_stepper')
+        def handle_control_stepper(data):
+            #处理窗口开度控制（映射为舵机控制）
+            position = data.get('position', 0)  # 获取0-100的位置值
+            logger.info(f'收到窗口控制请求: {position}%开度')
+            # 将0-100%的开度值映射为0-180°的舵机角度
+            angle = int(position * 1.8)
+            # 调用控制器的舵机控制函数
+            self.controller_module.manual_control('servo', 'set', angle)
+            # 发送状态更新
+            self._push_sensor_data()
+            
+            
+            
+            
 
     def _push_sensor_data(self):
      try:
