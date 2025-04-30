@@ -60,6 +60,19 @@ def signal_handler(sig, frame):
     logger.info("系统已安全关闭")
     sys.exit(0)
 
+def get_local_ip():
+    """获取本地IP地址"""
+    import socket
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    try:
+        s.connect(('10.255.255.255', 1))
+        ip = s.getsockname()[0]
+    except Exception:
+        ip = '127.0.0.1'
+    finally:
+        s.close()
+    return ip
+
 def main():
     """主函数"""
     global sensor_module, controller_module, camera_module, web_server
@@ -93,7 +106,8 @@ def main():
         # 启动Web服务器
         web_server.start()
         
-        logger.info(f"系统启动完成，Web界面可通过 http://localhost:{SYSTEM_CONFIG['WEB_PORT']} 访问")
+        local_ip = get_local_ip()
+        logger.info(f"系统启动完成，Web界面可通过 http://{local_ip}:{SYSTEM_CONFIG['WEB_PORT']} 访问")
         logger.info("使用Ctrl+C退出系统")
         
         # 注册信号处理

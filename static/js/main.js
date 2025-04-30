@@ -32,9 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function initWebSocket() {
     // 获取当前页面URL作为WebSocket连接的基础
-    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    //const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const protocol = window.location.protocol;
     const host = window.location.host;
     const wsUrl = `${protocol}//${host}`;
+    console.log('正在连接到Socket.IO服务器:', wsUrl);
     
     // 创建Socket.IO连接
     socket = io(wsUrl);

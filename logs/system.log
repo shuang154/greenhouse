@@ -3455,3 +3455,831 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd6 in position 161: invali
 2025-04-27 19:36:21,118 - picamera2.picamera2 - INFO - Camera closed successfully.
 2025-04-27 19:36:21,120 - CameraModule - INFO - 摄像头模块资源已清理
 2025-04-27 19:36:21,121 - Main - INFO - 系统已安全关闭
+2025-04-28 16:45:42,093 - Main - INFO - 智能温室监控系统启动中...
+2025-04-28 16:45:42,100 - Main - INFO - 初始化传感器模块...
+2025-04-28 16:45:42,101 - SensorModule - INFO - 初始化传感器模块...
+2025-04-28 16:45:42,107 - SensorModule - INFO - 数据库初始化成功
+2025-04-28 16:45:43,562 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-28 16:45:43,581 - SensorModule - ERROR - ADS1115 ADC初始化失败: No Hardware I2C on (scl,sda)=(3, 2)
+Valid I2C ports: ((1, 3, 2), (0, 1, 0))
+2025-04-28 16:45:43,583 - SensorModule - ERROR - OLED显示屏初始化失败: No Hardware I2C on (scl,sda)=(3, 2)
+Valid I2C ports: ((1, 3, 2), (0, 1, 0))
+2025-04-28 16:45:43,678 - SensorModule - ERROR - DS18B20土壤温度传感器初始化失败: [Errno 2] No such file or directory: '/sys/bus/w1/devices/'
+2025-04-28 16:45:43,680 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-28 16:45:43,681 - Main - INFO - 初始化控制器模块...
+2025-04-28 16:45:43,682 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-28 16:45:43,684 - ControllerModule - INFO - 舵机初始化成功
+2025-04-28 16:45:43,687 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-28 16:45:43,687 - Main - INFO - 初始化摄像头模块...
+2025-04-28 16:45:43,688 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-28 16:45:43,853 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-28 16:45:43,870 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-28 16:45:43,936 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:45:44,090 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:45:44,282 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:45:44,496 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:45:44,557 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 43.25, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (92, 3286054, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 30.62, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (118, 3286047, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-28 16:45:44,569 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:45:44,587 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-28 16:45:44,726 - picamera2.picamera2 - INFO - Camera started
+2025-04-28 16:45:45,731 - CameraModule - INFO - 摄像头已启动
+2025-04-28 16:45:45,731 - Main - INFO - 初始化Web服务器...
+2025-04-28 16:45:45,732 - WebServer - INFO - 初始化Web服务器...
+2025-04-28 16:45:48,169 - WebServer - INFO - Web服务器初始化完成
+2025-04-28 16:45:48,177 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-28 16:45:48,180 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-28 16:45:48,200 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-28 16:46:20,595 - WebServer - INFO - 客户端已连接
+2025-04-28 16:47:05,319 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-28 16:47:05,320 - WebServer - INFO - 正在停止Web服务器...
+2025-04-28 16:47:06,254 - WebServer - INFO - Web服务器已停止
+2025-04-28 16:47:06,313 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-28 16:47:08,815 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-28 16:47:08,816 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-28 16:47:10,195 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-28 16:47:10,196 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-28 16:47:10,307 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-28 16:47:10,717 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-28 16:47:10,719 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-28 16:47:10,726 - Main - INFO - 系统已安全关闭
+2025-04-28 16:56:57,560 - Main - INFO - 智能温室监控系统启动中...
+2025-04-28 16:56:57,561 - Main - INFO - 初始化传感器模块...
+2025-04-28 16:56:57,562 - SensorModule - INFO - 初始化传感器模块...
+2025-04-28 16:56:57,566 - SensorModule - INFO - 数据库初始化成功
+2025-04-28 16:56:58,125 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-28 16:56:58,135 - SensorModule - ERROR - ADS1115 ADC初始化失败: No Hardware I2C on (scl,sda)=(3, 2)
+Valid I2C ports: ((1, 3, 2), (0, 1, 0))
+2025-04-28 16:56:58,137 - SensorModule - ERROR - OLED显示屏初始化失败: No Hardware I2C on (scl,sda)=(3, 2)
+Valid I2C ports: ((1, 3, 2), (0, 1, 0))
+2025-04-28 16:56:58,191 - SensorModule - ERROR - DS18B20土壤温度传感器初始化失败: [Errno 2] No such file or directory: '/sys/bus/w1/devices/'
+2025-04-28 16:56:58,193 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-28 16:56:58,194 - Main - INFO - 初始化控制器模块...
+2025-04-28 16:56:58,195 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-28 16:56:58,197 - ControllerModule - INFO - 舵机初始化成功
+2025-04-28 16:56:58,200 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-28 16:56:58,201 - Main - INFO - 初始化摄像头模块...
+2025-04-28 16:56:58,202 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-28 16:56:58,363 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-28 16:56:58,375 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-28 16:56:58,440 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:56:58,568 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:56:58,774 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:56:58,957 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:56:59,052 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 43.25, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (92, 3286054, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 30.62, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (118, 3286047, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-28 16:56:59,064 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:56:59,081 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-28 16:56:59,215 - picamera2.picamera2 - INFO - Camera started
+2025-04-28 16:57:00,217 - CameraModule - INFO - 摄像头已启动
+2025-04-28 16:57:00,218 - Main - INFO - 初始化Web服务器...
+2025-04-28 16:57:00,219 - WebServer - INFO - 初始化Web服务器...
+2025-04-28 16:57:01,960 - WebServer - INFO - Web服务器初始化完成
+2025-04-28 16:57:01,966 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-28 16:57:01,968 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-28 16:57:01,970 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-28 16:57:31,316 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-28 16:57:31,318 - WebServer - INFO - 正在停止Web服务器...
+2025-04-28 16:57:32,013 - WebServer - INFO - Web服务器已停止
+2025-04-28 16:57:32,014 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-28 16:57:33,731 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-28 16:57:33,732 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-28 16:57:34,006 - SensorModule - WARNING - 读取DHT11数据失败: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2025-04-28 16:57:35,733 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-28 16:57:35,734 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-28 16:57:35,873 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-28 16:57:36,284 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-28 16:57:36,285 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-28 16:57:36,285 - Main - INFO - 系统已安全关闭
+2025-04-28 16:59:38,773 - Main - INFO - 智能温室监控系统启动中...
+2025-04-28 16:59:38,774 - Main - INFO - 初始化传感器模块...
+2025-04-28 16:59:38,775 - SensorModule - INFO - 初始化传感器模块...
+2025-04-28 16:59:38,779 - SensorModule - INFO - 数据库初始化成功
+2025-04-28 16:59:38,810 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-28 16:59:38,819 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-28 16:59:39,546 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-28 16:59:39,593 - SensorModule - ERROR - DS18B20土壤温度传感器初始化失败: [Errno 2] No such file or directory: '/sys/bus/w1/devices/'
+2025-04-28 16:59:39,595 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-28 16:59:39,596 - Main - INFO - 初始化控制器模块...
+2025-04-28 16:59:39,597 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-28 16:59:39,600 - ControllerModule - INFO - 舵机初始化成功
+2025-04-28 16:59:39,602 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-28 16:59:39,603 - Main - INFO - 初始化摄像头模块...
+2025-04-28 16:59:39,604 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-28 16:59:39,746 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-28 16:59:39,753 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-28 16:59:39,820 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:59:39,953 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:59:40,118 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:59:40,297 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:59:40,432 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 43.25, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (92, 3286054, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 30.62, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (118, 3286047, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-28 16:59:40,443 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 16:59:40,461 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-28 16:59:40,594 - picamera2.picamera2 - INFO - Camera started
+2025-04-28 16:59:41,597 - CameraModule - INFO - 摄像头已启动
+2025-04-28 16:59:41,598 - Main - INFO - 初始化Web服务器...
+2025-04-28 16:59:41,598 - WebServer - INFO - 初始化Web服务器...
+2025-04-28 16:59:43,300 - WebServer - INFO - Web服务器初始化完成
+2025-04-28 16:59:43,306 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-28 16:59:43,308 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-28 16:59:43,310 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-28 17:01:44,722 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-28 17:01:44,738 - WebServer - INFO - 正在停止Web服务器...
+2025-04-28 17:01:46,375 - WebServer - INFO - Web服务器已停止
+2025-04-28 17:01:46,376 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-28 17:01:48,877 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-28 17:01:48,878 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-28 17:01:49,992 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-28 17:01:49,994 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-28 17:01:50,051 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-28 17:01:50,461 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-28 17:01:50,462 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-28 17:01:50,463 - Main - INFO - 系统已安全关闭
+2025-04-28 17:17:10,151 - Main - INFO - 智能温室监控系统启动中...
+2025-04-28 17:17:10,153 - Main - INFO - 初始化传感器模块...
+2025-04-28 17:17:10,154 - SensorModule - INFO - 初始化传感器模块...
+2025-04-28 17:17:10,160 - SensorModule - INFO - 数据库初始化成功
+2025-04-28 17:17:10,190 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-28 17:17:10,211 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-28 17:17:10,779 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-28 17:17:10,862 - SensorModule - ERROR - DS18B20土壤温度传感器初始化失败: [Errno 2] No such file or directory: '/sys/bus/w1/devices/'
+2025-04-28 17:17:10,865 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-28 17:17:10,866 - Main - INFO - 初始化控制器模块...
+2025-04-28 17:17:10,867 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-28 17:17:10,869 - ControllerModule - INFO - 舵机初始化成功
+2025-04-28 17:17:10,872 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-28 17:17:10,873 - Main - INFO - 初始化摄像头模块...
+2025-04-28 17:17:10,874 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-28 17:17:11,102 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-28 17:17:11,114 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-28 17:17:11,178 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 17:17:11,297 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 17:17:11,477 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 17:17:11,673 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 17:17:11,792 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 43.25, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (92, 3286054, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 30.62, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (118, 3286047, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-28 17:17:11,803 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-28 17:17:11,821 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-28 17:17:11,955 - picamera2.picamera2 - INFO - Camera started
+2025-04-28 17:17:12,958 - CameraModule - INFO - 摄像头已启动
+2025-04-28 17:17:12,960 - Main - INFO - 初始化Web服务器...
+2025-04-28 17:17:12,960 - WebServer - INFO - 初始化Web服务器...
+2025-04-28 17:17:16,147 - WebServer - INFO - Web服务器初始化完成
+2025-04-28 17:17:16,154 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-28 17:17:16,156 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-28 17:17:16,159 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-28 17:17:24,732 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-28 17:17:24,734 - WebServer - INFO - 正在停止Web服务器...
+2025-04-28 17:17:25,155 - WebServer - INFO - Web服务器已停止
+2025-04-28 17:17:25,156 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-28 17:17:26,374 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-28 17:17:26,376 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-28 17:17:27,466 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-28 17:17:27,467 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-28 17:17:27,522 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-28 17:17:27,932 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-28 17:17:27,934 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-28 17:17:27,935 - Main - INFO - 系统已安全关闭
+2025-04-30 00:10:17,864 - Main - INFO - 智能温室监控系统启动中...
+2025-04-30 00:10:17,866 - Main - INFO - 初始化传感器模块...
+2025-04-30 00:10:17,868 - SensorModule - INFO - 初始化传感器模块...
+2025-04-30 00:10:17,875 - SensorModule - INFO - 数据库初始化成功
+2025-04-30 00:10:19,365 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-30 00:10:19,381 - SensorModule - ERROR - ADS1115 ADC初始化失败: No I2C device at address: 0x48
+2025-04-30 00:10:19,885 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-30 00:10:19,925 - SensorModule - ERROR - DS18B20土壤温度传感器初始化失败: [Errno 2] No such file or directory: '/sys/bus/w1/devices/'
+2025-04-30 00:10:19,927 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-30 00:10:19,928 - Main - INFO - 初始化控制器模块...
+2025-04-30 00:10:19,928 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-30 00:10:19,930 - ControllerModule - INFO - 舵机初始化成功
+2025-04-30 00:10:19,931 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-30 00:10:19,932 - Main - INFO - 初始化摄像头模块...
+2025-04-30 00:10:19,932 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-30 00:10:20,097 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-30 00:10:20,108 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-30 00:10:20,150 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 00:10:20,280 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 00:10:20,418 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 00:10:20,453 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 00:10:20,498 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 43.25, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (92, 3286054, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 30.62, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (118, 3286047, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-30 00:10:20,504 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 00:10:20,514 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-30 00:10:20,610 - picamera2.picamera2 - INFO - Camera started
+2025-04-30 00:10:21,611 - CameraModule - INFO - 摄像头已启动
+2025-04-30 00:10:21,612 - Main - INFO - 初始化Web服务器...
+2025-04-30 00:10:21,612 - WebServer - INFO - 初始化Web服务器...
+2025-04-30 00:10:23,006 - WebServer - INFO - Web服务器初始化完成
+2025-04-30 00:10:23,012 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-30 00:10:23,014 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-30 00:10:23,016 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-30 00:16:24,006 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-30 00:16:24,007 - WebServer - INFO - 正在停止Web服务器...
+2025-04-30 00:16:24,222 - WebServer - INFO - 客户端已连接
+2025-04-30 00:16:26,008 - WebServer - INFO - Web服务器已停止
+2025-04-30 00:16:26,009 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-30 00:16:28,447 - WebServer - INFO - 客户端已断开连接
+2025-04-30 00:16:28,512 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-30 00:16:28,514 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-30 00:16:28,772 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-30 00:16:28,773 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-30 00:16:28,876 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-30 00:16:29,286 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-30 00:16:29,287 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-30 00:16:29,288 - Main - INFO - 系统已安全关闭
+2025-04-30 10:37:45,225 - Main - INFO - 智能温室监控系统启动中...
+2025-04-30 10:37:45,227 - Main - INFO - 初始化传感器模块...
+2025-04-30 10:37:45,228 - SensorModule - INFO - 初始化传感器模块...
+2025-04-30 10:37:45,234 - SensorModule - INFO - 数据库初始化成功
+2025-04-30 10:37:46,670 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-30 10:37:46,678 - SensorModule - INFO - ADS1115 ADC初始化成功
+2025-04-30 10:37:47,181 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-30 10:37:47,222 - SensorModule - ERROR - DS18B20土壤温度传感器初始化失败: [Errno 2] No such file or directory: '/sys/bus/w1/devices/'
+2025-04-30 10:37:47,224 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-30 10:37:47,225 - Main - INFO - 初始化控制器模块...
+2025-04-30 10:37:47,225 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-30 10:37:47,226 - ControllerModule - INFO - 舵机初始化成功
+2025-04-30 10:37:47,228 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-30 10:37:47,228 - Main - INFO - 初始化摄像头模块...
+2025-04-30 10:37:47,229 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-30 10:37:47,399 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-30 10:37:47,405 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-30 10:37:47,459 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:37:47,613 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:37:47,791 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:37:47,992 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:37:48,070 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 43.25, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (92, 3286054, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 30.62, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (118, 3286047, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-30 10:37:48,081 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:37:48,099 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-30 10:37:48,235 - picamera2.picamera2 - INFO - Camera started
+2025-04-30 10:37:49,237 - CameraModule - INFO - 摄像头已启动
+2025-04-30 10:37:49,238 - Main - INFO - 初始化Web服务器...
+2025-04-30 10:37:49,239 - WebServer - INFO - 初始化Web服务器...
+2025-04-30 10:37:52,005 - WebServer - INFO - Web服务器初始化完成
+2025-04-30 10:37:52,014 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-30 10:37:52,018 - Main - INFO - 系统启动完成，Web界面可通过 http://localhost:8000 访问
+2025-04-30 10:37:52,020 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-30 10:40:04,515 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-30 10:40:04,516 - WebServer - INFO - 正在停止Web服务器...
+2025-04-30 10:40:06,525 - WebServer - INFO - Web服务器已停止
+2025-04-30 10:40:06,526 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-30 10:40:07,772 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-30 10:40:07,773 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-30 10:40:08,527 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-30 10:40:08,528 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-30 10:40:08,628 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-30 10:40:09,039 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-30 10:40:09,040 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-30 10:40:09,041 - Main - INFO - 系统已安全关闭
+2025-04-30 10:47:58,480 - Main - INFO - 智能温室监控系统启动中...
+2025-04-30 10:47:58,481 - Main - INFO - 初始化传感器模块...
+2025-04-30 10:47:58,482 - SensorModule - INFO - 初始化传感器模块...
+2025-04-30 10:47:58,486 - SensorModule - INFO - 数据库初始化成功
+2025-04-30 10:47:59,046 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-30 10:47:59,059 - SensorModule - INFO - ADS1115 ADC初始化成功
+2025-04-30 10:47:59,603 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-30 10:47:59,650 - SensorModule - ERROR - DS18B20土壤温度传感器初始化失败: [Errno 2] No such file or directory: '/sys/bus/w1/devices/'
+2025-04-30 10:47:59,653 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-30 10:47:59,654 - Main - INFO - 初始化控制器模块...
+2025-04-30 10:47:59,655 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-30 10:47:59,656 - ControllerModule - INFO - 舵机初始化成功
+2025-04-30 10:47:59,659 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-30 10:47:59,659 - Main - INFO - 初始化摄像头模块...
+2025-04-30 10:47:59,659 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-30 10:47:59,741 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-30 10:47:59,752 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-30 10:47:59,794 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:47:59,916 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:48:00,047 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:48:00,081 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:48:00,133 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 43.25, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (92, 3286054, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 30.62, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (118, 3286047, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-30 10:48:00,145 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:48:00,163 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-30 10:48:00,294 - picamera2.picamera2 - INFO - Camera started
+2025-04-30 10:48:01,317 - CameraModule - INFO - 摄像头已启动
+2025-04-30 10:48:01,329 - Main - INFO - 初始化Web服务器...
+2025-04-30 10:48:01,341 - WebServer - INFO - 初始化Web服务器...
+2025-04-30 10:48:03,359 - WebServer - INFO - Web服务器初始化完成
+2025-04-30 10:48:03,366 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-30 10:48:03,371 - Main - ERROR - 系统启动失败: name 'get_local_ip' is not defined
+2025-04-30 10:48:03,373 - WebServer - INFO - 正在停止Web服务器...
+2025-04-30 10:48:03,455 - WebServer - INFO - 客户端已连接
+2025-04-30 10:48:05,374 - WebServer - INFO - Web服务器已停止
+2025-04-30 10:48:05,376 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-30 10:48:07,885 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-30 10:48:07,886 - SensorModule - WARNING - 读取DHT11数据失败: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2025-04-30 10:48:07,888 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-30 10:48:09,894 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-30 10:48:09,895 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-30 10:48:10,025 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-30 10:48:10,437 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-30 10:48:10,438 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-30 10:49:30,495 - Main - INFO - 智能温室监控系统启动中...
+2025-04-30 10:49:30,496 - Main - INFO - 初始化传感器模块...
+2025-04-30 10:49:30,497 - SensorModule - INFO - 初始化传感器模块...
+2025-04-30 10:49:30,501 - SensorModule - INFO - 数据库初始化成功
+2025-04-30 10:49:30,532 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-30 10:49:30,546 - SensorModule - INFO - ADS1115 ADC初始化成功
+2025-04-30 10:49:31,091 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-30 10:49:31,140 - SensorModule - ERROR - DS18B20土壤温度传感器初始化失败: [Errno 2] No such file or directory: '/sys/bus/w1/devices/'
+2025-04-30 10:49:31,143 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-30 10:49:31,144 - Main - INFO - 初始化控制器模块...
+2025-04-30 10:49:31,145 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-30 10:49:31,148 - ControllerModule - INFO - 舵机初始化成功
+2025-04-30 10:49:31,150 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-30 10:49:31,152 - Main - INFO - 初始化摄像头模块...
+2025-04-30 10:49:31,153 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-30 10:49:31,261 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-30 10:49:31,267 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-30 10:49:31,303 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:49:31,421 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:49:31,606 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:49:31,667 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:49:31,723 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 43.25, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (92, 3286054, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 30.62, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (118, 3286047, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-30 10:49:31,734 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:49:31,752 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-30 10:49:31,887 - picamera2.picamera2 - INFO - Camera started
+2025-04-30 10:49:32,889 - CameraModule - INFO - 摄像头已启动
+2025-04-30 10:49:32,890 - Main - INFO - 初始化Web服务器...
+2025-04-30 10:49:32,891 - WebServer - INFO - 初始化Web服务器...
+2025-04-30 10:49:34,998 - WebServer - INFO - Web服务器初始化完成
+2025-04-30 10:49:35,005 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-30 10:49:35,009 - Main - INFO - 系统启动完成，Web界面可通过 http://192.168.247.124:8000 访问
+2025-04-30 10:49:35,009 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-30 10:50:27,860 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-30 10:50:27,863 - WebServer - INFO - 正在停止Web服务器...
+2025-04-30 10:50:28,361 - WebServer - INFO - 客户端已连接
+2025-04-30 10:50:29,047 - WebServer - INFO - Web服务器已停止
+2025-04-30 10:50:29,053 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-30 10:50:31,573 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-30 10:50:31,574 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-30 10:50:32,418 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-30 10:50:32,419 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-30 10:50:32,479 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-30 10:50:32,890 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-30 10:50:32,891 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-30 10:50:32,892 - Main - INFO - 系统已安全关闭
+2025-04-30 10:51:30,301 - Main - INFO - 智能温室监控系统启动中...
+2025-04-30 10:51:30,302 - Main - INFO - 初始化传感器模块...
+2025-04-30 10:51:30,304 - SensorModule - INFO - 初始化传感器模块...
+2025-04-30 10:51:30,309 - SensorModule - INFO - 数据库初始化成功
+2025-04-30 10:51:31,006 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-30 10:51:31,020 - SensorModule - INFO - ADS1115 ADC初始化成功
+2025-04-30 10:51:31,565 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-30 10:51:31,610 - SensorModule - ERROR - DS18B20土壤温度传感器初始化失败: [Errno 2] No such file or directory: '/sys/bus/w1/devices/'
+2025-04-30 10:51:31,612 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-30 10:51:31,613 - Main - INFO - 初始化控制器模块...
+2025-04-30 10:51:31,613 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-30 10:51:31,614 - ControllerModule - INFO - 舵机初始化成功
+2025-04-30 10:51:31,616 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-30 10:51:31,616 - Main - INFO - 初始化摄像头模块...
+2025-04-30 10:51:31,617 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-30 10:51:31,695 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-30 10:51:31,706 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-30 10:51:31,748 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:51:31,882 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:51:32,006 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:51:32,033 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:51:32,065 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 43.25, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (92, 3286054, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 30.62, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (118, 3286047, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-30 10:51:32,072 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:51:32,082 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-30 10:51:32,180 - picamera2.picamera2 - INFO - Camera started
+2025-04-30 10:51:33,186 - CameraModule - INFO - 摄像头已启动
+2025-04-30 10:51:33,188 - Main - INFO - 初始化Web服务器...
+2025-04-30 10:51:33,189 - WebServer - INFO - 初始化Web服务器...
+2025-04-30 10:51:35,339 - WebServer - INFO - Web服务器初始化完成
+2025-04-30 10:51:35,351 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-30 10:51:35,354 - Main - INFO - 系统启动完成，Web界面可通过 http://192.168.247.124:8000 访问
+2025-04-30 10:51:35,356 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-30 10:52:46,612 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-30 10:52:46,614 - WebServer - INFO - 正在停止Web服务器...
+2025-04-30 10:52:46,752 - WebServer - INFO - 客户端已连接
+2025-04-30 10:52:47,429 - WebServer - INFO - Web服务器已停止
+2025-04-30 10:52:47,430 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-30 10:52:49,934 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-30 10:52:49,935 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-30 10:52:49,974 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-30 10:52:49,976 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-30 10:52:50,105 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-30 10:52:50,516 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-30 10:52:50,517 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-30 10:52:50,518 - Main - INFO - 系统已安全关闭
+2025-04-30 10:54:34,464 - Main - INFO - 智能温室监控系统启动中...
+2025-04-30 10:54:34,466 - Main - INFO - 初始化传感器模块...
+2025-04-30 10:54:34,467 - SensorModule - INFO - 初始化传感器模块...
+2025-04-30 10:54:34,471 - SensorModule - INFO - 数据库初始化成功
+2025-04-30 10:54:36,361 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-30 10:54:36,373 - SensorModule - INFO - ADS1115 ADC初始化成功
+2025-04-30 10:54:36,706 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-30 10:54:36,735 - SensorModule - ERROR - DS18B20土壤温度传感器初始化失败: [Errno 2] No such file or directory: '/sys/bus/w1/devices/'
+2025-04-30 10:54:36,737 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-30 10:54:36,737 - Main - INFO - 初始化控制器模块...
+2025-04-30 10:54:36,738 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-30 10:54:36,739 - ControllerModule - INFO - 舵机初始化成功
+2025-04-30 10:54:36,741 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-30 10:54:36,741 - Main - INFO - 初始化摄像头模块...
+2025-04-30 10:54:36,742 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-30 10:54:36,826 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-30 10:54:36,837 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-30 10:54:36,879 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:54:36,997 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:54:37,131 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:54:37,159 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:54:37,191 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 43.25, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (92, 3286054, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 30.62, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (118, 3286047, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-30 10:54:37,199 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:54:37,209 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-30 10:54:37,304 - picamera2.picamera2 - INFO - Camera started
+2025-04-30 10:54:38,306 - CameraModule - INFO - 摄像头已启动
+2025-04-30 10:54:38,307 - Main - INFO - 初始化Web服务器...
+2025-04-30 10:54:38,308 - WebServer - INFO - 初始化Web服务器...
+2025-04-30 10:54:40,364 - WebServer - INFO - Web服务器初始化完成
+2025-04-30 10:54:40,374 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-30 10:54:40,377 - Main - INFO - 系统启动完成，Web界面可通过 http://192.168.247.124:8000 访问
+2025-04-30 10:54:40,380 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-30 10:54:40,489 - WebServer - INFO - 客户端已连接
+2025-04-30 10:54:50,134 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-30 10:54:50,146 - WebServer - INFO - 正在停止Web服务器...
+2025-04-30 10:54:52,172 - WebServer - INFO - Web服务器已停止
+2025-04-30 10:54:52,174 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-30 10:54:54,678 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-30 10:54:54,679 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-30 10:54:56,004 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-30 10:54:56,005 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-30 10:54:56,063 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-30 10:54:56,474 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-30 10:54:56,475 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-30 10:54:56,475 - Main - INFO - 系统已安全关闭
+2025-04-30 10:59:01,203 - Main - INFO - 智能温室监控系统启动中...
+2025-04-30 10:59:01,204 - Main - INFO - 初始化传感器模块...
+2025-04-30 10:59:01,205 - SensorModule - INFO - 初始化传感器模块...
+2025-04-30 10:59:01,207 - SensorModule - INFO - 数据库初始化成功
+2025-04-30 10:59:01,237 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-30 10:59:01,245 - SensorModule - INFO - ADS1115 ADC初始化成功
+2025-04-30 10:59:01,613 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-30 10:59:01,661 - SensorModule - ERROR - DS18B20土壤温度传感器初始化失败: [Errno 2] No such file or directory: '/sys/bus/w1/devices/'
+2025-04-30 10:59:01,664 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-30 10:59:01,665 - Main - INFO - 初始化控制器模块...
+2025-04-30 10:59:01,666 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-30 10:59:01,669 - ControllerModule - INFO - 舵机初始化成功
+2025-04-30 10:59:01,671 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-30 10:59:01,672 - Main - INFO - 初始化摄像头模块...
+2025-04-30 10:59:01,673 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-30 10:59:01,812 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-30 10:59:01,824 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-30 10:59:01,893 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:59:02,048 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:59:02,237 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:59:02,414 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:59:02,526 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 43.25, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (92, 3286054, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 30.62, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (118, 3286047, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-30 10:59:02,538 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 10:59:02,556 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-30 10:59:02,691 - picamera2.picamera2 - INFO - Camera started
+2025-04-30 10:59:03,693 - CameraModule - INFO - 摄像头已启动
+2025-04-30 10:59:03,694 - Main - INFO - 初始化Web服务器...
+2025-04-30 10:59:03,695 - WebServer - INFO - 初始化Web服务器...
+2025-04-30 10:59:06,232 - WebServer - INFO - Web服务器初始化完成
+2025-04-30 10:59:06,239 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.4128787878788, 'soil_temperature': 0, 'light_intensity': 24.62121212121212, 'timestamp': '2025-04-30T10:59:03.015540'}
+2025-04-30 10:59:06,241 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-30 10:59:06,247 - Main - INFO - 系统启动完成，Web界面可通过 http://192.168.247.124:8000 访问
+2025-04-30 10:59:06,243 - WebServer - INFO - 原始控制器状态: {'fan_status': False, 'fan_speed': 0, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 10:59:06,251 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-30 10:59:06,255 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.4128787878788, 'soil_temperature': 0, 'light_intensity': 24.62121212121212, 'timestamp': '2025-04-30T10:59:03.015540'}, 'devices': {'fan': False, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T10:59:06.254717', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 10:59:06,259 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 10:59:09,270 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.25757575757575, 'soil_temperature': 0, 'light_intensity': 20.833333333333336, 'timestamp': '2025-04-30T10:59:06.597471'}
+2025-04-30 10:59:09,278 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 10:59:09,293 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.25757575757575, 'soil_temperature': 0, 'light_intensity': 20.833333333333336, 'timestamp': '2025-04-30T10:59:06.597471'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T10:59:09.293308', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 10:59:09,325 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 10:59:12,339 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.4469696969697, 'soil_temperature': 0, 'light_intensity': 20.454545454545457, 'timestamp': '2025-04-30T10:59:12.046789'}
+2025-04-30 10:59:12,340 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 10:59:12,341 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.4469696969697, 'soil_temperature': 0, 'light_intensity': 20.454545454545457, 'timestamp': '2025-04-30T10:59:12.046789'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T10:59:12.341037', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 10:59:12,342 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 10:59:15,344 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.4469696969697, 'soil_temperature': 0, 'light_intensity': 20.454545454545457, 'timestamp': '2025-04-30T10:59:12.046789'}
+2025-04-30 10:59:15,345 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 10:59:15,348 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.4469696969697, 'soil_temperature': 0, 'light_intensity': 20.454545454545457, 'timestamp': '2025-04-30T10:59:12.046789'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T10:59:15.347697', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 10:59:15,349 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 10:59:18,351 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.35606060606062, 'soil_temperature': 0, 'light_intensity': 20.833333333333336, 'timestamp': '2025-04-30T10:59:16.162555'}
+2025-04-30 10:59:18,352 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 10:59:18,353 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.35606060606062, 'soil_temperature': 0, 'light_intensity': 20.833333333333336, 'timestamp': '2025-04-30T10:59:16.162555'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T10:59:18.353110', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 10:59:18,354 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 10:59:21,355 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.52651515151516, 'soil_temperature': 0, 'light_intensity': 21.590909090909093, 'timestamp': '2025-04-30T10:59:19.125660'}
+2025-04-30 10:59:21,358 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 10:59:21,363 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.52651515151516, 'soil_temperature': 0, 'light_intensity': 21.590909090909093, 'timestamp': '2025-04-30T10:59:19.125660'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T10:59:21.362967', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 10:59:21,366 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 10:59:24,368 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.13257575757576, 'soil_temperature': 0, 'light_intensity': 18.181818181818183, 'timestamp': '2025-04-30T10:59:23.796556'}
+2025-04-30 10:59:24,370 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 10:59:24,371 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.13257575757576, 'soil_temperature': 0, 'light_intensity': 18.181818181818183, 'timestamp': '2025-04-30T10:59:23.796556'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T10:59:24.371191', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 10:59:24,372 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 10:59:27,385 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.13257575757576, 'soil_temperature': 0, 'light_intensity': 18.181818181818183, 'timestamp': '2025-04-30T10:59:23.796556'}
+2025-04-30 10:59:27,392 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 10:59:27,397 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.13257575757576, 'soil_temperature': 0, 'light_intensity': 18.181818181818183, 'timestamp': '2025-04-30T10:59:23.796556'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T10:59:27.397410', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 10:59:27,399 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 10:59:30,400 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 63.969696969696976, 'soil_temperature': 0, 'light_intensity': 21.969696969696972, 'timestamp': '2025-04-30T10:59:30.241734'}
+2025-04-30 10:59:30,401 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 10:59:30,402 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 63.969696969696976, 'soil_temperature': 0, 'light_intensity': 21.969696969696972, 'timestamp': '2025-04-30T10:59:30.241734'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T10:59:30.402181', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 10:59:30,404 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 10:59:33,405 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 63.969696969696976, 'soil_temperature': 0, 'light_intensity': 21.969696969696972, 'timestamp': '2025-04-30T10:59:30.241734'}
+2025-04-30 10:59:33,406 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 10:59:33,408 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 63.969696969696976, 'soil_temperature': 0, 'light_intensity': 21.969696969696972, 'timestamp': '2025-04-30T10:59:30.241734'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T10:59:33.407795', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 10:59:33,409 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 10:59:36,410 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.0340909090909, 'soil_temperature': 0, 'light_intensity': 20.833333333333336, 'timestamp': '2025-04-30T10:59:34.601580'}
+2025-04-30 10:59:36,411 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 10:59:36,412 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.0340909090909, 'soil_temperature': 0, 'light_intensity': 20.833333333333336, 'timestamp': '2025-04-30T10:59:34.601580'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T10:59:36.412482', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 10:59:36,413 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 10:59:39,414 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.05303030303031, 'soil_temperature': 0, 'light_intensity': 20.075757575757578, 'timestamp': '2025-04-30T10:59:37.563431'}
+2025-04-30 10:59:39,415 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 10:59:39,416 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.05303030303031, 'soil_temperature': 0, 'light_intensity': 20.075757575757578, 'timestamp': '2025-04-30T10:59:37.563431'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T10:59:39.416175', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 10:59:39,417 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 10:59:41,851 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-30 10:59:41,852 - WebServer - INFO - 正在停止Web服务器...
+2025-04-30 10:59:41,953 - WebServer - INFO - 客户端已连接
+2025-04-30 10:59:41,956 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 63.35227272727274, 'soil_temperature': 0, 'light_intensity': 22.34848484848485, 'timestamp': '2025-04-30T10:59:40.383847'}
+2025-04-30 10:59:41,958 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 10:59:41,961 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 63.35227272727274, 'soil_temperature': 0, 'light_intensity': 22.34848484848485, 'timestamp': '2025-04-30T10:59:40.383847'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T10:59:41.960626', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 10:59:41,966 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 10:59:42,419 - WebServer - INFO - Web服务器已停止
+2025-04-30 10:59:42,420 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-30 10:59:44,926 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-30 10:59:44,927 - SensorModule - WARNING - 读取DHT11数据失败: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2025-04-30 10:59:44,928 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-30 10:59:46,932 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-30 10:59:46,933 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-30 10:59:47,047 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-30 10:59:47,459 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-30 10:59:47,460 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-30 10:59:47,461 - Main - INFO - 系统已安全关闭
+2025-04-30 11:02:41,991 - Main - INFO - 智能温室监控系统启动中...
+2025-04-30 11:02:41,992 - Main - INFO - 初始化传感器模块...
+2025-04-30 11:02:41,993 - SensorModule - INFO - 初始化传感器模块...
+2025-04-30 11:02:41,998 - SensorModule - INFO - 数据库初始化成功
+2025-04-30 11:02:44,414 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-30 11:02:44,423 - SensorModule - INFO - ADS1115 ADC初始化成功
+2025-04-30 11:02:44,756 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-30 11:02:44,784 - SensorModule - ERROR - DS18B20土壤温度传感器初始化失败: [Errno 2] No such file or directory: '/sys/bus/w1/devices/'
+2025-04-30 11:02:44,786 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-30 11:02:44,786 - Main - INFO - 初始化控制器模块...
+2025-04-30 11:02:44,787 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-30 11:02:44,788 - ControllerModule - INFO - 舵机初始化成功
+2025-04-30 11:02:44,790 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-30 11:02:44,790 - Main - INFO - 初始化摄像头模块...
+2025-04-30 11:02:44,791 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-30 11:02:44,873 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-30 11:02:44,889 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-30 11:02:44,932 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 11:02:45,065 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 11:02:45,262 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 11:02:45,403 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 11:02:45,457 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 43.25, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (92, 3286054, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 30.62, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (118, 3286047, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-30 11:02:45,468 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 11:02:45,487 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-30 11:02:45,622 - picamera2.picamera2 - INFO - Camera started
+2025-04-30 11:02:46,625 - CameraModule - INFO - 摄像头已启动
+2025-04-30 11:02:46,628 - Main - INFO - 初始化Web服务器...
+2025-04-30 11:02:46,629 - WebServer - INFO - 初始化Web服务器...
+2025-04-30 11:02:47,405 - WebServer - INFO - Web服务器初始化完成
+2025-04-30 11:02:47,410 - WebServer - INFO - 原始传感器数据: {'air_temperature': 0, 'air_humidity': 0, 'soil_moisture': 0, 'soil_temperature': 0, 'light_intensity': 0, 'timestamp': '2025-04-30T11:02:41.994969'}
+2025-04-30 11:02:47,411 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-30 11:02:47,414 - WebServer - INFO - 原始控制器状态: {'fan_status': False, 'fan_speed': 0, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:02:47,420 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 0, 'air_humidity': 0, 'soil_moisture': 0, 'soil_temperature': 0, 'light_intensity': 0, 'timestamp': '2025-04-30T11:02:41.994969'}, 'devices': {'fan': False, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:02:47.419993', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:02:47,420 - Main - INFO - 系统启动完成，Web界面可通过 http://192.168.247.124:8000 访问
+2025-04-30 11:02:47,422 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:02:47,424 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-30 11:02:47,468 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.247.124:8000
+2025-04-30 11:02:47,470 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 11:02:47,680 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:02:47] "GET /socket.io/?EIO=4&transport=polling&t=cpb1cb01 HTTP/1.1" 200 -
+2025-04-30 11:02:47,817 - WebServer - INFO - 客户端已连接
+2025-04-30 11:02:47,826 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.18560606060606, 'soil_temperature': 0, 'light_intensity': 21.969696969696972, 'timestamp': '2025-04-30T11:02:47.712479'}
+2025-04-30 11:02:47,830 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:02:47] "GET /socket.io/?EIO=4&transport=polling&t=cpb4a31h&sid=L1wmUifJXWdRWOG4AAAA HTTP/1.1" 200 -
+2025-04-30 11:02:47,831 - WebServer - INFO - 原始控制器状态: {'fan_status': False, 'fan_speed': 0, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:02:47,836 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.18560606060606, 'soil_temperature': 0, 'light_intensity': 21.969696969696972, 'timestamp': '2025-04-30T11:02:47.712479'}, 'devices': {'fan': False, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:02:47.836265', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:02:47,840 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:02:47,844 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:02:47] "POST /socket.io/?EIO=4&transport=polling&t=cpb49j65&sid=L1wmUifJXWdRWOG4AAAA HTTP/1.1" 200 -
+2025-04-30 11:02:47,877 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:02:47] "GET /socket.io/?EIO=4&transport=polling&t=cpb76nqz&sid=L1wmUifJXWdRWOG4AAAA HTTP/1.1" 200 -
+2025-04-30 11:02:50,427 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.18560606060606, 'soil_temperature': 0, 'light_intensity': 21.969696969696972, 'timestamp': '2025-04-30T11:02:47.712479'}
+2025-04-30 11:02:50,428 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:02:50,429 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.18560606060606, 'soil_temperature': 0, 'light_intensity': 21.969696969696972, 'timestamp': '2025-04-30T11:02:47.712479'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:02:50.428948', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:02:50,431 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:02:53,446 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.3409090909091, 'soil_temperature': 0, 'light_intensity': 19.6969696969697, 'timestamp': '2025-04-30T11:02:50.573758'}
+2025-04-30 11:02:53,447 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:02:53,448 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.3409090909091, 'soil_temperature': 0, 'light_intensity': 19.6969696969697, 'timestamp': '2025-04-30T11:02:50.573758'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:02:53.447917', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:02:53,449 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:02:56,451 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.40909090909092, 'soil_temperature': 0, 'light_intensity': 18.93939393939394, 'timestamp': '2025-04-30T11:02:53.517300'}
+2025-04-30 11:02:56,452 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:02:56,453 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.40909090909092, 'soil_temperature': 0, 'light_intensity': 18.93939393939394, 'timestamp': '2025-04-30T11:02:53.517300'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:02:56.453271', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:02:56,455 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:02:59,457 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.5227272727273, 'soil_temperature': 0, 'light_intensity': 19.31818181818182, 'timestamp': '2025-04-30T11:02:58.051925'}
+2025-04-30 11:02:59,458 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:02:59,459 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.5227272727273, 'soil_temperature': 0, 'light_intensity': 19.31818181818182, 'timestamp': '2025-04-30T11:02:58.051925'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:02:59.459257', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:02:59,461 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:02,463 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 63.321969696969695, 'soil_temperature': 0, 'light_intensity': 17.045454545454547, 'timestamp': '2025-04-30T11:03:02.129752'}
+2025-04-30 11:03:02,464 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:02,465 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 63.321969696969695, 'soil_temperature': 0, 'light_intensity': 17.045454545454547, 'timestamp': '2025-04-30T11:03:02.129752'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:02.465369', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:02,467 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:05,480 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.78409090909092, 'soil_temperature': 0, 'light_intensity': 15.530303030303031, 'timestamp': '2025-04-30T11:03:04.354133'}
+2025-04-30 11:03:05,481 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:05,482 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.78409090909092, 'soil_temperature': 0, 'light_intensity': 15.530303030303031, 'timestamp': '2025-04-30T11:03:04.354133'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:05.482512', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:05,484 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:08,486 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.48106060606061, 'soil_temperature': 0, 'light_intensity': 15.90909090909091, 'timestamp': '2025-04-30T11:03:06.640963'}
+2025-04-30 11:03:08,487 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:08,488 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.48106060606061, 'soil_temperature': 0, 'light_intensity': 15.90909090909091, 'timestamp': '2025-04-30T11:03:06.640963'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:08.488180', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:08,489 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:09,989 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:09] "GET / HTTP/1.1" 200 -
+2025-04-30 11:03:10,027 - WebServer - INFO - 客户端已断开连接
+2025-04-30 11:03:10,036 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:10] "GET /socket.io/?EIO=4&transport=websocket&sid=L1wmUifJXWdRWOG4AAAA HTTP/1.1" 200 -
+2025-04-30 11:03:10,131 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:10] "GET /video_feed HTTP/1.1" 200 -
+2025-04-30 11:03:10,159 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-30 11:03:10,198 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-30 11:03:10,280 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:10] "GET /socket.io/?EIO=4&transport=polling&t=cpsgsmkk HTTP/1.1" 200 -
+2025-04-30 11:03:10,313 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:10] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-30 11:03:10,397 - WebServer - INFO - 客户端已连接
+2025-04-30 11:03:10,399 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.48863636363637, 'soil_temperature': 0, 'light_intensity': 15.90909090909091, 'timestamp': '2025-04-30T11:03:09.623891'}
+2025-04-30 11:03:10,407 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:10,413 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.48863636363637, 'soil_temperature': 0, 'light_intensity': 15.90909090909091, 'timestamp': '2025-04-30T11:03:09.623891'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:10.413316', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:10,416 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:10,417 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:10] "GET /socket.io/?EIO=4&transport=polling&t=cpsk7b5i&sid=BVDHrqvtFxNvaq57AAAC HTTP/1.1" 200 -
+2025-04-30 11:03:10,419 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:10] "POST /socket.io/?EIO=4&transport=polling&t=cpsk7up3&sid=BVDHrqvtFxNvaq57AAAC HTTP/1.1" 200 -
+2025-04-30 11:03:11,498 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.48863636363637, 'soil_temperature': 0, 'light_intensity': 15.90909090909091, 'timestamp': '2025-04-30T11:03:09.623891'}
+2025-04-30 11:03:11,499 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:11,500 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.48863636363637, 'soil_temperature': 0, 'light_intensity': 15.90909090909091, 'timestamp': '2025-04-30T11:03:09.623891'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:11.500512', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:11,503 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:14,504 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.46212121212122, 'soil_temperature': 0, 'light_intensity': 17.803030303030305, 'timestamp': '2025-04-30T11:03:11.893973'}
+2025-04-30 11:03:14,505 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:14,506 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.46212121212122, 'soil_temperature': 0, 'light_intensity': 17.803030303030305, 'timestamp': '2025-04-30T11:03:11.893973'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:14.506562', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:14,509 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:14,920 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:14] "GET / HTTP/1.1" 200 -
+2025-04-30 11:03:14,960 - WebServer - INFO - 客户端已断开连接
+2025-04-30 11:03:14,964 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:14] "GET /socket.io/?EIO=4&transport=websocket&sid=BVDHrqvtFxNvaq57AAAC HTTP/1.1" 200 -
+2025-04-30 11:03:14,979 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-30 11:03:14,987 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:14] "GET /video_feed HTTP/1.1" 200 -
+2025-04-30 11:03:15,000 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-30 11:03:15,104 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:15] "GET /socket.io/?EIO=4&transport=polling&t=cpw6sftz HTTP/1.1" 200 -
+2025-04-30 11:03:15,109 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:15] "[33mGET /api/history?hours=24 HTTP/1.1[0m" 404 -
+2025-04-30 11:03:15,153 - WebServer - INFO - 客户端已连接
+2025-04-30 11:03:15,155 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.5227272727273, 'soil_temperature': 0, 'light_intensity': 17.803030303030305, 'timestamp': '2025-04-30T11:03:14.842335'}
+2025-04-30 11:03:15,159 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:15,176 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.5227272727273, 'soil_temperature': 0, 'light_intensity': 17.803030303030305, 'timestamp': '2025-04-30T11:03:14.842335'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:15.176181', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:15,181 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:15,183 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:15] "GET /socket.io/?EIO=4&transport=polling&t=cpw8wvhr&sid=qykcpM2bHdk4iNA2AAAE HTTP/1.1" 200 -
+2025-04-30 11:03:15,188 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:03:15] "POST /socket.io/?EIO=4&transport=polling&t=cpw8vmdg&sid=qykcpM2bHdk4iNA2AAAE HTTP/1.1" 200 -
+2025-04-30 11:03:17,518 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.03030303030303, 'soil_temperature': 0, 'light_intensity': 20.454545454545457, 'timestamp': '2025-04-30T11:03:17.128821'}
+2025-04-30 11:03:17,520 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:17,521 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.03030303030303, 'soil_temperature': 0, 'light_intensity': 20.454545454545457, 'timestamp': '2025-04-30T11:03:17.128821'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:17.521310', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:17,524 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:20,526 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.03030303030303, 'soil_temperature': 0, 'light_intensity': 20.454545454545457, 'timestamp': '2025-04-30T11:03:17.128821'}
+2025-04-30 11:03:20,527 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:20,528 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.03030303030303, 'soil_temperature': 0, 'light_intensity': 20.454545454545457, 'timestamp': '2025-04-30T11:03:17.128821'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:20.527937', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:20,530 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:23,535 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.68560606060608, 'soil_temperature': 0, 'light_intensity': 567.8030303030304, 'timestamp': '2025-04-30T11:03:23.283061'}
+2025-04-30 11:03:23,536 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:23,537 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.68560606060608, 'soil_temperature': 0, 'light_intensity': 567.8030303030304, 'timestamp': '2025-04-30T11:03:23.283061'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:23.537462', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:23,540 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:26,542 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.68560606060608, 'soil_temperature': 0, 'light_intensity': 567.8030303030304, 'timestamp': '2025-04-30T11:03:23.283061'}
+2025-04-30 11:03:26,543 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:26,544 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.68560606060608, 'soil_temperature': 0, 'light_intensity': 567.8030303030304, 'timestamp': '2025-04-30T11:03:23.283061'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:26.544063', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:26,545 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:29,547 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.68560606060608, 'soil_temperature': 0, 'light_intensity': 567.8030303030304, 'timestamp': '2025-04-30T11:03:23.283061'}
+2025-04-30 11:03:29,548 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:29,549 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.68560606060608, 'soil_temperature': 0, 'light_intensity': 567.8030303030304, 'timestamp': '2025-04-30T11:03:23.283061'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:29.549352', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:29,551 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:32,558 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.29924242424244, 'soil_temperature': 0, 'light_intensity': 610.9848484848485, 'timestamp': '2025-04-30T11:03:30.258801'}
+2025-04-30 11:03:32,565 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:32,573 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.29924242424244, 'soil_temperature': 0, 'light_intensity': 610.9848484848485, 'timestamp': '2025-04-30T11:03:30.258801'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:32.573300', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:32,590 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:35,602 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.98484848484848, 'soil_temperature': 0, 'light_intensity': 607.1969696969697, 'timestamp': '2025-04-30T11:03:33.741705'}
+2025-04-30 11:03:35,603 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:35,604 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.98484848484848, 'soil_temperature': 0, 'light_intensity': 607.1969696969697, 'timestamp': '2025-04-30T11:03:33.741705'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:35.604447', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:35,606 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:38,608 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.97348484848484, 'soil_temperature': 0, 'light_intensity': 504.54545454545456, 'timestamp': '2025-04-30T11:03:38.323196'}
+2025-04-30 11:03:38,609 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:38,610 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.97348484848484, 'soil_temperature': 0, 'light_intensity': 504.54545454545456, 'timestamp': '2025-04-30T11:03:38.323196'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:38.610318', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:38,613 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:41,615 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.97348484848484, 'soil_temperature': 0, 'light_intensity': 504.54545454545456, 'timestamp': '2025-04-30T11:03:38.323196'}
+2025-04-30 11:03:41,616 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:41,617 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 64.97348484848484, 'soil_temperature': 0, 'light_intensity': 504.54545454545456, 'timestamp': '2025-04-30T11:03:38.323196'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:41.616967', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:41,619 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:44,621 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.50378787878788, 'soil_temperature': 0, 'light_intensity': 471.5909090909092, 'timestamp': '2025-04-30T11:03:43.694554'}
+2025-04-30 11:03:44,622 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:44,624 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.50378787878788, 'soil_temperature': 0, 'light_intensity': 471.5909090909092, 'timestamp': '2025-04-30T11:03:43.694554'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:44.623629', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:44,626 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:47,628 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.50378787878788, 'soil_temperature': 0, 'light_intensity': 471.5909090909092, 'timestamp': '2025-04-30T11:03:43.694554'}
+2025-04-30 11:03:47,630 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:47,632 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.50378787878788, 'soil_temperature': 0, 'light_intensity': 471.5909090909092, 'timestamp': '2025-04-30T11:03:43.694554'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:47.632095', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:47,635 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:50,637 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.56818181818181, 'soil_temperature': 0, 'light_intensity': 236.36363636363637, 'timestamp': '2025-04-30T11:03:48.581485'}
+2025-04-30 11:03:50,638 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:50,640 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.56818181818181, 'soil_temperature': 0, 'light_intensity': 236.36363636363637, 'timestamp': '2025-04-30T11:03:48.581485'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:50.639727', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:50,641 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:53,644 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.14015151515152, 'soil_temperature': 0, 'light_intensity': 24.242424242424242, 'timestamp': '2025-04-30T11:03:53.165005'}
+2025-04-30 11:03:53,645 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:53,647 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.14015151515152, 'soil_temperature': 0, 'light_intensity': 24.242424242424242, 'timestamp': '2025-04-30T11:03:53.165005'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:53.646546', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:53,649 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:56,653 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.14015151515152, 'soil_temperature': 0, 'light_intensity': 24.242424242424242, 'timestamp': '2025-04-30T11:03:53.165005'}
+2025-04-30 11:03:56,654 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:56,657 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.0530303030303, 'soil_temperature': 0, 'light_intensity': 24.242424242424242, 'timestamp': '2025-04-30T11:03:53.165005'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:56.657352', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:56,661 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:03:59,662 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.36742424242425, 'soil_temperature': 0, 'light_intensity': 23.484848484848484, 'timestamp': '2025-04-30T11:03:58.955981'}
+2025-04-30 11:03:59,664 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:03:59,665 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.36742424242425, 'soil_temperature': 0, 'light_intensity': 23.484848484848484, 'timestamp': '2025-04-30T11:03:58.955981'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:03:59.665541', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:03:59,667 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:04:02,669 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.5719696969697, 'soil_temperature': 0, 'light_intensity': 20.454545454545457, 'timestamp': '2025-04-30T11:04:01.927709'}
+2025-04-30 11:04:02,671 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:04:02,672 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.5719696969697, 'soil_temperature': 0, 'light_intensity': 20.454545454545457, 'timestamp': '2025-04-30T11:04:01.927709'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:04:02.671784', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:04:02,674 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:04:05,685 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.0340909090909, 'soil_temperature': 0, 'light_intensity': 20.833333333333336, 'timestamp': '2025-04-30T11:04:04.207344'}
+2025-04-30 11:04:05,686 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:04:05,687 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.0340909090909, 'soil_temperature': 0, 'light_intensity': 20.833333333333336, 'timestamp': '2025-04-30T11:04:04.207344'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:04:05.687160', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:04:05,689 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:04:08,690 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.23863636363636, 'soil_temperature': 0, 'light_intensity': 21.212121212121215, 'timestamp': '2025-04-30T11:04:08.066776'}
+2025-04-30 11:04:08,691 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:04:08,692 - WebServer - INFO - 推送数据到客户端: {'sensors': {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.23863636363636, 'soil_temperature': 0, 'light_intensity': 21.212121212121215, 'timestamp': '2025-04-30T11:04:08.066776'}, 'devices': {'fan': True, 'pump': False, 'light': False, 'stepper': 100.0}, 'auto_mode': True, 'system_time': '2025-04-30T11:04:08.692525', 'thresholds': {'temp_min': 25.0, 'temp_max': 28.0, 'humidity_min': 40.0, 'humidity_max': 70.0, 'soil_moisture_min': 30.0, 'soil_moisture_max': 70.0, 'light_min': 2000, 'light_max': 8000}}
+2025-04-30 11:04:08,694 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:04:10,368 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-30 11:04:10,374 - WebServer - INFO - 正在停止Web服务器...
+2025-04-30 11:04:11,696 - WebServer - INFO - Web服务器已停止
+2025-04-30 11:04:11,698 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-30 11:04:14,201 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-30 11:04:14,203 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-30 11:04:14,414 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-30 11:04:14,416 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-30 11:04:14,517 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-30 11:04:14,731 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-30 11:04:14,732 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-30 11:04:14,733 - Main - INFO - 系统已安全关闭
+2025-04-30 11:06:43,840 - Main - INFO - 智能温室监控系统启动中...
+2025-04-30 11:06:43,841 - Main - INFO - 初始化传感器模块...
+2025-04-30 11:06:43,842 - SensorModule - INFO - 初始化传感器模块...
+2025-04-30 11:06:43,845 - SensorModule - INFO - 数据库初始化成功
+2025-04-30 11:06:45,862 - SensorModule - INFO - DHT11传感器初始化成功
+2025-04-30 11:06:45,871 - SensorModule - INFO - ADS1115 ADC初始化成功
+2025-04-30 11:06:46,204 - SensorModule - INFO - OLED显示屏初始化成功
+2025-04-30 11:06:46,232 - SensorModule - ERROR - DS18B20土壤温度传感器初始化失败: [Errno 2] No such file or directory: '/sys/bus/w1/devices/'
+2025-04-30 11:06:46,234 - SensorModule - INFO - 传感器模块初始化完成
+2025-04-30 11:06:46,234 - Main - INFO - 初始化控制器模块...
+2025-04-30 11:06:46,235 - ControllerModule - INFO - 初始化控制器模块...
+2025-04-30 11:06:46,236 - ControllerModule - INFO - 舵机初始化成功
+2025-04-30 11:06:46,238 - ControllerModule - INFO - 控制器模块初始化完成
+2025-04-30 11:06:46,238 - Main - INFO - 初始化摄像头模块...
+2025-04-30 11:06:46,239 - CameraModule - INFO - 初始化摄像头模块...
+2025-04-30 11:06:46,335 - picamera2.picamera2 - INFO - Initialization successful.
+2025-04-30 11:06:46,342 - picamera2.picamera2 - INFO - Camera now open.
+2025-04-30 11:06:46,405 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 11:06:46,543 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 11:06:46,731 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 11:06:46,938 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 11:06:47,043 - CameraModule - INFO - 摄像头支持的模式: [{'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (640, 480), 'fps': 58.92, 'crop_limits': (16, 0, 2560, 1920), 'exposure_limits': (134, 4879289, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1296, 972), 'fps': 43.25, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (92, 3286054, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (1920, 1080), 'fps': 30.62, 'crop_limits': (348, 434, 1928, 1080), 'exposure_limits': (118, 3286047, 20000)}, {'format': SGBRG10_CSI2P, 'unpacked': 'SGBRG10', 'bit_depth': 10, 'size': (2592, 1944), 'fps': 15.63, 'crop_limits': (0, 0, 2592, 1944), 'exposure_limits': (130, 3066985, 20000)}]
+2025-04-30 11:06:47,054 - picamera2.picamera2 - INFO - Configuration successful!
+2025-04-30 11:06:47,073 - CameraModule - INFO - 摄像头模块初始化成功
+2025-04-30 11:06:47,208 - picamera2.picamera2 - INFO - Camera started
+2025-04-30 11:06:48,212 - CameraModule - INFO - 摄像头已启动
+2025-04-30 11:06:48,214 - Main - INFO - 初始化Web服务器...
+2025-04-30 11:06:48,216 - WebServer - INFO - 初始化Web服务器...
+2025-04-30 11:06:48,807 - WebServer - INFO - Web服务器初始化完成
+2025-04-30 11:06:48,832 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 66.17803030303031, 'soil_temperature': 0, 'light_intensity': 9.46969696969697, 'timestamp': '2025-04-30T11:06:48.212994'}
+2025-04-30 11:06:48,834 - WebServer - INFO - Web服务器已启动，访问地址: http://0.0.0.0:8000
+2025-04-30 11:06:48,837 - WebServer - INFO - 原始控制器状态: {'fan_status': False, 'fan_speed': 0, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:06:48,841 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:06:48,842 - Main - INFO - 系统启动完成，Web界面可通过 http://192.168.247.124:8000 访问
+2025-04-30 11:06:48,845 - Main - INFO - 使用Ctrl+C退出系统
+2025-04-30 11:06:48,882 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.247.124:8000
+2025-04-30 11:06:48,884 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 11:06:51,844 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 66.17803030303031, 'soil_temperature': 0, 'light_intensity': 9.46969696969697, 'timestamp': '2025-04-30T11:06:48.212994'}
+2025-04-30 11:06:51,847 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:06:51,849 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:06:52,878 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:06:52] "GET /socket.io/?EIO=4&transport=polling&t=cuk83nzf HTTP/1.1" 200 -
+2025-04-30 11:06:52,948 - WebServer - INFO - 客户端已连接
+2025-04-30 11:06:52,954 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 66.12878787878789, 'soil_temperature': 0, 'light_intensity': 7.196969696969697, 'timestamp': '2025-04-30T11:06:52.908617'}
+2025-04-30 11:06:52,956 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:06:52,959 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:06:52,962 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:06:52] "GET /socket.io/?EIO=4&transport=polling&t=cuk9nd6y&sid=qrdlEWYU69WTHr2pAAAA HTTP/1.1" 200 -
+2025-04-30 11:06:52,965 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:06:52] "POST /socket.io/?EIO=4&transport=polling&t=cuk9mfm7&sid=qrdlEWYU69WTHr2pAAAA HTTP/1.1" 200 -
+2025-04-30 11:06:54,851 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 66.12878787878789, 'soil_temperature': 0, 'light_intensity': 7.196969696969697, 'timestamp': '2025-04-30T11:06:52.908617'}
+2025-04-30 11:06:54,853 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:06:54,855 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:06:57,858 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 66.6590909090909, 'soil_temperature': 0, 'light_intensity': 7.575757575757576, 'timestamp': '2025-04-30T11:06:56.521321'}
+2025-04-30 11:06:57,859 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:06:57,860 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:07:00,863 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 65.86363636363637, 'soil_temperature': 0, 'light_intensity': 6.0606060606060606, 'timestamp': '2025-04-30T11:06:59.517896'}
+2025-04-30 11:07:00,864 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:07:00,866 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:07:03,872 - WebServer - INFO - 原始传感器数据: {'air_temperature': 40, 'air_humidity': 34, 'soil_moisture': 66.83333333333334, 'soil_temperature': 0, 'light_intensity': 6.4393939393939394, 'timestamp': '2025-04-30T11:07:02.409294'}
+2025-04-30 11:07:03,873 - WebServer - INFO - 原始控制器状态: {'fan_status': True, 'fan_speed': 100, 'servo_status': True, 'servo_angle': 180, 'auto_mode': True}
+2025-04-30 11:07:03,875 - WebServer - INFO - 状态数据已推送到客户端
+2025-04-30 11:07:04,578 - Main - INFO - 收到退出信号，正在关闭系统...
+2025-04-30 11:07:04,579 - WebServer - INFO - 正在停止Web服务器...
+2025-04-30 11:07:06,580 - WebServer - INFO - Web服务器已停止
+2025-04-30 11:07:06,581 - ControllerModule - INFO - 正在清理控制器模块资源...
+2025-04-30 11:07:09,094 - ControllerModule - INFO - 控制器模块资源已清理
+2025-04-30 11:07:09,097 - SensorModule - INFO - 正在清理传感器模块资源...
+2025-04-30 11:07:09,115 - SensorModule - INFO - 传感器模块资源已清理
+2025-04-30 11:07:09,116 - CameraModule - INFO - 正在清理摄像头模块资源...
+2025-04-30 11:07:09,156 - picamera2.picamera2 - INFO - Camera stopped
+2025-04-30 11:07:09,372 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:07:09] "GET / HTTP/1.1" 200 -
+2025-04-30 11:07:09,405 - WebServer - INFO - 客户端已断开连接
+2025-04-30 11:07:09,409 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:07:09] "GET /socket.io/?EIO=4&transport=websocket&sid=qrdlEWYU69WTHr2pAAAA HTTP/1.1" 200 -
+2025-04-30 11:07:09,447 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:07:09] "GET /video_feed HTTP/1.1" 200 -
+2025-04-30 11:07:09,511 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:07:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-30 11:07:09,547 - werkzeug - INFO - 192.168.247.248 - - [30/Apr/2025 11:07:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-30 11:07:09,577 - picamera2.picamera2 - INFO - Camera closed successfully.
+2025-04-30 11:07:09,580 - CameraModule - INFO - 摄像头模块资源已清理
+2025-04-30 11:07:09,581 - Main - INFO - 系统已安全关闭

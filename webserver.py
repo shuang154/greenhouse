@@ -48,7 +48,7 @@ class WebServer:
         self.app.config['JSON_AS_ASCII'] = False
         
         # 添加SocketIO支持 - 注意位置在创建Flask应用之后
-        self.socketio = SocketIO(self.app)
+        self.socketio = SocketIO(self.app, cors_allowed_origins="*", async_mode='threading')
         
         # 设置路由
         self._setup_routes()
@@ -238,33 +238,26 @@ class WebServer:
 
     def _push_sensor_data(self):
      try:
+        # 获取最新数据
         sensor_data = self.sensor_module.get_latest_readings()
         controller_status = self.controller_module.get_status()
         
-        # 确保设备状态结构一致
-        if "devices" not in controller_status:
-            controller_status["devices"] = {
-                "fan": controller_status.get("fan_status", False),
-                "fan_speed": controller_status.get("fan_speed", 0),
-                "pump": False,  # 如果没有水泵，提供默认值
-                "light": False, # 如果没有灯，提供默认值
-                "stepper": controller_status.get("servo_angle", 0)
-            }
+        # 记录原始数据，以便调试
+        #logger.info(f"原始传感器数据: {sensor_data}")
+        #logger.info(f"原始控制器状态: {controller_status}")
         
-        # 格式化为前端期望的格式
+        # 构建与前端期望完全一致的数据结构
         data = {
             "sensors": sensor_data,
             "devices": {
-                # 映射控制器状态到前端期望的格式
-                "fan": controller_status["fan_status"],
-                "pump": False,  # 目前没有水泵控制，设为默认值
-                "light": False, # 目前没有灯光控制，设为默认值
-                "stepper": controller_status["servo_angle"] / 180 * 100  # 将舵机角度转换为百分比
+                "fan": controller_status.get("fan_status", False),
+                "pump": False,  # 目前没有水泵控制
+                "light": False, # 目前没有灯光控制
+                "stepper": controller_status.get("servo_angle", 90) / 180 * 100  # 转换为百分比
             },
-            "auto_mode": controller_status["auto_mode"],
+            "auto_mode": controller_status.get("auto_mode", True),
             "system_time": datetime.now().isoformat(),
             "thresholds": {
-                # 使用配置文件中的阈值
                 "temp_min": THRESHOLD_CONFIG["TEMP_MIN"],
                 "temp_max": THRESHOLD_CONFIG["TEMP_MAX"],
                 "humidity_min": THRESHOLD_CONFIG["HUMIDITY_MIN"],
@@ -276,9 +269,12 @@ class WebServer:
             }
         }
         
+        # 记录发送的数据
+        #logger.info(f"推送数据到客户端: {data}")
+        
         # 发送到客户端
         self.socketio.emit('status_update', data)
-        logger.debug('状态数据已推送到客户端')
+        logger.info('状态数据已推送到客户端')
      except Exception as e:
         logger.error(f'推送数据时发生错误: {e}')
         
