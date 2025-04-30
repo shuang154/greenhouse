@@ -33,12 +33,14 @@ from sensors import SensorModule
 from controllers import ControllerModule
 from webserver import WebServer
 from camera import CameraModule 
+from cloud_connector import CloudConnector  # 新增服务器
 
 # 全局变量
 sensor_module = None
 controller_module = None
 camera_module = None  # 新增：摄像头模块全局变量
 web_server = None
+cloud_connector = None  # 新增，服务器的
 
 def signal_handler(sig, frame):
     """信号处理器，处理系统退出"""
@@ -56,6 +58,9 @@ def signal_handler(sig, frame):
     # 新增：清理摄像头模块资源
     if camera_module:
         camera_module.cleanup()
+        
+    if cloud_connector:  # 新增
+        cloud_connector.stop()
     
     logger.info("系统已安全关闭")
     sys.exit(0)
@@ -130,6 +135,9 @@ def main():
         
         if sensor_module:
             sensor_module.cleanup()
+       
+        if cloud_connector:  # 新增，清理服务器滴
+            cloud_connector.stop()
         
         # 新增：清理摄像头模块资源
         if camera_module:

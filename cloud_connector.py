@@ -10,7 +10,9 @@ import socketio
 import ssl
 import requests
 import uuid
+import os
 
+# 导入配置文件
 from config import SYSTEM_CONFIG, CLOUD_CONFIG
 
 # 配置日志
@@ -86,6 +88,14 @@ class CloudConnector:
                 self._connect_to_server()
         
         @self.sio.event
+        def register_response(data):
+            """设备注册响应"""
+            if data.get('success'):
+                logger.info("设备注册成功")
+            else:
+                logger.error(f"设备注册失败: {data.get('error')}")
+        
+        @self.sio.event
         def control_command(data):
             """接收控制命令"""
             logger.info(f"收到云服务器控制命令: {data}")
@@ -95,20 +105,44 @@ class CloudConnector:
                 
                 if command == 'set_auto_mode':
                     # 设置自动/手动模式
-                    auto_mode = data.get('auto_mode', True)
+                    auto_mode = data.get('value', True)
                     self.controller_module.set_auto_mode(auto_mode)
+                    
+                    # 向服务器发送成功响应
+                    self.sio.emit('command_result', {
+                        'command_id': data.get('command_id'),
+                        'success': True,
+                        'message': f"自动模式已设为: {'开启' if auto_mode else '关闭'}"
+                    })
                     
                 elif command == 'control_device':
                     # 控制设备
                     device = data.get('device')
                     action = data.get('action')
                     value = data.get('value')
-                    self.controller_module.manual_control(device, action, value)
                     
-                elif command == 'update_thresholds':
-                    # 更新阈值设置
-                    # 这里需要实现阈值更新的逻辑
-                    pass
+                    result = self.controller_module.manual_control(device, action, value)
+                    
+                    if result:
+                        self.sio.emit('command_result', {
+                            'command_id': data.get('command_id'),
+                            'success': True,
+                            'message': f"设备 {device} 已成功控制"
+                        })
+                    else:
+                        self.sio.emit('command_result', {
+                            'command_id': data.get('command_id'),
+                            'success': False,
+                            'error': f"控制设备 {device} 失败"
+                        })
+                    
+                else:
+                    # 未知命令
+                    self.sio.emit('command_result', {
+                        'command_id': data.get('command_id'),
+                        'success': False,
+                        'error': f"未知命令: {command}"
+                    })
                 
                 # 数据变化后立即推送一次最新状态
                 self._push_data_to_cloud()
@@ -117,34 +151,36 @@ class CloudConnector:
                 logger.error(f"处理控制命令时出错: {e}")
                 
                 # 向云服务器发送错误信息
-                self.sio.emit('command_response', {
+                self.sio.emit('command_result', {
+                    'command_id': data.get('command_id'),
                     'success': False,
-                    'error': str(e),
-                    'command_id': data.get('command_id')
+                    'error': str(e)
                 })
     
     def _connect_to_server(self):
         """连接到云服务器"""
         try:
             server_url = CLOUD_CONFIG["SERVER_URL"]
-            auth_token = CLOUD_CONFIG["AUTH_TOKEN"]
             
-            # 使用SSL证书
+            # 创建连接选项
+            connection_opts = {}
+            
+            # 如果有SSL设置
             if CLOUD_CONFIG.get("USE_SSL", True):
-                # 如果没有提供证书路径，使用系统默认证书
-                ssl_cert = CLOUD_CONFIG.get("SSL_CERT", None)
-                if ssl_cert:
-                    sio_kwargs = {'ssl_verify': ssl_cert}
+                if CLOUD_CONFIG.get("SSL_VERIFY", True):
+                    connection_opts = {
+                        "ssl_verify": True
+                    }
                 else:
-                    sio_kwargs = {}
-            else:
-                sio_kwargs = {}
+                    # 禁用SSL验证（仅用于测试）
+                    connection_opts = {
+                        "ssl_verify": False
+                    }
             
             # 连接到服务器
             self.sio.connect(
                 server_url,
-                auth={'token': auth_token, 'device_id': self.device_id},
-                **sio_kwargs
+                **connection_opts
             )
             
             logger.info(f"正在连接到云服务器: {server_url}")
@@ -152,6 +188,11 @@ class CloudConnector:
         except Exception as e:
             logger.error(f"连接到云服务器失败: {e}")
             self.connected = False
+            
+            # 等待后重试
+            if self.running:
+                time.sleep(10)  # 10秒后重试
+                self._connect_to_server()
     
     def _push_data_to_cloud(self):
         """推送数据到云服务器"""
@@ -168,7 +209,8 @@ class CloudConnector:
                 'device_id': self.device_id,
                 'timestamp': time.time(),
                 'sensors': sensor_data,
-                'controllers': controller_status
+                'controllers': controller_status,
+                'device_name': CLOUD_CONFIG.get("DEVICE_NAME", "智能温室")
             }
             
             # 发送到云服务器
@@ -181,8 +223,9 @@ class CloudConnector:
     def _data_push_loop(self):
         """数据推送循环"""
         while self.running:
-            self._push_data_to_cloud()
-            time.sleep(CLOUD_CONFIG.get("PUSH_INTERVAL", 10))  # 默认每10秒推送一次
+            if self.connected:
+                self._push_data_to_cloud()
+            time.sleep(CLOUD_CONFIG.get("PUSH_INTERVAL", 5))  # 默认每5秒推送一次
     
     def start(self):
         """启动云服务连接"""

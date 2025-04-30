@@ -65,3 +65,13 @@ THRESHOLD_CONFIG = {
     "SOIL_MOISTURE_MIN": 30.0, # 干燥土壤阈值 (%)
     "SOIL_MOISTURE_MAX": 70.0  # 湿润土壤阈值 (%)
 }
+
+# 云服务配置
+CLOUD_CONFIG = {
+    "SERVER_URL": "http://47.93.80.194:3000",  # 您的阿里云服务器地址和端口
+    "DEVICE_ID": "",                            # 设备ID，留空则自动生成
+    "DEVICE_NAME": "智能温室1号",               # 设备名称
+    "PUSH_INTERVAL": 5,                         # 数据推送间隔(秒)
+    "USE_SSL": False,                           # 是否使用SSL
+    "SSL_VERIFY": False                         # 是否验证SSL证书
+}
