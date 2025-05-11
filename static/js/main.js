@@ -1,5 +1,6 @@
 /**
  * 智能农业大棚系统 - 前端JavaScript
+ main.js
  */
 
 // 全局变量
@@ -9,7 +10,7 @@ let humidityChart;
 let soilChart;
 let lightChart;
 let isConnected = false;
-
+let deviceId = window.location.pathname.split('/').pop();
 // 当文档加载完成后执行
 document.addEventListener('DOMContentLoaded', function() {
     // 初始化WebSocket连接
@@ -46,6 +47,10 @@ function initWebSocket() {
         console.log('已连接到服务器');
         isConnected = true;
         updateConnectionStatus(true);
+        
+        const deviceId = window.location.pathname.split('/').pop();
+        console.log('订阅设备:', deviceId);
+        socket.emit('subscribe_device', deviceId);
     });
     
     // 连接断开事件
@@ -366,7 +371,8 @@ function initEventListeners() {
     autoModeSwitch.addEventListener('change', function() {
         if (isConnected) {
             const autoMode = this.checked;
-            socket.emit('control_mode', { auto_mode: autoMode });
+            socket.emit('control_mode', {device_id: deviceId,
+            auto_mode: autoMode });
             
             // 更新UI状态
             document.getElementById('auto-mode-label').textContent = autoMode ? '自动模式' : '手动模式';
@@ -381,7 +387,10 @@ function initEventListeners() {
     fanSwitch.addEventListener('change', function() {
         if (isConnected) {
             const state = this.checked;
-            socket.emit('control_fan', { state: state });
+            const deviceId = window.location.pathname.split('/').pop();
+            socket.emit('control_fan', { device_id: deviceId,
+           // auto_mode: autoMode  });
+            state: state  });
         }
     });
     
@@ -390,6 +399,7 @@ function initEventListeners() {
     pumpSwitch.addEventListener('change', function() {
         if (isConnected) {
             const state = this.checked;
+            const deviceId = window.location.pathname.split('/').pop();
             socket.emit('control_pump', { state: state });
         }
     });
@@ -399,6 +409,7 @@ function initEventListeners() {
     lightSwitch.addEventListener('change', function() {
         if (isConnected) {
             const state = this.checked;
+            const deviceId = window.location.pathname.split('/').pop();
             socket.emit('control_light', { state: state });
         }
     });

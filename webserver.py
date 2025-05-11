@@ -1,7 +1,7 @@
 """
 Web服务器模块 - 提供Web界面访问智能温室系统
 """
-
+# -*- coding: utf-8 -*-
 import logging
 import threading
 import time
@@ -13,9 +13,15 @@ import io
 from flask.helpers import send_from_directory
 import socket
 from flask_socketio import SocketIO
-
 # 导入配置文件 - 修复导入错误
 from config import SYSTEM_CONFIG, THRESHOLD_CONFIG
+
+
+
+#os.environ['PYTHONIOENCODING'] = 'utf-8'
+#os.environ['LANG'] = 'en_US.UTF-8'
+#os.environ['LC_ALL'] = 'en_US.UTF-8'
+
 
 # 配置日志
 logging.basicConfig(
@@ -42,11 +48,14 @@ class WebServer:
         self.camera_module = camera_module
         
         # 创建Flask应用
-        self.app = Flask(__name__)
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        self.app = Flask(__name__, 
+                        template_folder=os.path.join(current_dir, 'templates'),
+                        static_folder=os.path.join(current_dir, 'static'))
         
         #尝试解决乱码
         self.app.config['JSON_AS_ASCII'] = False
-        
+        self.app.config['JSONIFY_MIMETYPE'] = 'application/json; charset=utf-8'  # 添加这行
         # 添加SocketIO支持 - 注意位置在创建Flask应用之后
         self.socketio = SocketIO(self.app, cors_allowed_origins="*", async_mode='threading')
         
@@ -145,7 +154,7 @@ class WebServer:
         @self.app.route('/static/<path:path>')
         def serve_static(path):
             """提供静态文件"""
-            return send_from_directory('static', path)
+            return send_from_directory(self.app.static_folder, path)
             
         # 添加视频流路由
         @self.app.route('/video_feed')

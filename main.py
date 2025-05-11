@@ -4,6 +4,7 @@ import logging
 import signal
 import sys
 import os
+#import camera_streamer
 from pathlib import Path
 
 # 确保目录结构存在
@@ -92,24 +93,35 @@ def main():
         # 初始化控制器模块
         logger.info("初始化控制器模块...")
         controller_module = ControllerModule(sensor_module)
+        # 启动摄像头流
+        #logger.info("初始化摄像头流...")
+        #camera_streamer.initialize_camera_stream()
         
         # 新增：初始化摄像头模块（仅当配置启用时）
         camera_module = None
         if SYSTEM_CONFIG.get("ENABLE_CAMERA", False):
             logger.info("初始化摄像头模块...")
+            from camera import CameraModule
             camera_module = CameraModule()
             if camera_module.camera is None:
                 logger.warning("摄像头初始化失败，系统将继续但没有摄像头功能")
                 camera_module = None
             else:
                 camera_module.start()
+                logger.info("摄像头模块已准备，由云连接器管理")
         
         # 初始化Web服务器
         logger.info("初始化Web服务器...")
         web_server = WebServer(sensor_module, controller_module, camera_module)
         
-        # 启动Web服务器
+        # 初始化云连接器
+        logger.info("初始化云连接器...")
+        cloud_connector = CloudConnector(sensor_module, controller_module, camera_module)
+        
+        
+        # 启动Web服务器和云连接器
         web_server.start()
+        cloud_connector.start()
         
         local_ip = get_local_ip()
         logger.info(f"系统启动完成，Web界面可通过 http://{local_ip}:{SYSTEM_CONFIG['WEB_PORT']} 访问")

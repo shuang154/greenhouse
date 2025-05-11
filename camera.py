@@ -45,9 +45,6 @@ class CameraModule:
             # 初始化摄像头
             self.camera = Picamera2()
             
-            # 获取可用的配置并打印日志
-            camera_configs = self.camera.sensor_modes
-            logger.info(f"摄像头支持的模式: {camera_configs}")
             
             # 配置摄像头 - 使用测试脚本中可行的配置
             width, height = SYSTEM_CONFIG["CAMERA_RESOLUTION"]

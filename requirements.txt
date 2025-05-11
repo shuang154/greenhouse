@@ -1,9 +1,12 @@
 Adafruit-Blinka==8.56.0
 adafruit-circuitpython-ads1x15==2.4.2
+adafruit-circuitpython-bmp280==3.3.6
 adafruit-circuitpython-busdevice==5.2.11
 adafruit-circuitpython-connectionmanager==3.1.3
+adafruit-circuitpython-dht==4.0.7
 adafruit-circuitpython-framebuf==1.6.7
 adafruit-circuitpython-motor==3.4.15
+adafruit-circuitpython-register==1.10.2
 adafruit-circuitpython-requests==4.1.10
 adafruit-circuitpython-ssd1306==2.12.19
 adafruit-circuitpython-typing==1.11.2
@@ -14,6 +17,8 @@ av==14.3.0
 bidict==0.23.1
 binho-host-adapter==0.1.6
 blinker==1.9.0
+certifi==2025.4.26
+charset-normalizer==3.4.1
 click==8.1.8
 dnspython==2.7.0
 eventlet==0.39.1
@@ -21,6 +26,7 @@ Flask==3.1.0
 Flask-SocketIO==5.5.1
 greenlet==3.2.1
 h11==0.16.0
+idna==3.10
 itsdangerous==2.2.0
 Jinja2==3.1.6
 jsonschema==4.23.0
@@ -28,10 +34,13 @@ jsonschema-specifications==2025.4.1
 libarchive-c==5.2
 MarkupSafe==3.0.2
 numpy==2.2.5
+opencv-python==4.11.0.86
 picamera2==0.3.25
 pidng==4.0.9
 piexif==1.1.3
+pigpio==1.78
 pillow==11.2.1
+psutil==7.0.0
 pyftdi==0.56.0
 pyserial==3.5
 python-engineio==4.12.0
@@ -39,6 +48,7 @@ python-prctl==1.8.1
 python-socketio==5.13.0
 pyusb==1.3.1
 referencing==0.36.2
+requests==2.32.3
 rpds-py==0.24.0
 rpi-ws281x==5.0.0
 RPi.GPIO==0.7.1
@@ -47,6 +57,7 @@ simplejpeg==1.8.2
 sysv-ipc==1.1.0
 tqdm==4.67.1
 typing_extensions==4.13.2
+urllib3==2.4.0
 v4l2-python3==0.3.5
 Werkzeug==3.1.3
 wsproto==1.2.0

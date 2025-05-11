@@ -14,6 +14,17 @@ GPIO_CONFIG = {
     "LIGHT_SENSOR_PIN": 27,    # 光照传感器数字输出
     "RELAY_FAN": 18,           # 风扇控制针脚 (GPIO18) - 低电平触发继电器
     "SERVO_PIN": 12,           # SG90舵机控制针脚 (GPIO12)
+    "DS18B20_PIN": 4,             # DS18B20温度传感器(1-Wire) GPIO4
+}
+
+# 云服务配置
+CLOUD_CONFIG = {
+    "SERVER_URL": "http://47.93.80.194:3000",  # 修改为你的服务器地址
+    "DEVICE_ID": "",                           # 留空则自动生成
+    "DEVICE_NAME": "智能温室1号",               # 设备名称
+    "PUSH_INTERVAL": 5,                        # 数据推送间隔(秒)
+    "USE_SSL": False,                          # 是否使用SSL
+    "SSL_VERIFY": False                        # 是否验证SSL证书
 }
 
 # I2C设备配置
